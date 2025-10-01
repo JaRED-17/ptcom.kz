@@ -12,7 +12,7 @@ const Content = () => {
       <Routes>
         <Route path='/' element={<Home />} exact />
         <Route path='/company/about' element={<AboutCompany />} exact />
-        <Route element={<PageNotFound />} />
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
     </div>
   )
