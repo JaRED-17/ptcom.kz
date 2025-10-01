@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  min-width: 1024px;
+  padding: 10px 70px 8px;
+  color: #d5d8d9;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    gap: 20px;
+
+    &-img {
+      width: 200px;
+    }
+
+    &-text {
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 1.125rem;
+    width: auto;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 300px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  &:before {
+    content: "";
+    background: #13354E url("../../media/background.jpg") no-repeat center top;
+    width: 100%;
+    height: 168px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+}

@@ -31,15 +31,15 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: '[name]-[hash].css'
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, './src/media'),
+          to: path.resolve(__dirname, './dist/media')
+        }
+      ]
     })
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     {
-    //       from: path.resolve(__dirname, './src/media'),
-    //       to: path.resolve(__dirname, './dist/media')
-    //     }
-    //   ]
-    // })
   ],
   module: {
     rules: [
