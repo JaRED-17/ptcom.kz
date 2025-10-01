@@ -1,6 +1,8 @@
 {
   "name": "ptcom.kz",
   "version": "0.1.0",
+  "author": "Igor Borozdov",
+  "license": "ISC",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
@@ -16,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src"
   },
   "eslintConfig": {
     "extends": [
@@ -35,5 +38,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "eslint": "^7.11.0",
+    "eslint-config-standard": "10.x",
+    "eslint-config-standard-react": "5.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jest": "21.x",
+    "eslint-plugin-node": "5.x",
+    "eslint-plugin-promise": "3.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-standard": "3.x"
   }
 }
