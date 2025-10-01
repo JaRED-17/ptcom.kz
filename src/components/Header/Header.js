@@ -11,7 +11,9 @@ const Header = () => {
   return (
     <header className='header'>
       <div className='header__logo'>
-        <img className='header__logo-img' src={logo} alt={message('logo')} />
+        <a href='/'>
+          <img className='header__logo-img' src={logo} alt={message('logo')} />
+        </a>
         <h1 className='header__logo-text'>
           {message('logo')}
         </h1>
