@@ -1,33 +1,37 @@
 import React from 'react'
 import './Header.scss'
 import logo from '../../media/Logo.png'
-import { FormattedMessage } from 'react-intl'
+import Markdown from 'react-markdown'
+import messages from './Header.messages'
+import setMessages from '../../helpers/setMessages'
 
 const Header = () => {
+  const message = setMessages(messages, 'app.header.')
+
   return (
     <header className='header'>
       <div className='header__logo'>
-        <img className='header__logo-img' src={logo} alt={'Транспортно–экспедиторские услуги'} />
+        <img className='header__logo-img' src={logo} alt={message('logo')} />
         <h1 className='header__logo-text'>
-          <FormattedMessage id='app.header.logo' />
+          {message('logo')}
         </h1>
       </div>
       <div className='header__title'>
-        <FormattedMessage id='app.header.title' />
+        <Markdown children={message('title')} />
       </div>
       <div className='header__contacts'>
         <a href='tel:87172978468'>
-          <FormattedMessage id='app.header.contact.astana' />
+          {message('contact.astana')}
         </a>
         <a href='tel:87273122115'>
-          <FormattedMessage id='app.header.contact.almaty' />
+          {message('contact.almaty')}
         </a>
         <a href='tel:87152630047'>
-          <FormattedMessage id='app.header.contact.petropavl' />
+          {message('contact.petropavl')}
         </a>
         <div className='mailto'>
           <a href='mailto:info@ptcom.kz'>
-            <FormattedMessage id='app.header.contact.email' />
+            {message('contact.email')}
           </a>
         </div>
       </div>

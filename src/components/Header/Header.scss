@@ -1,6 +1,7 @@
 .header {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 45px;
   min-width: 1024px;
   padding: 10px 70px 8px;
@@ -26,6 +27,10 @@
     text-align: center;
     font-size: 1.125rem;
     width: auto;
+
+    p {
+      margin: 0;
+    }
   }
 
   &__contacts {
