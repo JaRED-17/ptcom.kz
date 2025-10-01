@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client'
 import './index.scss'
 import App from './components/App/App'
 import reportWebVitals from './reportWebVitals'
+import { IntlProvider } from 'react-intl'
+import messages from './locales/ru.json'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <App />
+    <IntlProvider locale='ru' messages={messages}>
+      <App />
+    </IntlProvider>
   </React.StrictMode>
 )
 
