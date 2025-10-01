@@ -9,7 +9,7 @@ module.exports = {
   entry: './src/index.js',
   mode: 'production',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     filename: '[name]-[hash]-bundle.js',
     clean: true
   },
@@ -36,7 +36,7 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, './src/media'),
-          to: path.resolve(__dirname, './dist/media')
+          to: path.resolve(__dirname, './build/media')
         }
       ]
     })
