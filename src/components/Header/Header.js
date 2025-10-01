@@ -1,9 +1,10 @@
 import React from 'react'
 import './Header.scss'
 import logo from '../../media/Logo.png'
-import Markdown from 'react-markdown'
+import Markdown from '../Markdown'
 import messages from './Header.messages'
 import setMessages from '../../helpers/setMessages'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const message = setMessages(messages, 'app.header.')
@@ -11,30 +12,22 @@ const Header = () => {
   return (
     <header className='header'>
       <div className='header__logo'>
-        <a href='/'>
+        <Link to={'/'}>
           <img className='header__logo-img' src={logo} alt={message('logo')} />
-        </a>
+        </Link>
         <h1 className='header__logo-text'>
           {message('logo')}
         </h1>
       </div>
       <div className='header__title'>
-        <Markdown children={message('title')} />
+        <Markdown text={message('title')} />
       </div>
       <div className='header__contacts'>
-        <a href='tel:87172978468'>
-          {message('contact.astana')}
-        </a>
-        <a href='tel:87273122115'>
-          {message('contact.almaty')}
-        </a>
-        <a href='tel:87152630047'>
-          {message('contact.petropavl')}
-        </a>
+        <Markdown inline text={message('contact.astana')} />
+        <Markdown inline text={message('contact.almaty')} />
+        <Markdown inline text={message('contact.petropavl')} />
         <div className='mailto'>
-          <a href='mailto:info@ptcom.kz'>
-            {message('contact.email')}
-          </a>
+          <Markdown inline text={message('contact.email')} />
         </div>
       </div>
     </header>

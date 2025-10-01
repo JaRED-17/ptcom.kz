@@ -2,7 +2,7 @@ import React from 'react'
 import './Footer.scss'
 import messages from './Footer.messages'
 import setMessages from '../../helpers/setMessages'
-import Markdown from 'react-markdown'
+import Markdown from '../Markdown'
 
 const Header = () => {
   const message = setMessages(messages, 'app.footer.')
@@ -15,7 +15,7 @@ const Header = () => {
       </div>
       <div className='footer_2'>
         <h1>{message('contacts.title')}</h1>
-        <Markdown children={message('contacts.text')} />
+        <Markdown text={message('contacts.text')} />
       </div>
       <div className='footer_3'>
         <h1>{message('address.title')}</h1>
@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       <div className='footer_4'>
         <h1>{message('navigation.title')}</h1>
-        <Markdown children={message('navigation.text')} />
+        <Markdown text={message('navigation.text')} />
       </div>
     </div>
   )
