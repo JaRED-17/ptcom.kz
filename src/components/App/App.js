@@ -1,11 +1,13 @@
 import React from 'react'
 import './App.scss'
 import Header from '../Header'
+import Footer from '../Footer'
 
 const App = () => {
   return (
     <div className='App'>
       <Header />
+      <Footer />
     </div>
   )
 }
