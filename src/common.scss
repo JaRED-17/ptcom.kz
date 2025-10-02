@@ -5,5 +5,16 @@ a {
   }
   &.grey-link {
     color: #696969;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &.blue-link {
+    color: #21b6ee;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }

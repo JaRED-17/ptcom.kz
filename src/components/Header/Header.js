@@ -37,7 +37,7 @@ const Header = () => {
         />
         <div className='mailto'>
           <Markdown
-            childrenClassName={{target: 'link', className: 'white-link'}}
+            childrenClassName={{target: 'link', className: 'blue-link'}}
             text={message('contact.email')}
           />
         </div>
