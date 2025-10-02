@@ -1,0 +1,22 @@
+.style-guide {
+  max-width: 768px;
+  margin: 0 auto;
+
+  &__block {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    table {
+      width: 100%;
+
+      td {
+        width: 50%;
+        text-align: left;
+        border: 1px solid black;
+        padding: 5px;
+      }
+    }
+  }
+}
