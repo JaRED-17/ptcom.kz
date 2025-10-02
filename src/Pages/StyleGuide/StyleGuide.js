@@ -1,6 +1,7 @@
 import React from 'react'
 import './StyleGuide.scss'
 import PropTypes from 'prop-types'
+import {Helmet} from 'react-helmet'
 
 const StyleGuideBlock = ({title, children}) => {
   return (
@@ -21,6 +22,9 @@ StyleGuideBlock.propTypes = {
 const StyleGuide = () => {
   return (
     <div className='style-guide'>
+      <Helmet>
+        <title>{'Style guide'}</title>
+      </Helmet>
       <StyleGuideBlock title='H block'>
         <h1>H1 example</h1>
         <h2>H2 example</h2>
