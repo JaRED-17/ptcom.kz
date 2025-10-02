@@ -31,7 +31,8 @@ const StyleGuide = () => {
       </StyleGuideBlock>
       <StyleGuideBlock title='Tags block'>
         <p>p example</p>
-        <a href='#'>a example</a>
+        <a className='white-link' href='#'>white link example</a>
+        <a className='grey-link' href='#'>grey link example</a>
       </StyleGuideBlock>
       <StyleGuideBlock title='Font sizes'>
         {(() => {

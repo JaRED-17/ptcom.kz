@@ -1,3 +1,5 @@
+@import '../../common.scss';
+
 .style-guide {
   max-width: 768px;
   margin: 0 auto;
@@ -7,10 +9,16 @@
     margin-bottom: 1.25rem;
     border: 1px solid black;
     border-radius: 10px;
+    background: #00bcd4;
 
     &-title {
       margin-bottom: 0.938rem;
       font-weight: bold;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
     }
 
     table {
