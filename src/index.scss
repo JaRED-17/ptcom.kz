@@ -17,22 +17,23 @@ code {
 }
 
 a {
+  text-decoration: none;
+
   &.white-link {
-    color: white;
-    text-decoration: none;
+    color: var(--text-color-white);
+
+    &:hover {
+      color: var(--text-color-gray);
+    }
   }
   &.grey-link {
-    color: #696969;
+    color: var(--text-color-gray);
 
     &:hover {
-      text-decoration: none;
+      color: var(--text-color-white);
     }
   }
-  &.blue-link {
-    color: #21b6ee;
-
-    &:hover {
-      text-decoration: none;
-    }
+  &.orange-link {
+    color: var(--text-color-orange);
   }
 }

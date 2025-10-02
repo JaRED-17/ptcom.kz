@@ -37,7 +37,7 @@ const StyleGuide = () => {
         <p>p example</p>
         <a className='white-link' href='#'>white link example</a>
         <a className='grey-link' href='#'>grey link example</a>
-        <a className='blue-link' href='#'>blue link example</a>
+        <a className='orange-link' href='#'>orange link example</a>
       </StyleGuideBlock>
       <StyleGuideBlock title='Font sizes'>
         {(() => {

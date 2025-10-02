@@ -9,24 +9,34 @@ const Footer = () => {
 
   return (
     <div className='footer'>
-      <div className='footer__block footer_about-us'>
-        <h3>{message('about-us.title')}</h3>
-        <p>{message('about-us.text')}</p>
-      </div>
-      <div className='footer__block footer_contacts'>
-        <h3>{message('contacts.title')}</h3>
-        <Markdown text={message('contacts.text')} />
-      </div>
-      <div className='footer__block footer_address'>
-        <h3>{message('address.title')}</h3>
-        <p>{message('address.text')}</p>
-      </div>
-      <div className='footer__block footer_navigation'>
-        <h3>{message('navigation.title')}</h3>
-        <Markdown
-          childrenClassName={{target: 'link', className: 'white-link'}}
-          text={message('navigation.text')}
-        />
+      <div className='footer__content'>
+        <div className='footer__block footer_about-us'>
+          <h4 className='footer__block-header'>
+            {message('about-us.title')}
+          </h4>
+          <p>{message('about-us.text')}</p>
+        </div>
+        <div className='footer__block footer_contacts'>
+          <h4 className='footer__block-header'>
+            {message('contacts.title')}
+          </h4>
+          <Markdown text={message('contacts.text')} />
+        </div>
+        <div className='footer__block footer_address'>
+          <h4 className='footer__block-header'>
+            {message('address.title')}
+          </h4>
+          <p>{message('address.text')}</p>
+        </div>
+        <div className='footer__block footer_navigation'>
+          <h4 className='footer__block-header'>
+            {message('navigation.title')}
+          </h4>
+          <Markdown
+            childrenClassName={{target: 'link', className: 'grey-link'}}
+            text={message('navigation.text')}
+          />
+        </div>
       </div>
     </div>
   )

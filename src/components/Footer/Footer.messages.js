@@ -15,7 +15,7 @@ export default defineMessages({
   },
   'app.footer.contacts.text': {
     id: 'app.footer.contacts.text',
-    defaultMessage: '+7 7152 63 00 47\n\n+7 777 536 95 55\n\n+7 771 081 18 86'
+    defaultMessage: '+7 7152 63 00 47\n\n+7 771 081 18 86'
   },
   'app.footer.address.title': {
     id: 'app.footer.address.title',
