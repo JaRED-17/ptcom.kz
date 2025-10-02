@@ -9,20 +9,20 @@ const Footer = () => {
 
   return (
     <div className='footer'>
-      <div className='footer_1'>
-        <h1>{message('about-us.title')}</h1>
+      <div className='footer__block footer_about-us'>
+        <h3>{message('about-us.title')}</h3>
         <p>{message('about-us.text')}</p>
       </div>
-      <div className='footer_2'>
-        <h1>{message('contacts.title')}</h1>
+      <div className='footer__block footer_contacts'>
+        <h3>{message('contacts.title')}</h3>
         <Markdown text={message('contacts.text')} />
       </div>
-      <div className='footer_3'>
-        <h1>{message('address.title')}</h1>
+      <div className='footer__block footer_address'>
+        <h3>{message('address.title')}</h3>
         <p>{message('address.text')}</p>
       </div>
-      <div className='footer_4'>
-        <h1>{message('navigation.title')}</h1>
+      <div className='footer__block footer_navigation'>
+        <h3>{message('navigation.title')}</h3>
         <Markdown
           childrenClassName={{target: 'link', className: 'white-link'}}
           text={message('navigation.text')}

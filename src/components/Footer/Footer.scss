@@ -1,4 +1,16 @@
 .footer {
   display: flex;
   background: #29333a;
+  gap: 1.25rem;
+  padding: 1.25rem;
+
+  &__block {
+    flex-basis: 25%;
+    text-align: left;
+  }
+
+  &_navigation {
+    display: flex;
+    flex-direction: column;
+  }
 }
