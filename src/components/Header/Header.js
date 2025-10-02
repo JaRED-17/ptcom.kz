@@ -23,11 +23,23 @@ const Header = () => {
         <Markdown text={message('title')} />
       </div>
       <div className='header__contacts'>
-        <Markdown inline text={message('contact.astana')} />
-        <Markdown inline text={message('contact.almaty')} />
-        <Markdown inline text={message('contact.petropavl')} />
+        <Markdown
+          childrenClassName={{target: 'link', className: 'white-link'}}
+          text={message('contact.astana')}
+        />
+        <Markdown
+          childrenClassName={{target: 'link', className: 'white-link'}}
+          text={message('contact.almaty')}
+        />
+        <Markdown
+          childrenClassName={{target: 'link', className: 'white-link'}}
+          text={message('contact.petropavl')}
+        />
         <div className='mailto'>
-          <Markdown inline text={message('contact.email')} />
+          <Markdown
+            childrenClassName={{target: 'link', className: 'white-link'}}
+            text={message('contact.email')}
+          />
         </div>
       </div>
     </header>

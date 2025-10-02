@@ -4,7 +4,7 @@ import messages from './Footer.messages'
 import setMessages from '../../helpers/setMessages'
 import Markdown from '../Markdown'
 
-const Header = () => {
+const Footer = () => {
   const message = setMessages(messages, 'app.footer.')
 
   return (
@@ -23,10 +23,13 @@ const Header = () => {
       </div>
       <div className='footer_4'>
         <h1>{message('navigation.title')}</h1>
-        <Markdown text={message('navigation.text')} />
+        <Markdown
+          childrenClassName={{target: 'link', className: 'white-link'}}
+          text={message('navigation.text')}
+        />
       </div>
     </div>
   )
 }
 
-export default Header
+export default Footer
