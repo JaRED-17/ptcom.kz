@@ -21,7 +21,7 @@ StyleGuideBlock.propTypes = {
 const StyleGuide = () => {
   return (
     <div className='style-guide'>
-      <StyleGuideBlock title='Tags block'>
+      <StyleGuideBlock title='H block'>
         <h1>H1 example</h1>
         <h2>H2 example</h2>
         <h3>H3 example</h3>
@@ -29,7 +29,7 @@ const StyleGuide = () => {
         <h5>H5 example</h5>
         <h6>H6 example</h6>
       </StyleGuideBlock>
-      <StyleGuideBlock title='H block'>
+      <StyleGuideBlock title='Tags block'>
         <p>p example</p>
         <a href='#'>a example</a>
       </StyleGuideBlock>
@@ -43,16 +43,24 @@ const StyleGuide = () => {
 
           return (
             <table>
-              {arr.map((size, index) => (
-                <tr key={index}>
-                  <td style={{ fontSize: `${size}px` }}>
-                    {`Font site example (${size}px)`}
-                  </td>
-                  <td>
-                    {`${(size / 16).toFixed(3)}rem`}
-                  </td>
+              <thead>
+                <tr>
+                  <th>{'Font size (px)'}</th>
+                  <th>{'Font size (rem)'}</th>
                 </tr>
-              ))}
+              </thead>
+              <tbody>
+                {arr.map((size, index) => (
+                  <tr key={index}>
+                    <td style={{ fontSize: `${size}px` }}>
+                      {`Example (${size}px)`}
+                    </td>
+                    <td>
+                      {`${(size / 16).toFixed(3)}rem`}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
             </table>
           )
         })()}

@@ -3,19 +3,24 @@
   margin: 0 auto;
 
   &__block {
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
     border: 1px solid black;
     border-radius: 10px;
+
+    &-title {
+      margin-bottom: 0.938rem;
+      font-weight: bold;
+    }
 
     table {
       width: 100%;
 
-      td {
+      td, th {
         width: 50%;
         text-align: left;
         border: 1px solid black;
-        padding: 5px;
+        padding: 0.313rem;
       }
     }
   }
