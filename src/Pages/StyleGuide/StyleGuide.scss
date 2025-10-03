@@ -36,10 +36,13 @@
     }
 
     .color-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       border-radius: 10px;
       border: 1px solid black;
       overflow: hidden;
-      width: calc(50% - 10px);
+      width: calc(33% - 10px);
 
       &__name {
         padding: 0.75rem;
@@ -47,6 +50,7 @@
 
       &__example {
         height: 40px;
+        width: 100%;
       }
     }
   }

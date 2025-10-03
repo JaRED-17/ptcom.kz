@@ -41,27 +41,29 @@ const StyleGuide = () => {
       <StyleGuideBlock title='Colors'>
         <div className={'color-blocks'}>
           {(() => {
-            const colors = [
-              '--body-background',
-              '--body-color',
-              '--text-color-white',
-              '--text-color-gray',
-              '--text-color-orange',
-              '--button-primary-color',
-              '--button-primary-background',
-              '--button-primary-background-hover',
-              '--button-primary-border',
-              '--button-secondary-color',
-              '--button-secondary-background',
-              '--button-secondary-background-hover',
-              '--custom-button-border',
-              '--custom-button-text',
-              '--custom-button-background',
-              '--custom-button-background-hover',
-              '--block-primary-border'
-            ]
+            const getRootCSSVariables = () => {
+              const cssVars = []
 
-            return colors.map(color => <ColorBlock name={color} />)
+              for (const sheet of document.styleSheets) {
+                try {
+                  for (const rule of sheet.cssRules) {
+                    if (rule.selectorText === ':root') {
+                      for (const prop of rule.style) {
+                        if (prop.startsWith('--') && !cssVars.includes(prop)) {
+                          cssVars.push(prop)
+                        }
+                      }
+                    }
+                  }
+                } catch (e) {
+                  continue
+                }
+              }
+
+              return cssVars
+            }
+
+            return getRootCSSVariables().map(color => <ColorBlock name={color} />)
           })()}
         </div>
       </StyleGuideBlock>
