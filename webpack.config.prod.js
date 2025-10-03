@@ -1,8 +1,8 @@
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 
 module.exports = {
@@ -11,7 +11,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: '[name]-[hash]-bundle.js',
-    clean: true
+    clean: true,
+    publicPath: '/'
   },
   optimization: {
     splitChunks: {
@@ -49,10 +50,7 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: [
-            ['@babel/plugin-proposal-decorators', { 'legacy': true }],
-            ['@babel/plugin-proposal-class-properties', { 'loose': false }]
-          ]
+          plugins: ['@babel/plugin-proposal-class-properties']
         }
       },
       {

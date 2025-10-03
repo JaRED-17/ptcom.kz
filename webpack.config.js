@@ -8,6 +8,7 @@ const TerserWebpackPlugin = require('terser-webpack-plugin')
 module.exports = {
   entry: './src/index.js',
   mode: 'development',
+  devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name]-[hash]-bundle.js',
