@@ -1,18 +1,11 @@
 @import './../../vars';
+@import './../../mixins';
 
 .header {
   position: sticky;
   top: 0;
   padding: 0.938rem 1rem;
-
-  @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
-    & {
-      background: color-mix(in srgb, var(--body-background) 85%, transparent);
-      -webkit-backdrop-filter: saturate(180%) blur(16px);
-      backdrop-filter: saturate(180%) blur(16px);
-      transition: background-color 320ms ease;
-    }
-  }
+  @include glass;
 
   &__content {
     display: flex;

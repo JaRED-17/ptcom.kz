@@ -4,12 +4,13 @@ import logo from '../../media/Logo.png'
 import Markdown from '../Markdown'
 import messages from './Header.messages'
 import setMessages from '../../helpers/setMessages'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Button from '../Button'
+import withRoute from '../../helpers/withRoute'
+import PropTypes from 'prop-types'
 
-const Header = () => {
+const Header = ({ navigate }) => {
   const message = setMessages(messages, 'app.header.')
-  const navigate = useNavigate()
 
   return (
     <header className='header'>
@@ -40,4 +41,8 @@ const Header = () => {
   )
 }
 
-export default Header
+Header.propTypes = {
+  navigate: PropTypes.object
+}
+
+export default withRoute(Header)
