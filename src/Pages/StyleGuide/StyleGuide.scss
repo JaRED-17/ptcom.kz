@@ -29,5 +29,25 @@
         padding: 0.313rem;
       }
     }
+    .color-blocks {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .color-block {
+      border-radius: 10px;
+      border: 1px solid black;
+      overflow: hidden;
+      width: calc(50% - 10px);
+
+      &__name {
+        padding: 0.75rem;
+      }
+
+      &__example {
+        height: 40px;
+      }
+    }
   }
 }
