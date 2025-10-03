@@ -1,7 +1,9 @@
 @import './../../vars';
+@import './../../mixins';
 
 .footer {
   padding: 1.25rem 1rem 12.5rem;
+  @include glass;
 
   &__content {
     display: flex;
