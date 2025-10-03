@@ -8,6 +8,16 @@
     &--block {
       max-width: 500px;
       margin-right: auto;
+
+      &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

@@ -42,7 +42,7 @@ const Home = ({ navigate }) => {
       <div className='backgrounds curve-turquoise' />
       <div className='backgrounds curve-orange-bottom-1' />
       <div className='backgrounds curve-orange-bottom-2' />
-      <div className='backgrounds trains' />
+      <div className='backgrounds trains trains-home' />
     </div>
   )
 }

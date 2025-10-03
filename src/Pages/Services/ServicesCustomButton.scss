@@ -1,0 +1,16 @@
+.services__custom-button {
+  border: 3px solid var(--custom-button-border);
+  border-radius: 16px;
+  background-color: var(--custom-button-background);
+  color: var(--custom-button-text);
+  max-width: 200px;
+  min-width: 200px;
+  height: 55px;
+  padding: 0.625rem;
+
+  &-text {
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

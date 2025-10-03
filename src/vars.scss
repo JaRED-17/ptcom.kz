@@ -63,7 +63,7 @@ $size-xs: 480px;
 
   --text-color-white: #fff;
   --text-color-gray: #c2c3c6;
-  --text-color-orange: #b0511b;
+  --text-color-orange: #fe5e00;
 
   --buttom-primary-color: var(--body-color);
   --buttom-primary-background: var(--body-background);
@@ -72,7 +72,11 @@ $size-xs: 480px;
 
   --buttom-secondary-color: var(--body-color);
   --buttom-secondary-background: linear-gradient(200deg, #cb2c4b, #f58634);
-  --buttom-secondary-background-hover: linear-gradient(200deg, #f58634, #cb2c4b); ;
+  --buttom-secondary-background-hover: linear-gradient(200deg, #f58634, #cb2c4b);
+
+  --custom-button-border: #fe5e00;
+  --custom-button-text: #fe5e00;
+  --custom-button-background: #fff;
 
   --block-primary-border: black;
 
