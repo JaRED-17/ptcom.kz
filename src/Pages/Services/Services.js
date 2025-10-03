@@ -15,12 +15,36 @@ const Services = () => {
             <h1>{message('title')}</h1>
           </div>
           <div className={'services__content--block__buttons'}>
-            <ServicesCustomButton icon={'wagons'} text={message('provideWagons')} to={'/'} />
-            <ServicesCustomButton icon={'wagons'} text={message('railwaysPays')} to={'/'} />
-            <ServicesCustomButton icon={'wagons'} text={message('ways')} to={'/'} />
-            <ServicesCustomButton icon={'wagons'} text={message('developmentSchemes')} to={'/'} />
-            <ServicesCustomButton icon={'wagons'} text={message('cargoReloading')} to={'/'} />
-            <ServicesCustomButton icon={'wagons'} text={message('cargoHandling')} to={'/'} />
+            <ServicesCustomButton
+              icon={'wagons'}
+              text={message('provideWagons')}
+              to={'/services/provide-wagons'}
+            />
+            <ServicesCustomButton
+              icon={'shield'}
+              text={message('railwaysPays')}
+              to={'/services/railways-pays'}
+            />
+            <ServicesCustomButton
+              icon={'railways'}
+              text={message('ways')}
+              to={'/services/ways'}
+            />
+            <ServicesCustomButton
+              icon={'scheme'}
+              text={message('developmentSchemes')}
+              to={'/services/development-schemes'}
+            />
+            <ServicesCustomButton
+              icon={'cells'}
+              text={message('cargoReloading')}
+              to={'/services/cargo-reloading'}
+            />
+            <ServicesCustomButton
+              icon={'cargoHandling'}
+              text={message('cargoHandling')}
+              to={'/services/cargo-handling'}
+            />
           </div>
         </div>
       </div>

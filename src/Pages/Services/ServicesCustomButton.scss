@@ -1,4 +1,6 @@
 .services__custom-button {
+  display: flex;
+  justify-content: space-between;
   border: 3px solid var(--custom-button-border);
   border-radius: 16px;
   background-color: var(--custom-button-background);
@@ -9,10 +11,17 @@
   padding: 0.625rem;
   transition: background-color .5s;
 
+  &-icon {
+    height: auto;
+    width: 70px;
+  }
+
   &-text {
     text-align: right;
     text-transform: uppercase;
     font-weight: bold;
+    max-width: 120px;
+    font-size: 0.75rem;
   }
 
   &:hover {
