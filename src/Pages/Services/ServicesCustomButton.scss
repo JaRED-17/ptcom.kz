@@ -7,10 +7,16 @@
   min-width: 200px;
   height: 55px;
   padding: 0.625rem;
+  transition: background-color .5s;
 
   &-text {
     text-align: right;
     text-transform: uppercase;
     font-weight: bold;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--custom-button-background-hover);
   }
 }
