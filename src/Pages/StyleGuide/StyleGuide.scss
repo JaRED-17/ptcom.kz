@@ -1,3 +1,6 @@
+@import './../../vars';
+@import './../../mixins';
+
 .style-guide {
   max-width: 768px;
   margin: 0 auto;
@@ -8,6 +11,7 @@
     border: 1px solid var(--block-primary-border);
     border-radius: 10px;
     box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, .2);
+    @include glass;
 
     &-title {
       margin-bottom: 0.938rem;
