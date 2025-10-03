@@ -63,7 +63,7 @@ const StyleGuide = () => {
               return cssVars
             }
 
-            return getRootCSSVariables().map(color => <ColorBlock name={color} />)
+            return getRootCSSVariables().map((color, index) => <ColorBlock key={index} name={color} />)
           })()}
         </div>
       </StyleGuideBlock>
