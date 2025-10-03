@@ -11,7 +11,7 @@ export default defineMessages({
   },
   'app.page.services.railwaysPays': {
     id: 'app.page.services.railwaysPays',
-    defaultMessage: 'Оплата ДЖ тарифов'
+    defaultMessage: 'Оплата ЖД тарифов'
   },
   'app.page.services.ways': {
     id: 'app.page.services.ways',
