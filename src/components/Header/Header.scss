@@ -1,8 +1,9 @@
+@import './../../vars';
+
 .header {
   position: sticky;
   top: 0;
-  min-width: 1024px;
-  padding: 0.938rem 0;
+  padding: 0.938rem 1rem;
 
   @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
     & {
@@ -16,9 +17,9 @@
   &__content {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2.813rem;
-    max-width: 1600px;
+    max-width: $size-ml;
     margin: 0 auto;
   }
 
@@ -28,6 +29,12 @@
 
     &-img {
       width: 200px;
+    }
+  }
+
+  &__navigation {
+    a:not(:last-child) {
+      margin-right: 2rem;
     }
   }
 }
