@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 const Markdown = ({text, inline, childrenClassName}) => {
   const getComponents = (inline, childrenClassName) => {
@@ -13,7 +14,7 @@ const Markdown = ({text, inline, childrenClassName}) => {
     if (childrenClassName) {
       return childrenClassName.target === 'link' ? {
         p: ({ children }) => <>{children}</>,
-        a: ({ children, href }) => <a href={href} className={childrenClassName.className}>{children}</a>
+        a: ({ children, href }) => <Link to={href} className={childrenClassName.className}>{children}</Link>
       } : {
         p: ({ children }) => <p className={childrenClassName.className}>{children}</p>
       }
