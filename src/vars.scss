@@ -65,14 +65,14 @@ $size-xs: 480px;
   --text-color-gray: #c2c3c6;
   --text-color-orange: #fe5e00;
 
-  --buttom-primary-color: var(--body-color);
-  --buttom-primary-background: var(--body-background);
-  --buttom-primary-background-hover: #434953;
-  --buttom-primary-border: black;
+  --button-primary-color: var(--body-color);
+  --button-primary-background: var(--body-background);
+  --button-primary-background-hover: #434953;
+  --button-primary-border: black;
 
-  --buttom-secondary-color: var(--body-color);
-  --buttom-secondary-background: linear-gradient(200deg, #cb2c4b, #f58634);
-  --buttom-secondary-background-hover: linear-gradient(200deg, #f58634, #cb2c4b);
+  --button-secondary-color: var(--body-color);
+  --button-secondary-background: linear-gradient(200deg, #cb2c4b, #f58634);
+  --button-secondary-background-hover: linear-gradient(200deg, #f58634, #cb2c4b);
 
   --custom-button-border: #fe5e00;
   --custom-button-text: #fe5e00;
@@ -80,5 +80,4 @@ $size-xs: 480px;
   --custom-button-background-hover: #c2c3c6;
 
   --block-primary-border: black;
-
 }
