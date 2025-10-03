@@ -23,7 +23,7 @@ const ColorBlock = ({ name }) => {
   return (
     <div className={'color-block'}>
       <div className={'color-block__name'}>{name}</div>
-      <div className={'color-block__example'} style={{ backgroundColor: `var(${name})` }} />
+      <div className={'color-block__example'} style={{ background: `var(${name})` }} />
     </div>
   )
 }
