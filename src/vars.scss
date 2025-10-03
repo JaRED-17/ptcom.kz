@@ -1,3 +1,62 @@
+$size-xl: 1920px;
+$size-lg: 1440px;
+$size-ml: 1280px;
+$size-md: 1024px;
+$size-sm: 767px;
+$size-xs: 480px;
+
+@mixin media($max, $min: null) {
+  @if ($min == null) {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else if($max == null) {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $max) and (min-width: $min) {
+      @content;
+    }
+  }
+}
+@mixin media-xl {
+  @media (max-width: $size-xl) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media (max-width: $size-lg) {
+    @content;
+  }
+}
+@mixin media-ml {
+  @media (max-width: $size-ml) {
+    @content;
+  }
+}
+@mixin media-md {
+  @media (max-width: $size-md) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media (max-width: $size-sm) {
+    @content;
+  }
+}
+@mixin media-xs {
+  @media (max-width: $size-xs) {
+    @content;
+  }
+}
+@mixin media-sm-landscape {
+  @media (max-width: $size-sm) and (orientation: landscape) {
+    @content;
+  }
+}
+
 :root {
   --body-background: #383d45;
   --body-color: #fff;
@@ -11,10 +70,3 @@
   --text-color-gray: #c2c3c6;
   --text-color-orange: #b0511b;
 }
-
-$size-xl: 1920px;
-$size-lg: 1440px;
-$size-ml: 1280px;
-$size-md: 1024px;
-$size-sm: 767px;
-$size-xs: 480px;
