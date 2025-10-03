@@ -8,9 +8,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
-  background-image: url('./media/background.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 
 code {
@@ -40,7 +37,7 @@ a {
   }
 }
 .backgrounds {
-  position: absolute;
+  position: fixed;
   z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
@@ -85,14 +82,11 @@ a {
 
   }
   &.trains {
-    position: absolute;
     top: 0;
     right: 0;
     width: 507px;
     height: 100%;
     background-image: url('./media/trains.png');
-    background-size: cover;
-    background-repeat: no-repeat;
     z-index: -2;
   }
 }
