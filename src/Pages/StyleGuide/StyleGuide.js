@@ -104,7 +104,7 @@ const StyleGuide = () => {
                       {`Example (${size}px)`}
                     </td>
                     <td>
-                      {`${(size / 16).toFixed(3)}rem`}
+                      {`${parseFloat((size / 16).toFixed(3))}rem`}
                     </td>
                   </tr>
                 ))}
