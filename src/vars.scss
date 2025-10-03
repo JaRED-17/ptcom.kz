@@ -61,14 +61,19 @@ $size-xs: 480px;
   --body-background: #383d45;
   --body-color: #fff;
 
+  --text-color-white: #fff;
+  --text-color-gray: #c2c3c6;
+  --text-color-orange: #b0511b;
+
   --buttom-primary-color: var(--body-color);
   --buttom-primary-background: var(--body-background);
   --buttom-primary-background-hover: #434953;
   --buttom-primary-border: black;
 
+  --buttom-secondary-color: var(--body-color);
+  --buttom-secondary-background: linear-gradient(200deg, #cb2c4b, #f58634);
+  --buttom-secondary-background-hover: linear-gradient(200deg, #f58634, #cb2c4b); ;
+
   --block-primary-border: black;
 
-  --text-color-white: #fff;
-  --text-color-gray: #c2c3c6;
-  --text-color-orange: #b0511b;
 }
