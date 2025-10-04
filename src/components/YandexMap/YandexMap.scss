@@ -1,0 +1,24 @@
+.yandex-map {
+  &__content {
+    position: relative;
+    overflow: hidden;
+
+    &--link-1 {
+      color: #eee;
+      font-size: 12px;
+      position: absolute;
+      top: 0px;
+    }
+
+    &--link-2 {
+      color: #eee;
+      font-size: 12px;
+      position: absolute;
+      top: 14px;
+    }
+
+    .iframe {
+      position: relative;
+    }
+  }
+}
