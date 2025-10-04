@@ -1,6 +1,7 @@
 import React from 'react'
 import './ContactBlock.scss'
 import PropTypes from 'prop-types'
+import Markdown from '../../components/Markdown'
 
 const ContactBlock = ({ name, position, contact }) => {
   return (
@@ -9,11 +10,11 @@ const ContactBlock = ({ name, position, contact }) => {
       <div className={'contact-block__name'}>
         {name}
       </div>
-      <div className={'contact-block__position'}>
+      <p className={'contact-block__position'}>
         {position}
-      </div>
+      </p>
       <div className={'contact-block__contact'}>
-        {contact}
+        <Markdown childrenClassName={{target: 'link', className: 'white-link'}} text={contact} />
       </div>
     </div>
   )

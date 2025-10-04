@@ -15,13 +15,13 @@ const Contacts = () => {
             <h1>{message('title')}</h1>
           </div>
           <div className={'contacts__content--block__contacts'}>
-            <ContactBlock name={'Евгения Владимировна Криворучко'} position={'Бухгалтер по налогам'} contact={'Внутренний номер 315 evgedsha_petr@mail.ru'} />
-            <ContactBlock name={'Евгения Владимировна Криворучко'} position={'Бухгалтер по налогам'} contact={'Внутренний номер 315 evgedsha_petr@mail.ru'} />
-            <ContactBlock name={'Евгения Владимировна Криворучко'} position={'Бухгалтер по налогам'} contact={'Внутренний номер 315 evgedsha_petr@mail.ru'} />
-            <ContactBlock name={'Евгения Владимировна Криворучко'} position={'Бухгалтер по налогам'} contact={'Внутренний номер 315 evgedsha_petr@mail.ru'} />
-            <ContactBlock name={'Евгения Владимировна Криворучко'} position={'Бухгалтер по налогам'} contact={'Внутренний номер 315 evgedsha_petr@mail.ru'} />
-            <ContactBlock name={'Евгения Владимировна Криворучко'} position={'Бухгалтер по налогам'} contact={'Внутренний номер 315 evgedsha_petr@mail.ru'} />
-            <ContactBlock name={'Евгения Владимировна Криворучко'} position={'Бухгалтер по налогам'} contact={'Внутренний номер 315 evgedsha_petr@mail.ru'} />
+            <ContactBlock name={message('name1')} position={message('position1')} contact={message('contact1')} />
+            <ContactBlock name={message('name1')} position={message('position1')} contact={message('contact1')} />
+            <ContactBlock name={message('name1')} position={message('position1')} contact={message('contact1')} />
+            <ContactBlock name={message('name1')} position={message('position1')} contact={message('contact1')} />
+            <ContactBlock name={message('name1')} position={message('position1')} contact={message('contact1')} />
+            <ContactBlock name={message('name1')} position={message('position1')} contact={message('contact1')} />
+            <ContactBlock name={message('name1')} position={message('position1')} contact={message('contact1')} />
           </div>
         </div>
       </div>

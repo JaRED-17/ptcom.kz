@@ -1,1 +1,15 @@
-.contact-block {}
+.contact-block {
+  max-width: 25%;
+
+  &__icon {
+    width: 20px;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__position {
+    color: var(--text-color-orange);
+  }
+}
