@@ -2,19 +2,22 @@
   &__content {
     position: relative;
     overflow: hidden;
+    margin-top: 1rem;
 
     &--link-1 {
-      color: #eee;
+      color: black;
       font-size: 12px;
       position: absolute;
-      top: 0px;
+      top: 10px;
+      left: 10px;
     }
 
     &--link-2 {
-      color: #eee;
+      color: black;
       font-size: 12px;
       position: absolute;
-      top: 14px;
+      top: 30px;
+      left: 10px;
     }
 
     .iframe {
