@@ -48,21 +48,21 @@ a {
       right: 0;
       width: 570px;
       height: calc(100% + 42px);
-      background-image: url('./media/curve-orange-1.png');
+      background-image: url('./media/page-backgrounds/curve-orange-1.png');
     }
     &-orange-2 {
       bottom: 0;
       right: 275px;
       width: 220px;
       height: 50%;
-      background-image: url('./media/curve-orange-2.png');
+      background-image: url('./media/page-backgrounds/curve-orange-2.png');
     }
     &-turquoise {
       bottom: 0;
       right: 0;
       width: 576px;
       height: 100%;
-      background-image: url('./media/curve-turquoise.png');
+      background-image: url('./media/page-backgrounds/curve-turquoise.png');
     }
 
     &-orange-bottom-1 {
@@ -70,14 +70,14 @@ a {
       left: 0;
       width: 461px;
       height: 273px;
-      background-image: url('./media/curve-orange-bottom-1.png');
+      background-image: url('./media/page-backgrounds/curve-orange-bottom-1.png');
     }
     &-orange-bottom-2 {
       bottom: 236px;
       left: 0;
       width: 224px;
       height: 177px;
-      background-image: url('./media/curve-orange-bottom-2.png');
+      background-image: url('./media/page-backgrounds/curve-orange-bottom-2.png');
     }
 
   }
@@ -89,10 +89,10 @@ a {
     z-index: -2;
 
     &-home {
-      background-image: url('./media/trains-home.png');
+      background-image: url('./media/page-backgrounds/trains-home.png');
     }
     &-services {
-      background-image: url('./media/trains-services.png');
+      background-image: url('./media/page-backgrounds/trains-services.png');
     }
   }
 }
