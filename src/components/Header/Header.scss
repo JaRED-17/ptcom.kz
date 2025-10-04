@@ -6,6 +6,7 @@
   top: 0;
   padding: 0.938rem 1rem;
   @include glass;
+  z-index: 10;
 
   &__content {
     display: flex;
