@@ -7,7 +7,7 @@ export default defineMessages({
   },
   'app.page.contacts.hint': {
     id: 'app.page.contacts.hint',
-    defaultMessage: 'Для того, чтобы получить интересующую вас в компании "Петропавл Экспресс Логистика" информация свяжитесь с нами по удобным для вас телефонам'
+    defaultMessage: 'Для того, чтобы получить интересующую вас в компании «Петропавл Экспресс Логистика» информация свяжитесь с нами по удобным для вас телефонам'
   },
   'app.page.contacts.astana.title': {
     id: 'app.page.contacts.astana.title',
@@ -47,7 +47,7 @@ export default defineMessages({
   },
   'app.page.contacts.address.text': {
     id: 'app.page.contacts.address.text',
-    defaultMessage: 'Товарищество с ограниченной ответственностью "Петропавл Экспресс Логистика" Казахстан, Северо-Казахстанская облась, г. Петропавловск, ул. Сатпаева, 46'
+    defaultMessage: 'Товарищество с ограниченной ответственностью «Петропавл Экспресс Логистика» Казахстан, Северо-Казахстанская облась, г. Петропавловск, ул. Сатпаева, 46'
   },
   'app.page.contacts.list.name1': {
     id: 'app.page.contacts.list.name1',
