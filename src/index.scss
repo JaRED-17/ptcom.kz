@@ -36,6 +36,11 @@ a {
     color: var(--text-color-orange);
   }
 }
+
+.text-color-gray {
+  color: var(--text-color-gray);
+}
+
 .backgrounds {
   position: fixed;
   z-index: -1;

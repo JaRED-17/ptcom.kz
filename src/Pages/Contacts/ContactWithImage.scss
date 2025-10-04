@@ -1,0 +1,14 @@
+.contact-with-image {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__image {
+    width: 75px;
+  }
+
+  &__title {
+    color: var(--text-color-orange);
+    font-weight: bold;
+  }
+}

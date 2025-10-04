@@ -8,12 +8,42 @@
     &--block {
       max-width: 1024px;
       margin-right: auto;
+    }
+  }
 
-      &__contacts {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
+  &-contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+  }
+
+  &-with-image {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &-sipnet {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &__image {
+      height: auto;
+      width: 80px;
+    }
+
+    &__phone-image {
+      height: 30px;
+      width: auto;
+    }
+
+    &__phone-text {
+      font-size: 1.25rem;
+    }
+
+    &__warning {
+      font-size: 0.625rem;
     }
   }
 }
