@@ -9,8 +9,8 @@ const Contacts = () => {
   const message = setMessages(messages, 'app.page.contacts.')
 
   return (
-    <div className='contacts'>
-      <div className='contacts__content'>
+    <div className={'contacts'}>
+      <div className={'contacts__content'}>
         <div className={'contacts__content--block'}>
           <div className={'contacts-title'}>
             <h1>{message('title')}</h1>
@@ -22,8 +22,8 @@ const Contacts = () => {
             <ContactWithImage image={'petropavl'} title={message('petropavl.title')} contact={message('petropavl.contact')} />
           </div>
           <div className={'contacts-sipnet'}>
-            <img className={'contacts-sipnet__image'} src={'../../../media/icons/sipnet.png'} alt='' />
-            <img className={'contacts-sipnet__phone-image'} src={'../../../media/icons/phone.png'} alt='' />
+            <img className={'contacts-sipnet__image'} src={'../../../media/icons/sipnet.png'} alt={''} />
+            <img className={'contacts-sipnet__phone-image'} src={'../../../media/icons/phone.png'} alt={''} />
             <div className={'contacts-sipnet__phone-text'}>{message('sipnet.phone')}</div>
             <div className={'contacts-sipnet__warning text-color-gray'}>{message('sipnet.warning')}</div>
           </div>
@@ -40,7 +40,7 @@ const Contacts = () => {
           </div>
         </div>
       </div>
-      <div className='backgrounds contacts-page' />
+      <div className={'backgrounds contacts-page'} />
     </div>
   )
 }

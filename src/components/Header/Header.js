@@ -13,22 +13,22 @@ const Header = ({ navigate }) => {
   const message = setMessages(messages, 'app.header.')
 
   return (
-    <header className='header'>
-      <div className='header__content'>
-        <div className='header__logo'>
+    <header className={'header'}>
+      <div className={'header__content'}>
+        <div className={'header__logo'}>
           <Link to={'/'}>
-            <img className='header__logo-img' src={logo} alt={message('logo')} />
+            <img className={'header__logo-img'} src={logo} alt={message('logo')} />
           </Link>
         </div>
-        <div className='header__navigation'>
+        <div className={'header__navigation'}>
           <Markdown
             childrenClassName={{target: 'link', className: 'white-link'}}
             text={message('navigation.links')}
           />
         </div>
-        <div className='header__button'>
+        <div className={'header__button'}>
           <Button
-            className='button-primary'
+            className={'button-primary'}
             onClick={() => {
               navigate('/calculation')
             }}

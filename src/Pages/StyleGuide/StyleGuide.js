@@ -5,9 +5,9 @@ import {Helmet} from 'react-helmet'
 
 const StyleGuideBlock = ({title, children}) => {
   return (
-    <div className='style-guide__block'>
-      <div className='style-guide__block-title'>{title}</div>
-      <div className='style-guide__block-content'>
+    <div className={'style-guide__block'}>
+      <div className={'style-guide__block-title'}>{title}</div>
+      <div className={'style-guide__block-content'}>
         {children}
       </div>
     </div>
@@ -34,11 +34,11 @@ ColorBlock.propTypes = {
 
 const StyleGuide = () => {
   return (
-    <div className='style-guide'>
+    <div className={'style-guide'}>
       <Helmet>
         <title>{'Style guide'}</title>
       </Helmet>
-      <StyleGuideBlock title='Colors'>
+      <StyleGuideBlock title={'Colors'}>
         <div className={'color-blocks'}>
           {(() => {
             const getRootCSSVariables = () => {
@@ -67,7 +67,7 @@ const StyleGuide = () => {
           })()}
         </div>
       </StyleGuideBlock>
-      <StyleGuideBlock title='H block'>
+      <StyleGuideBlock title={'H block'}>
         <h1>H1 example</h1>
         <h2>H2 example</h2>
         <h3>H3 example</h3>
@@ -75,13 +75,13 @@ const StyleGuide = () => {
         <h5>H5 example</h5>
         <h6>H6 example</h6>
       </StyleGuideBlock>
-      <StyleGuideBlock title='Tags block'>
+      <StyleGuideBlock title={'Tags block'}>
         <p>p example</p>
-        <a className='white-link' href='#'>white link example</a>
-        <a className='grey-link' href='#'>grey link example</a>
-        <a className='orange-link' href='#'>orange link example</a>
+        <a className={'white-link'} href={'#'}>white link example</a>
+        <a className={'grey-link'} href={'#'}>grey link example</a>
+        <a className={'orange-link'} href={'#'}>orange link example</a>
       </StyleGuideBlock>
-      <StyleGuideBlock title='Font sizes'>
+      <StyleGuideBlock title={'Font sizes'}>
         {(() => {
           const arr = []
 

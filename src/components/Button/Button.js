@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 const Button = ({ onClick = () => {}, children, className }) => {
   return (
     <ButtonUI
-      variant='contained'
+      variant={'contained'}
       className={`button button-default ${className}`}
       onClick={onClick}
     >

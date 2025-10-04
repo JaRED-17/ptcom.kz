@@ -11,7 +11,7 @@ const ServicesCustomButton = ({ navigate, icon, text, to }) => {
         navigate(to)
       }}
     >
-      <img className={'services__custom-button-icon'} src={`../../../media/icons/${icon}.png`} alt='' />
+      <img className={'services__custom-button-icon'} src={`../../../media/icons/${icon}.png`} alt={''} />
       <div className={'services__custom-button-text'}>
         {text}
       </div>

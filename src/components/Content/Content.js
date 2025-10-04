@@ -14,12 +14,12 @@ const Content = () => {
   return (
     <div className={'content'}>
       <Routes>
-        <Route path='/' element={<Home />} exact />
-        <Route path='/company/about' element={<AboutCompany />} exact />
-        <Route path='/services' element={<Services />} exact />
-        <Route path='/contacts' element={<Contacts />} exact />
-        <Route path='/style-guide' element={<StyleGuide />} exact />
-        <Route path='*' element={<PageNotFound />} />
+        <Route path={'/'} element={<Home />} exact />
+        <Route path={'/company/about'} element={<AboutCompany />} exact />
+        <Route path={'/services'} element={<Services />} exact />
+        <Route path={'/contacts'} element={<Contacts />} exact />
+        <Route path={'/style-guide'} element={<StyleGuide />} exact />
+        <Route path={'*'} element={<PageNotFound />} />
       </Routes>
       <div className={'content__background'} />
     </div>

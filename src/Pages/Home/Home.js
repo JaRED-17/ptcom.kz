@@ -19,7 +19,7 @@ const Home = ({ navigate }) => {
           </div>
           <div className={'home__content--buttons'}>
             <Button
-              className='button-secondary button-services'
+              className={'button-secondary button-services'}
               onClick={() => {
                 navigate('/services')
               }}
@@ -27,7 +27,7 @@ const Home = ({ navigate }) => {
               {message('button.services')}
             </Button>
             <Button
-              className='button-secondary button-consultation'
+              className={'button-secondary button-consultation'}
               onClick={() => {
                 navigate('/consultation')
               }}
@@ -37,12 +37,12 @@ const Home = ({ navigate }) => {
           </div>
         </div>
       </div>
-      <div className='backgrounds curve-orange-1' />
-      <div className='backgrounds curve-orange-2' />
-      <div className='backgrounds curve-turquoise' />
-      <div className='backgrounds curve-orange-bottom-1' />
-      <div className='backgrounds curve-orange-bottom-2' />
-      <div className='backgrounds trains trains-home' />
+      <div className={'backgrounds curve-orange-1'} />
+      <div className={'backgrounds curve-orange-2'} />
+      <div className={'backgrounds curve-turquoise'} />
+      <div className={'backgrounds curve-orange-bottom-1'} />
+      <div className={'backgrounds curve-orange-bottom-2'} />
+      <div className={'backgrounds trains trains-home'} />
     </div>
   )
 }
