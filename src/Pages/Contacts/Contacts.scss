@@ -1,0 +1,8 @@
+@import './../../vars';
+
+.contacts {
+  &__content {
+    max-width: $size-ml;
+    margin: 0 auto;
+  }
+}
