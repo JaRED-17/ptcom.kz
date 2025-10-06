@@ -9,5 +9,13 @@
       max-width: 1024px;
       margin-right: auto;
     }
+
+    &--list {
+      display: flex;
+    }
+  }
+
+  &__list1 {
+    margin-right: 2rem;
   }
 }
