@@ -4,7 +4,7 @@ import './Content.scss'
 
 /* Pages */
 import Home from '../../Pages/Home'
-import AboutCompany from '../../Pages/Company/About'
+import AboutUs from '../../Pages/AboutUs'
 import PageNotFound from '../../Pages/PageNotFound'
 import Services from '../../Pages/Services'
 import ProvisionOfWagons from '../../Pages/ProvisionOfWagons'
@@ -17,7 +17,7 @@ const Content = () => {
     <div className={'content'}>
       <Routes>
         <Route path={'/'} element={<Home />} exact />
-        <Route path={'/company/about'} element={<AboutCompany />} exact />
+        <Route path={'/about-us'} element={<AboutUs />} exact />
         <Route path={'/services'} element={<Services />} exact />
         <Route path={'/services/provision-of-wagons'} element={<ProvisionOfWagons />} exact />
         <Route path={'/services/drive-ways'} element={<DriveWays />} exact />
