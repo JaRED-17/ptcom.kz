@@ -37,6 +37,10 @@ export default defineMessages({
     id: 'app.page.consultation.title',
     defaultMessage: 'Консультации'
   },
+  'app.page.calculation.title': {
+    id: 'app.page.calculation.title',
+    defaultMessage: 'Расчет тарифов'
+  },
   'app.page.contacts.title': {
     id: 'app.page.contacts.title',
     defaultMessage: 'Контакты'

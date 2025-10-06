@@ -2,18 +2,18 @@ import React from 'react'
 import './Sitemap.scss'
 import setMessages from '../../helpers/setMessages'
 import messages from './Sitemap.messages'
-import pageTranslations from '../../translations/Pages.messages'
+import pageTitles from '../../translations/PageTitles.messages'
 import data from '../../data/pages.json'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 const SiteMapLink = ({url, name}) => {
-  const pageTranslation = setMessages(pageTranslations, 'app.page.')
+  const pageTitle = setMessages(pageTitles, 'app.page.')
 
   return (
     <li>
       <Link to={url} className={'white-link'}>
-        {pageTranslation(name + '.title')}
+        {pageTitle(name + '.title')}
       </Link>
     </li>
   )

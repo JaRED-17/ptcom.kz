@@ -39,6 +39,10 @@
       "url": "/consultation"
     },
     {
+      "name": "calculation",
+      "url": "/calculation"
+    },
+    {
       "name": "contacts",
       "url": "/contacts"
     }
