@@ -13,6 +13,7 @@ import DriveWays from '../../Pages/DriveWays'
 import Schema from '../../Pages/Schema'
 import HandlingDostyk from '../../Pages/HandlingDostyk'
 import СargoProcessing from '../../Pages/СargoProcessing'
+import Consultation from '../../Pages/Consultation'
 import Contacts from '../../Pages/Contacts'
 import Sitemap from '../../Pages/Sitemap'
 import StyleGuide from '../../Pages/StyleGuide'
@@ -30,6 +31,7 @@ const Content = () => {
         <Route path={'/services/schema'} element={<Schema />} exact />
         <Route path={'/services/handling-dostyk'} element={<HandlingDostyk />} exact />
         <Route path={'/services/cargo-processing'} element={<СargoProcessing />} exact />
+        <Route path={'/consultation'} element={<Consultation />} exact />
         <Route path={'/contacts'} element={<Contacts />} exact />
         <Route path={'/sitemap'} element={<Sitemap />} exact />
         <Route path={'/style-guide'} element={<StyleGuide />} exact />
