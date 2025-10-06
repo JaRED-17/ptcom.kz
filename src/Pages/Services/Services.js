@@ -38,7 +38,7 @@ const Services = () => {
             <ServicesCustomButton
               icon={'cells'}
               text={message('cargoReloading')}
-              to={'/services/cargo-reloading'}
+              to={'/services/handling-dostyk'}
             />
             <ServicesCustomButton
               icon={'cargoHandling'}
