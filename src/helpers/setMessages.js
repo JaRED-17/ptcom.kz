@@ -4,6 +4,8 @@ export default (messages, prefix) => {
   const intl = useIntl()
 
   return (postfix) => {
-    return intl.formatMessage(messages[prefix + postfix])
+    const message = messages[prefix + postfix]
+
+    return message ? intl.formatMessage(message) : prefix + postfix
   }
 }
