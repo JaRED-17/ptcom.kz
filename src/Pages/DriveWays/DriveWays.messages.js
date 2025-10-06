@@ -48,13 +48,5 @@ export default defineMessages({
   'app.page.driveWays.header4': {
     id: 'app.page.driveWays.header4',
     defaultMessage: 'Местоположение подъездного пути на карте'
-  },
-  'app.page.driveWays.header5': {
-    id: 'app.page.driveWays.header5',
-    defaultMessage: 'Наши преимущества'
-  },
-  'app.page.driveWays.services.list5': {
-    id: 'app.page.driveWays.services.list5',
-    defaultMessage: '- качество оказываемых услуг;\n\n- логистика и оперативность;\n\n- индивидуальный подход к каждому клиенту;\n\n- выход на новые рынки;\n\n- дальнейшее повышение оперативной и финансовой эффективности;\n\n- дальнейшее укрепление нашего положения на рынке.'
   }
 })

@@ -4,6 +4,7 @@ import setMessages from '../../helpers/setMessages'
 import messages from './DriveWays.messages'
 import YandexMap from '../../components/YandexMap'
 import Markdown from '../../components/Markdown'
+import OurAdvantages from '../../components/OurAdvantages'
 
 const DriveWays = () => {
   const classNamePrefix = 'drive-ways'
@@ -33,8 +34,7 @@ const DriveWays = () => {
           <p className={'text-color-orange text-bolt text-header'}>{message('header4')}</p>
           <YandexMap />
 
-          <p className={'text-color-orange text-bolt text-header'}>{message('header5')}</p>
-          <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('services.list5')} />
+          <OurAdvantages />
         </div>
       </div>
       <div className={'backgrounds drive-ways-background'} />
