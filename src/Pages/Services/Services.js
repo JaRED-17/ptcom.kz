@@ -28,7 +28,7 @@ const Services = () => {
             <ServicesCustomButton
               icon={'railways'}
               text={message('ways')}
-              to={'/services/ways'}
+              to={'/services/drive-ways'}
             />
             <ServicesCustomButton
               icon={'scheme'}
