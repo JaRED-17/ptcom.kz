@@ -2,7 +2,25 @@
   "pages": [
     {
       "name": "aboutUs",
-      "url": "/about-us"
+      "url": "/about-us",
+      "entries": [
+        {
+          "name": "staffs",
+          "url": "/company/staffs"
+        },
+        {
+          "name": "news",
+          "url": "/company/news"
+        },
+        {
+          "name": "licenses",
+          "url": "/company/licenses"
+        },
+        {
+          "name": "vacancies",
+          "url": "/company/vacancies"
+        }
+      ]
     },
     {
       "name": "services",
@@ -36,7 +54,25 @@
     },
     {
       "name": "consultation",
-      "url": "/consultation"
+      "url": "/consultation",
+      "entries": [
+        {
+          "name": "dangerousGoods",
+          "url": "/consultation/dangerous-goods"
+        },
+        {
+          "name": "containers",
+          "url": "/consultation/containers"
+        },
+        {
+          "name": "wagons",
+          "url": "/consultation/wagons"
+        },
+        {
+          "name": "wagonsTypes",
+          "url": "/consultation/wagons-types"
+        }
+      ]
     },
     {
       "name": "calculation",
