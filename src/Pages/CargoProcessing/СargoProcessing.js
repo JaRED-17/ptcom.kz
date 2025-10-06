@@ -5,9 +5,9 @@ import messages from './СargoProcessing.messages'
 import Markdown from '../../components/Markdown'
 import OurAdvantages from '../../components/OurAdvantages'
 
-const СargoProcessing = () => {
+const CargoProcessing = () => {
   const classNamePrefix = 'cargo-processing'
-  const message = setMessages(messages, 'app.page.сargoProcessing.')
+  const message = setMessages(messages, 'app.page.cargoProcessing.')
 
   return (
     <div className={classNamePrefix}>
@@ -36,4 +36,4 @@ const СargoProcessing = () => {
   )
 }
 
-export default СargoProcessing
+export default CargoProcessing
