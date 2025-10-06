@@ -22,16 +22,16 @@ const DriveWays = () => {
 
           <p className={'text-color-orange text-bolt text-header'}>{message('header1')}</p>
           <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('services.list1')} />
-          <p className={'text-color-gray'}>{message('paragraph3')}</p>
+          <p className={'text-color-orange text-bolt text-header'}>{message('header2')}</p>
           <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('services.list2')} />
 
-          <p className={'text-color-orange text-bolt text-header'}>{message('header2')}</p>
+          <p className={'text-color-orange text-bolt text-header'}>{message('header3')}</p>
           <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('services.list3')} />
 
-          <p className={'text-color-orange text-bolt text-header'}>{message('header3')}</p>
+          <p className={'text-color-orange text-bolt text-header'}>{message('header4')}</p>
           <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('services.list4')} />
 
-          <p className={'text-color-orange text-bolt text-header'}>{message('header4')}</p>
+          <p className={'text-color-orange text-bolt text-header'}>{message('header5')}</p>
           <YandexMap />
 
           <OurAdvantages />
