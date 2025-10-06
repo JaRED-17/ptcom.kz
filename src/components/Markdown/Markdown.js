@@ -12,10 +12,20 @@ const Markdown = ({text, inline, childrenClassName}) => {
     }
 
     if (childrenClassName) {
-      return childrenClassName.target === 'link' ? {
-        p: ({ children }) => <>{children}</>,
-        a: ({ children, href }) => <Link to={href} className={childrenClassName.className}>{children}</Link>
-      } : {
+      if (childrenClassName.target === 'link') {
+        return {
+          p: ({ children }) => <>{children}</>,
+          a: ({ children, href }) => <Link to={href} className={childrenClassName.className}>{children}</Link>
+        }
+      }
+      if (childrenClassName.target === 'list') {
+        return {
+          li: ({ children }) => <li className={childrenClassName.className}>{children}</li>,
+          p: ({ children }) => <>{children}</>
+        }
+      }
+
+      return {
         p: ({ children }) => <p className={childrenClassName.className}>{children}</p>
       }
     }
