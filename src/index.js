@@ -2,9 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.scss'
 import App from './components/App/App'
+import ErrorFallback from './components/ErrorFallback'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
 import { IntlProvider } from 'react-intl'
+import { ErrorBoundary } from 'react-error-boundary'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -20,7 +22,9 @@ root.render(
       }}
     >
       <BrowserRouter>
-        <App />
+        <ErrorBoundary FallbackComponent={ErrorFallback}>
+          <App />
+        </ErrorBoundary>
       </BrowserRouter>
     </IntlProvider>
   </React.StrictMode>
