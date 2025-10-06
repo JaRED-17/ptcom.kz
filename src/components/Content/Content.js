@@ -10,6 +10,7 @@ import Services from '../../Pages/Services'
 import ProvisionOfWagons from '../../Pages/ProvisionOfWagons'
 import PaymentRailwayTariffs from '../../Pages/PaymentRailwayTariffs'
 import DriveWays from '../../Pages/DriveWays'
+import Schema from '../../Pages/Schema'
 import Contacts from '../../Pages/Contacts'
 import StyleGuide from '../../Pages/StyleGuide'
 
@@ -23,6 +24,7 @@ const Content = () => {
         <Route path={'/services/provision-of-wagons'} element={<ProvisionOfWagons />} exact />
         <Route path={'/services/payment-railway-tariffs'} element={<PaymentRailwayTariffs />} exact />
         <Route path={'/services/drive-ways'} element={<DriveWays />} exact />
+        <Route path={'/services/schema'} element={<Schema />} exact />
         <Route path={'/contacts'} element={<Contacts />} exact />
         <Route path={'/style-guide'} element={<StyleGuide />} exact />
         <Route path={'*'} element={<PageNotFound />} />
