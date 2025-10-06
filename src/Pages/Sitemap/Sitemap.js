@@ -2,7 +2,7 @@ import React from 'react'
 import './Sitemap.scss'
 import setMessages from '../../helpers/setMessages'
 import messages from './Sitemap.messages'
-import pageTitles from '../../translations/PageTitles.messages'
+import pageTitles from '../../components/PageTitle/PageTitle.messages'
 import data from '../../data/pages.json'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
@@ -40,14 +40,14 @@ const Sitemap = () => {
                 return pages.map((page, index) => {
                   if (page.entries) {
                     return (
-                      <>
-                        <SiteMapLink key={index} url={page.url} name={page.name} />
-                        <ul key={index} className={`${classNamePrefix}-links sub-links`}>
+                      <div key={index}>
+                        <SiteMapLink url={page.url} name={page.name} />
+                        <ul className={`${classNamePrefix}-links sub-links`}>
                           {(() => {
                             return page.entries.map((page, index) => <SiteMapLink key={index} url={page.url} name={page.name} />)
                           })()}
                         </ul>
-                      </>
+                      </div>
                     )
                   }
 
