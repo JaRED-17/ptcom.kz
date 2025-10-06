@@ -4,6 +4,7 @@ import setMessages from '../../helpers/setMessages'
 import messages from './HandlingDostyk.messages'
 import Markdown from '../../components/Markdown'
 import OurAdvantages from '../../components/OurAdvantages'
+import PageTitle from '../../components/PageTitle'
 
 const HandlingDostyk = () => {
   const classNamePrefix = 'handling-dostyk'
@@ -13,9 +14,7 @@ const HandlingDostyk = () => {
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content--block`}>
-          <div className={`${classNamePrefix}-title`}>
-            <h1>{message('title')}</h1>
-          </div>
+          <PageTitle name={'handlingDostyk'} />
           <p className={'text-color-gray'}>{message('paragraph1')}</p>
           <p className={'text-color-gray'}>{message('paragraph2')}</p>
 

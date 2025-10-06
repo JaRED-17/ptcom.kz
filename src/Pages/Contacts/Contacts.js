@@ -4,6 +4,7 @@ import setMessages from '../../helpers/setMessages'
 import messages from './Contacts.messages'
 import ContactBlock from './ContactBlock'
 import ContactWithImage from './ContactWithImage'
+import PageTitle from '../../components/PageTitle'
 
 const Contacts = () => {
   const message = setMessages(messages, 'app.page.contacts.')
@@ -12,9 +13,7 @@ const Contacts = () => {
     <div className={'contacts'}>
       <div className={'contacts__content'}>
         <div className={'contacts__content--block'}>
-          <div className={'contacts-title'}>
-            <h1>{message('title')}</h1>
-          </div>
+          <PageTitle name={'contacts'} />
           <p className={'text-color-gray'}>{message('hint')}</p>
           <div className={'contacts-with-image'}>
             <ContactWithImage image={'astana'} title={message('astana.title')} contact={message('astana.contact')} />

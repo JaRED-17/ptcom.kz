@@ -4,6 +4,7 @@ import setMessages from '../../helpers/setMessages'
 import messages from './Schema.messages'
 import Markdown from '../../components/Markdown'
 import OurAdvantages from '../../components/OurAdvantages'
+import PageTitle from '../../components/PageTitle'
 
 const Schema = () => {
   const classNamePrefix = 'schema'
@@ -13,9 +14,7 @@ const Schema = () => {
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content--block`}>
-          <div className={`${classNamePrefix}-title`}>
-            <h1>{message('title')}</h1>
-          </div>
+          <PageTitle name={'schema'} />
           <p className={'text-color-gray'}>{message('paragraph1')}</p>
           <p className={'text-color-gray'}>{message('paragraph2')}</p>
           <p className={'text-color-gray'}>{message('paragraph3')}</p>

@@ -5,6 +5,7 @@ import messages from './DriveWays.messages'
 import YandexMap from '../../components/YandexMap'
 import Markdown from '../../components/Markdown'
 import OurAdvantages from '../../components/OurAdvantages'
+import PageTitle from '../../components/PageTitle'
 
 const DriveWays = () => {
   const classNamePrefix = 'drive-ways'
@@ -14,9 +15,7 @@ const DriveWays = () => {
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content--block`}>
-          <div className={`${classNamePrefix}-title`}>
-            <h1>{message('title')}</h1>
-          </div>
+          <PageTitle name={'driveWays'} />
           <p className={'text-color-gray'}>{message('paragraph1')}</p>
           <p className={'text-color-gray'}>{message('paragraph2')}</p>
 

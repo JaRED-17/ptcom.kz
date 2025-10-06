@@ -2,6 +2,7 @@ import React from 'react'
 import './PageNotFound.scss'
 import messages from './PageNotFound.messages'
 import setMessages from '../../helpers/setMessages'
+import PageTitle from '../../components/PageTitle'
 
 const PageNotFound = () => {
   const classNamePrefix = 'page-not-found'
@@ -11,9 +12,7 @@ const PageNotFound = () => {
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content--block`}>
-          <div className={`${classNamePrefix}-title`}>
-            <h1>{message('title')}</h1>
-          </div>
+          <PageTitle name={'pageNotFound'} />
           <p className={'text-color-gray'}>{message('text')}</p>
         </div>
       </div>

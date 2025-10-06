@@ -3,6 +3,7 @@ import './Services.scss'
 import setMessages from '../../helpers/setMessages'
 import messages from './Services.messages'
 import ServicesCustomButton from './ServicesCustomButton'
+import PageTitle from '../../components/PageTitle'
 
 const Services = () => {
   const message = setMessages(messages, 'app.page.services.')
@@ -11,9 +12,7 @@ const Services = () => {
     <div className={'services'}>
       <div className={'services__content'}>
         <div className={'services__content--block'}>
-          <div className={'services__content--block__title'}>
-            <h1>{message('title')}</h1>
-          </div>
+          <PageTitle name={'services'} />
           <div className={'services__content--block__buttons'}>
             <ServicesCustomButton
               icon={'wagons'}

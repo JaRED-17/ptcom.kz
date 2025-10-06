@@ -3,6 +3,7 @@ import './ProvisionOfWagons.scss'
 import setMessages from '../../helpers/setMessages'
 import messages from './ProvisionOfWagons.messages'
 import Markdown from '../../components/Markdown'
+import PageTitle from '../../components/PageTitle'
 
 const ProvisionOfWagons = () => {
   const classNamePrefix = 'provision-of-wagons'
@@ -12,9 +13,7 @@ const ProvisionOfWagons = () => {
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content--block`}>
-          <div className={`${classNamePrefix}-title`}>
-            <h1>{message('title')}</h1>
-          </div>
+          <PageTitle name={'provisionOfWagons'} />
           <p className={'text-color-gray'}>{message('paragraph')}</p>
           <div className={`${classNamePrefix}__content--list`}>
             <div className={`${classNamePrefix}__list1`}>

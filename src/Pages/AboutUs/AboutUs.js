@@ -4,6 +4,7 @@ import setMessages from '../../helpers/setMessages'
 import messages from './AboutUs.messages'
 import OurAdvantages from '../../components/OurAdvantages'
 import Markdown from '../../components/Markdown'
+import PageTitle from '../../components/PageTitle'
 
 const AboutUs = () => {
   const classNamePrefix = 'about-us'
@@ -13,9 +14,7 @@ const AboutUs = () => {
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content--block`}>
-          <div className={`${classNamePrefix}-title`}>
-            <h1>{message('title')}</h1>
-          </div>
+          <PageTitle name={'aboutUs'} />
           <p className={'text-color-gray'}>{message('paragraph1')}</p>
           <p className={'text-color-gray'}>{message('paragraph2')}</p>
           <p className={'text-color-orange text-bolt text-header'}>{message('header')}</p>

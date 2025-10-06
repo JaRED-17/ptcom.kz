@@ -1,11 +1,11 @@
 import React from 'react'
 import './Sitemap.scss'
 import setMessages from '../../helpers/setMessages'
-import messages from './Sitemap.messages'
 import pageTitles from '../../components/PageTitle/PageTitle.messages'
 import data from '../../data/pages.json'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import PageTitle from '../../components/PageTitle'
 
 const SiteMapLink = ({url, name}) => {
   const pageTitle = setMessages(pageTitles, 'app.page.')
@@ -26,7 +26,6 @@ SiteMapLink.propTypes = {
 
 const Sitemap = () => {
   const classNamePrefix = 'sitemap'
-  const message = setMessages(messages, 'app.page.sitemap.')
   const { pages } = data
 
   return (
@@ -34,7 +33,7 @@ const Sitemap = () => {
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content--block`}>
           <div className={`${classNamePrefix}-title`}>
-            <h1>{message('title')}</h1>
+            <PageTitle name={'sitemap'} />
             <ul className={`${classNamePrefix}-links`}>
               {(() => {
                 return pages.map((page, index) => {
