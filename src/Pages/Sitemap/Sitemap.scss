@@ -10,4 +10,13 @@
       margin-right: auto;
     }
   }
+
+  &-links {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      margin: 0.5rem 0;
+    }
+  }
 }

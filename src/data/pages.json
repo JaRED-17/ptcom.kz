@@ -1,0 +1,46 @@
+{
+  "pages": [
+    {
+      "name": "aboutUs",
+      "url": "/about-us"
+    },
+    {
+      "name": "services",
+      "url": "/services",
+      "entries": [
+        {
+          "name": "provisionOfWagons",
+          "url": "/services/provision-of-wagons"
+        },
+        {
+          "name": "paymentRailwayTariffs",
+          "url": "/services/payment-railway-tariffs"
+        },
+        {
+          "name": "driveWays",
+          "url": "/services/drive-ways"
+        },
+        {
+          "name": "schema",
+          "url": "/services/schema"
+        },
+        {
+          "name": "handlingDostyk",
+          "url": "/services/handling-dostyk"
+        },
+        {
+          "name": "cargoProcessing",
+          "url": "/services/cargo-processing"
+        }
+      ]
+    },
+    {
+      "name": "consultation",
+      "url": "/consultation"
+    },
+    {
+      "name": "contacts",
+      "url": "/contacts"
+    }
+  ]
+}

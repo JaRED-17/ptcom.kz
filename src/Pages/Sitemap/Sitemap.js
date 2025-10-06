@@ -2,10 +2,32 @@ import React from 'react'
 import './Sitemap.scss'
 import setMessages from '../../helpers/setMessages'
 import messages from './Sitemap.messages'
+import pageTranslations from '../../translations/Pages.messages'
+import data from '../../data/pages.json'
+import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
+
+const SiteMapLink = ({url, name}) => {
+  const pageTranslation = setMessages(pageTranslations, 'app.page.')
+
+  return (
+    <li>
+      <Link to={url} className={'white-link'}>
+        {pageTranslation(name + '.title')}
+      </Link>
+    </li>
+  )
+}
+
+SiteMapLink.propTypes = {
+  url: PropTypes.string,
+  name: PropTypes.string
+}
 
 const Sitemap = () => {
   const classNamePrefix = 'sitemap'
   const message = setMessages(messages, 'app.page.sitemap.')
+  const { pages } = data
 
   return (
     <div className={classNamePrefix}>
@@ -13,6 +35,26 @@ const Sitemap = () => {
         <div className={`${classNamePrefix}__content--block`}>
           <div className={`${classNamePrefix}-title`}>
             <h1>{message('title')}</h1>
+            <ul className={`${classNamePrefix}-links`}>
+              {(() => {
+                return pages.map((page, index) => {
+                  if (page.entries) {
+                    return (
+                      <>
+                        <SiteMapLink key={index} url={page.url} name={page.name} />
+                        <ul key={index} className={`${classNamePrefix}-links sub-links`}>
+                          {(() => {
+                            return page.entries.map((page, index) => <SiteMapLink key={index} url={page.url} name={page.name} />)
+                          })()}
+                        </ul>
+                      </>
+                    )
+                  }
+
+                  return <SiteMapLink key={index} url={page.url} name={page.name} />
+                })
+              })()}
+            </ul>
           </div>
         </div>
       </div>
