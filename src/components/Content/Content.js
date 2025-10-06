@@ -12,6 +12,7 @@ import PaymentRailwayTariffs from '../../Pages/PaymentRailwayTariffs'
 import DriveWays from '../../Pages/DriveWays'
 import Schema from '../../Pages/Schema'
 import HandlingDostyk from '../../Pages/HandlingDostyk'
+import СargoProcessing from '../../Pages/СargoProcessing'
 import Contacts from '../../Pages/Contacts'
 import StyleGuide from '../../Pages/StyleGuide'
 
@@ -27,6 +28,7 @@ const Content = () => {
         <Route path={'/services/drive-ways'} element={<DriveWays />} exact />
         <Route path={'/services/schema'} element={<Schema />} exact />
         <Route path={'/services/handling-dostyk'} element={<HandlingDostyk />} exact />
+        <Route path={'/services/cargo-processing'} element={<СargoProcessing />} exact />
         <Route path={'/contacts'} element={<Contacts />} exact />
         <Route path={'/style-guide'} element={<StyleGuide />} exact />
         <Route path={'*'} element={<PageNotFound />} />
