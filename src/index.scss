@@ -136,4 +136,12 @@ a {
     z-index: -2;
     background-image: url('./media/page-backgrounds/provision-of-wagons-background.png');
   }
+  &.payment-railway-tariffs-background {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+    background-image: url('./media/page-backgrounds/payment-railway-tariffs-background.png');
+  }
 }

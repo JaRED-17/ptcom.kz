@@ -23,7 +23,7 @@ const Services = () => {
             <ServicesCustomButton
               icon={'shield'}
               text={message('railwaysPays')}
-              to={'/services/railways-pays'}
+              to={'/services/payment-railway-tariffs'}
             />
             <ServicesCustomButton
               icon={'railways'}
