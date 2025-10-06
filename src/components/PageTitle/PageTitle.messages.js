@@ -3,11 +3,11 @@ import { defineMessages } from 'react-intl'
 export default defineMessages({
   'app.page.aboutUs.title': {
     id: 'app.page.aboutUs.title',
-    defaultMessage: 'Компания'
+    defaultMessage: 'О компании'
   },
   'app.page.services.title': {
     id: 'app.page.services.title',
-    defaultMessage: 'Услуги'
+    defaultMessage: 'Наши услуги'
   },
   'app.page.provisionOfWagons.title': {
     id: 'app.page.provisionOfWagons.title',
@@ -44,5 +44,13 @@ export default defineMessages({
   'app.page.contacts.title': {
     id: 'app.page.contacts.title',
     defaultMessage: 'Контакты'
+  },
+  'app.page.sitemap.title': {
+    id: 'app.page.sitemap.title',
+    defaultMessage: 'Карта сайта'
+  },
+  'app.page.pageNotFound.title': {
+    id: 'app.page.pageNotFound.title',
+    defaultMessage: 'Страница не найдена'
   }
 })
