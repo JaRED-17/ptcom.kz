@@ -5,14 +5,17 @@ import messages from './Schema.messages'
 import Markdown from '../../components/Markdown'
 import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
-import Page from '../../components/Page'
+import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 
 const Schema = () => {
   const classNamePrefix = 'schema'
   const message = setMessages(messages, 'app.page.schema.')
 
   return (
-    <Page classNamePrefix={classNamePrefix}>
+    <PageWithAsideMenu
+      classNamePrefix={classNamePrefix}
+      background={<div className={'backgrounds schema-background'} />}
+    >
       <PageTitle name={'schema'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
       <p className={'text-color-gray'}>{message('paragraph2')}</p>
@@ -25,8 +28,7 @@ const Schema = () => {
       <p className={'text-color-gray'}>{message('paragraph5')}</p>
 
       <OurAdvantages />
-      <div className={'backgrounds schema-background'} />
-    </Page>
+    </PageWithAsideMenu>
   )
 }
 

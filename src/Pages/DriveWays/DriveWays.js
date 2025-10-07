@@ -6,14 +6,17 @@ import YandexMap from '../../components/YandexMap'
 import Markdown from '../../components/Markdown'
 import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
-import Page from '../../components/Page'
+import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 
 const DriveWays = () => {
   const classNamePrefix = 'drive-ways'
   const message = setMessages(messages, 'app.page.driveWays.')
 
   return (
-    <Page classNamePrefix={classNamePrefix}>
+    <PageWithAsideMenu
+      classNamePrefix={classNamePrefix}
+      background={<div className={'backgrounds drive-ways-background'} />}
+    >
       <PageTitle name={'driveWays'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
       <p className={'text-color-gray'}>{message('paragraph2')}</p>
@@ -33,8 +36,7 @@ const DriveWays = () => {
       <YandexMap />
 
       <OurAdvantages />
-      <div className={'backgrounds drive-ways-background'} />
-    </Page>
+    </PageWithAsideMenu>
   )
 }
 

@@ -5,14 +5,17 @@ import messages from './PaymentRailwayTariffs.messages'
 import Markdown from '../../components/Markdown'
 import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
-import Page from '../../components/Page'
+import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 
 const PaymentRailwayTariffs = () => {
   const classNamePrefix = 'payment-railway-tariffs'
   const message = setMessages(messages, 'app.page.paymentRailwayTariffs.')
 
   return (
-    <Page classNamePrefix={classNamePrefix}>
+    <PageWithAsideMenu
+      classNamePrefix={classNamePrefix}
+      background={<div className={'backgrounds payment-railway-tariffs-background'} />}
+    >
       <PageTitle name={'paymentRailwayTariffs'} />
       <p className={'text-color-orange text-bolt text-header'}>{message('header1')}</p>
       <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('list1')} />
@@ -25,8 +28,7 @@ const PaymentRailwayTariffs = () => {
       <p className={'text-color-gray'}>{message('paragraph3')}</p>
 
       <OurAdvantages />
-      <div className={'backgrounds payment-railway-tariffs-background'} />
-    </Page>
+    </PageWithAsideMenu>
   )
 }
 

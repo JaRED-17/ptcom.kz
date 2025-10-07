@@ -5,14 +5,14 @@ import messages from './СargoProcessing.messages'
 import Markdown from '../../components/Markdown'
 import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
-import Page from '../../components/Page'
+import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 
 const CargoProcessing = () => {
   const classNamePrefix = 'cargo-processing'
   const message = setMessages(messages, 'app.page.cargoProcessing.')
 
   return (
-    <Page classNamePrefix={classNamePrefix}>
+    <PageWithAsideMenu classNamePrefix={classNamePrefix}>
       <PageTitle name={'cargoProcessing'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
 
@@ -27,7 +27,7 @@ const CargoProcessing = () => {
       <p className={'text-color-gray'}>{message('paragraph3')}</p>
 
       <OurAdvantages />
-    </Page>
+    </PageWithAsideMenu>
   )
 }
 

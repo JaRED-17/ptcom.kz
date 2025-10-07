@@ -20,8 +20,9 @@
       left: 10px;
     }
 
-    .iframe {
+    &--iframe {
       position: relative;
+      width: 100%;
     }
   }
 }

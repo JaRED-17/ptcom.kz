@@ -4,14 +4,17 @@ import setMessages from '../../helpers/setMessages'
 import messages from './ProvisionOfWagons.messages'
 import Markdown from '../../components/Markdown'
 import PageTitle from '../../components/PageTitle'
-import Page from '../../components/Page'
+import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 
 const ProvisionOfWagons = () => {
   const classNamePrefix = 'provision-of-wagons'
   const message = setMessages(messages, 'app.page.provisionOfWagons.')
 
   return (
-    <Page classNamePrefix={classNamePrefix}>
+    <PageWithAsideMenu
+      classNamePrefix={classNamePrefix}
+      background={<div className={'backgrounds provision-of-wagons-background'} />}
+    >
       <PageTitle name={'provisionOfWagons'} />
       <p className={'text-color-gray'}>{message('paragraph')}</p>
       <div className={`${classNamePrefix}__content--list`}>
@@ -22,8 +25,7 @@ const ProvisionOfWagons = () => {
           <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('list2')} />
         </div>
       </div>
-      <div className={'backgrounds provision-of-wagons-background'} />
-    </Page>
+    </PageWithAsideMenu>
   )
 }
 
