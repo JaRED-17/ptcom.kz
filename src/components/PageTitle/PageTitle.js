@@ -1,4 +1,5 @@
 import React from 'react'
+import './PageTitle.scss'
 import setMessages from '../../helpers/setMessages'
 import messages from './PageTitle.messages'
 import PropTypes from 'prop-types'
