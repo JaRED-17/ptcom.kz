@@ -1,6 +1,10 @@
 .our-advantages {
   &__content--list {
     display: flex;
+
+    ul {
+      margin: 0;
+    }
   }
 
   &__list1 {
