@@ -13,7 +13,7 @@ const YandexMap = () => {
           width={'980'}
           height={'500'}
           frameBorder={'1'}
-          allowFullScreen={'true'}
+          allowFullScreen
         />
       </div>
     </div>
