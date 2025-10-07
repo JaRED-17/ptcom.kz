@@ -6,6 +6,7 @@ import data from '../../data/pages.json'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import PageTitle from '../../components/PageTitle'
+import Page from '../../components/Page'
 
 const SiteMapLink = ({url, name}) => {
   const pageTitle = setMessages(pageTitles, 'app.page.')
@@ -29,35 +30,29 @@ const Sitemap = () => {
   const { pages } = data
 
   return (
-    <div className={classNamePrefix}>
-      <div className={`${classNamePrefix}__content`}>
-        <div className={`${classNamePrefix}__content--block`}>
-          <div className={`${classNamePrefix}-title`}>
-            <PageTitle name={'sitemap'} />
-            <ul className={`${classNamePrefix}-links`}>
-              {(() => {
-                return pages.map((page, index) => {
-                  if (page.entries) {
-                    return (
-                      <div key={index}>
-                        <SiteMapLink url={page.url} name={page.name} />
-                        <ul className={`${classNamePrefix}-links sub-links`}>
-                          {(() => {
-                            return page.entries.map((page, index) => <SiteMapLink key={index} url={page.url} name={page.name} />)
-                          })()}
-                        </ul>
-                      </div>
-                    )
-                  }
+    <Page classNamePrefix={classNamePrefix}>
+      <PageTitle name={'sitemap'} />
+      <ul className={`${classNamePrefix}-links`}>
+        {(() => {
+          return pages.map((page, index) => {
+            if (page.entries) {
+              return (
+                <div key={index}>
+                  <SiteMapLink url={page.url} name={page.name} />
+                  <ul className={`${classNamePrefix}-links sub-links`}>
+                    {(() => {
+                      return page.entries.map((page, index) => <SiteMapLink key={index} url={page.url} name={page.name} />)
+                    })()}
+                  </ul>
+                </div>
+              )
+            }
 
-                  return <SiteMapLink key={index} url={page.url} name={page.name} />
-                })
-              })()}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+            return <SiteMapLink key={index} url={page.url} name={page.name} />
+          })
+        })()}
+      </ul>
+    </Page>
   )
 }
 

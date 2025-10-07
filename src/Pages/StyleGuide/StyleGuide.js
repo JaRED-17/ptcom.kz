@@ -2,6 +2,7 @@ import React from 'react'
 import './StyleGuide.scss'
 import PropTypes from 'prop-types'
 import {Helmet} from 'react-helmet'
+import Page from '../../components/Page'
 
 const StyleGuideBlock = ({title, children}) => {
   return (
@@ -33,8 +34,10 @@ ColorBlock.propTypes = {
 }
 
 const StyleGuide = () => {
+  const classNamePrefix = 'style-guide'
+
   return (
-    <div className={'style-guide'}>
+    <Page classNamePrefix={classNamePrefix}>
       <Helmet>
         <title>{'Style guide'}</title>
       </Helmet>
@@ -113,7 +116,7 @@ const StyleGuide = () => {
           )
         })()}
       </StyleGuideBlock>
-    </div>
+    </Page>
   )
 }
 

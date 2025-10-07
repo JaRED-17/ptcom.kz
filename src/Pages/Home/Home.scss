@@ -1,11 +1,6 @@
-@import './../../vars';
-
 .home {
   &__content {
-    max-width: $size-ml;
-    margin: 0 auto;
-
-    &--block {
+    &--block.page__content--block {
       max-width: 500px;
       margin-right: auto;
     }

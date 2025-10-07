@@ -1,16 +1,4 @@
-@import './../../vars';
-
 .sitemap {
-  &__content {
-    max-width: $size-ml;
-    margin: 0 auto;
-
-    &--block {
-      max-width: 1024px;
-      margin-right: auto;
-    }
-  }
-
   &-links {
     display: flex;
     flex-direction: column;
