@@ -2,7 +2,7 @@ import React from 'react'
 import './Page.scss'
 import PropTypes from 'prop-types'
 
-const Page = ({ classNamePrefix, children }) => {
+const Page = ({ classNamePrefix, children, background }) => {
   return (
     <div className={`${classNamePrefix} page`}>
       <div className={`${classNamePrefix}__content page__content`}>
@@ -10,13 +10,15 @@ const Page = ({ classNamePrefix, children }) => {
           {children}
         </div>
       </div>
+      {background}
     </div>
   )
 }
 
 Page.propTypes = {
   classNamePrefix: PropTypes.string,
-  children: PropTypes.any
+  children: PropTypes.any,
+  background: PropTypes.any
 }
 
 export default Page
