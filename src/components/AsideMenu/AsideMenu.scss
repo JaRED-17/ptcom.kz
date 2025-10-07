@@ -1,0 +1,33 @@
+@import './../../vars';
+@import './../../mixins';
+
+.aside-menu {
+  position: sticky;
+  top: 93px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.75rem;
+  margin-right: 1rem;
+  float: left;
+  max-height: 600px;
+  max-width: 220px;
+  border-radius: 20px;
+  @include glass;
+
+  @include media-md {
+    display: none;
+  }
+
+  & + div {
+    position: relative;
+    display: table;
+    padding: 1rem;
+    border-radius: 20px;
+    min-height: 568px;
+    @include glass;
+  }
+
+  a:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
