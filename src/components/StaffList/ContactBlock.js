@@ -1,12 +1,12 @@
 import React from 'react'
 import './ContactBlock.scss'
 import PropTypes from 'prop-types'
-import Markdown from '../../components/Markdown'
+import Markdown from '../Markdown'
 
 const ContactBlock = ({ name, position, contact }) => {
   return (
     <div className={'contact-block'}>
-      <img className={'contact-block__icon'} src={`../../../media/icons/contact.png`} alt={''} />
+      <img className={'contact-block__icon'} src={`../../media/icons/contact.png`} alt={''} />
       <div className={'contact-block__name'}>
         {name}
       </div>
