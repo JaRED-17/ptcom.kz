@@ -6,6 +6,10 @@ import data from '../../data/pages.json'
 /* Pages */
 import Home from '../../Pages/Home'
 import AboutUs from '../../Pages/AboutUs'
+import Staffs from '../../Pages/Staffs'
+import News from '../../Pages/News'
+import Licenses from '../../Pages/Licenses'
+import Vacancies from '../../Pages/Vacancies'
 import PageNotFound from '../../Pages/PageNotFound'
 import Services from '../../Pages/Services'
 import ProvisionOfWagons from '../../Pages/ProvisionOfWagons'
@@ -23,6 +27,10 @@ import StyleGuide from '../../Pages/StyleGuide'
 const Content = () => {
   const components = {
     'aboutUs': <AboutUs />,
+    'staffs': <Staffs />,
+    'news': <News />,
+    'licenses': <Licenses />,
+    'vacancies': <Vacancies />,
     'services': <Services />,
     'provisionOfWagons': <ProvisionOfWagons />,
     'paymentRailwayTariffs': <PaymentRailwayTariffs />,
