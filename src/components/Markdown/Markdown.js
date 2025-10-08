@@ -12,6 +12,12 @@ const Markdown = ({text, inline, childrenClassName}) => {
     }
 
     if (childrenClassName) {
+      if (Array.isArray(childrenClassName.target)) {
+        return {
+          p: ({ children }) => childrenClassName.target.includes('paragraph') ? <p className={childrenClassName.className[0]}>{children}</p> : <>{children}</>,
+          a: ({ children, href }) => childrenClassName.target.includes('link') ? <Link to={href} className={childrenClassName.className[1]}>{children}</Link> : null
+        }
+      }
       if (childrenClassName.target === 'link') {
         return {
           p: ({ children }) => <>{children}</>,
