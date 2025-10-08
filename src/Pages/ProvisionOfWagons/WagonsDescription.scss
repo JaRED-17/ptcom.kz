@@ -1,0 +1,13 @@
+.wagons-description {
+  &__description-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__table-block {
+    table {
+      width: 100%;
+    }
+  }
+}
