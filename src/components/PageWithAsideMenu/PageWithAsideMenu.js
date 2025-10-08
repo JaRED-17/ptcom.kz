@@ -8,9 +8,9 @@ const PageWithAsideMenu = ({ classNamePrefix, children }) => {
   const { pages } = data
 
   return (
-    <Page classNamePrefix={classNamePrefix}>
+    <Page classNamePrefix={classNamePrefix} asideMenu>
       <AsideMenu list={pages[1].entries} />
-      <div>
+      <div className={'fade-in-up'}>
         {children}
       </div>
     </Page>

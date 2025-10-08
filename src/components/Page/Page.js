@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import './Page.scss'
 import PropTypes from 'prop-types'
 
-const Page = ({ classNamePrefix, children }) => {
+const Page = ({ classNamePrefix, children, asideMenu }) => {
   useEffect(() => {
     const background = document.querySelector('#background')
     background?.classList.add(`backgrounds`)
@@ -17,7 +17,7 @@ const Page = ({ classNamePrefix, children }) => {
   return (
     <div className={`${classNamePrefix} page`}>
       <div className={`${classNamePrefix}__content page__content`}>
-        <div className={`${classNamePrefix}__content--block page__content--block fade-in-up`}>
+        <div className={`${classNamePrefix}__content--block page__content--block${asideMenu ? '' : ' fade-in-up'}`}>
           {children}
         </div>
       </div>
@@ -27,7 +27,8 @@ const Page = ({ classNamePrefix, children }) => {
 
 Page.propTypes = {
   classNamePrefix: PropTypes.string,
-  children: PropTypes.any
+  children: PropTypes.any,
+  asideMenu: PropTypes.bool
 }
 
 export default Page
