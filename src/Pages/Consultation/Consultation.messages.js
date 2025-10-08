@@ -1,10 +1,6 @@
 import { defineMessages } from 'react-intl'
 
 export default defineMessages({
-  'app.page.consultation.title': {
-    id: 'app.page.consultation.title',
-    defaultMessage: 'Консультации'
-  },
   'app.page.consultation.header1': {
     id: 'app.page.consultation.header1',
     defaultMessage: '[Основные типы вагонов 21.05.2014](/consultation/wagons-types)'
