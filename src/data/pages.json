@@ -10,7 +10,41 @@
         },
         {
           "name": "news",
-          "url": "/company/news"
+          "url": "/company/news",
+          "entries": [
+            {
+              "name": "stRkIso90012009",
+              "url": "/company/news/st-rk-iso-90012009"
+            },
+            {
+              "name": "5years",
+              "url": "/company/news/5years"
+            },
+            {
+              "name": "tl2015",
+              "url": "/company/news/tl2015"
+            },
+            {
+              "name": "tr2015",
+              "url": "/company/news/tr2015"
+            },
+            {
+              "name": "iso",
+              "url": "/company/news/iso"
+            },
+            {
+              "name": "transit",
+              "url": "/company/news/transit"
+            },
+            {
+              "name": "crocus",
+              "url": "/company/news/crocus"
+            },
+            {
+              "name": "zvezda2015",
+              "url": "/company/news/zvezda-2015"
+            }
+          ]
         },
         {
           "name": "licenses",

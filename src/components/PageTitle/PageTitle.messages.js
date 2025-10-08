@@ -84,5 +84,37 @@ export default defineMessages({
   'app.page.pageNotFound.title': {
     id: 'app.page.pageNotFound.title',
     defaultMessage: 'Страница не найдена'
+  },
+  'app.page.stRkIso90012009.title': {
+    id: 'app.page.stRkIso90012009.title',
+    defaultMessage: 'СТ РК ИСО 9001–2009'
+  },
+  'app.page.5years.title': {
+    id: 'app.page.5years.title',
+    defaultMessage: 'Наша компания - 5 лет на рынке!'
+  },
+  'app.page.tl2015.title': {
+    id: 'app.page.tl2015.title',
+    defaultMessage: 'Участие в выставке «Транспорт и Логистика», г. Алматы.'
+  },
+  'app.page.tr2015.title': {
+    id: 'app.page.tr2015.title',
+    defaultMessage: 'Участие в выставке «TransRussia 2015», г. Москва, МВЦ «Крокус Экспо'
+  },
+  'app.page.iso.title': {
+    id: 'app.page.iso.title',
+    defaultMessage: 'Сертификация ISO 9001:2009'
+  },
+  'app.page.transit.title': {
+    id: 'app.page.transit.title',
+    defaultMessage: 'Участие в 18-й Центрально-Азиатской выставке Transit-Kazakhstan, «Транспорт и логистика»'
+  },
+  'app.page.crocus.title': {
+    id: 'app.page.crocus.title',
+    defaultMessage: 'Участие в 19-й международной выставки TRANS RUSSIА, 22-25 апреля 2014 года, Москва, CROCUC EXPO'
+  },
+  'app.page.zvezda2015.title': {
+    id: 'app.page.zvezda2015.title',
+    defaultMessage: 'Получена новая награда «Звезда качества 2015»'
   }
 })
