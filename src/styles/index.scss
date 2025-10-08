@@ -1,5 +1,6 @@
 @import './vars';
 @import './backgrounds';
+@import './mixins';
 
 body {
   margin: 0;
@@ -67,5 +68,11 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.glass-effect {
+  @include glass;
+  padding: 1rem;
+  border-radius: 20px;
 }
 
