@@ -57,20 +57,20 @@
       "url": "/consultation",
       "entries": [
         {
-          "name": "dangerousGoods",
-          "url": "/consultation/dangerous-goods"
-        },
-        {
-          "name": "containers",
-          "url": "/consultation/containers"
+          "name": "wagonsTypes",
+          "url": "/consultation/wagons-types"
         },
         {
           "name": "wagons",
           "url": "/consultation/wagons"
         },
         {
-          "name": "wagonsTypes",
-          "url": "/consultation/wagons-types"
+          "name": "containers",
+          "url": "/consultation/containers"
+        },
+        {
+          "name": "dangerousGoods",
+          "url": "/consultation/dangerous-goods"
         }
       ]
     },
