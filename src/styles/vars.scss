@@ -80,4 +80,17 @@ $size-xs: 480px;
   --custom-button-background-hover: #c2c3c6;
 
   --block-primary-border: black;
+
+  .light-theme {
+    --body-background: white;
+    --body-color: black;
+
+    --text-color-white: black;
+    --text-color-gray: black;
+
+    --button-primary-color: var(--body-color);
+    --button-primary-background: var(--body-background);
+
+    --button-secondary-color: var(--body-color);
+  }
 }
