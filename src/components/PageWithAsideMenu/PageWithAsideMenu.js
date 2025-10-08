@@ -20,7 +20,7 @@ const PageWithAsideMenu = ({ classNamePrefix, children, index = 0 }) => {
 PageWithAsideMenu.propTypes = {
   classNamePrefix: PropTypes.string,
   children: PropTypes.any,
-  index: PropTypes.number,
+  index: PropTypes.number
 }
 
 export default PageWithAsideMenu
