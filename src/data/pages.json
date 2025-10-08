@@ -2,7 +2,7 @@
   "pages": [
     {
       "name": "aboutUs",
-      "url": "/about-us",
+      "url": "/company/about-us",
       "entries": [
         {
           "name": "staffs",

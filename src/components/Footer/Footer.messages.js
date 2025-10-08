@@ -31,6 +31,6 @@ export default defineMessages({
   },
   'app.footer.navigation.text': {
     id: 'app.footer.navigation.text',
-    defaultMessage: '[Компания](/about-us)\n\n[Услуги](/services)\n\n[Консультации](/consultation)\n\n[Контакты](/contacts)\n\n[Карта сайта](/sitemap)'
+    defaultMessage: '[Компания](/company/about-us)\n\n[Услуги](/services)\n\n[Консультации](/consultation)\n\n[Контакты](/contacts)\n\n[Карта сайта](/sitemap)'
   }
 })

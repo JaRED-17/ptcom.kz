@@ -7,7 +7,7 @@ export default defineMessages({
   },
   'app.header.navigation.links': {
     id: 'app.header.navigation.links',
-    defaultMessage: '[Компания](/about-us)\n\n[Услуги](/services)\n\n[Консультации](/consultation)\n\n[Контакты](/contacts)'
+    defaultMessage: '[Компания](/company/about-us)\n\n[Услуги](/services)\n\n[Консультации](/consultation)\n\n[Контакты](/contacts)'
   },
   'app.header.button': {
     id: 'app.header.button',
