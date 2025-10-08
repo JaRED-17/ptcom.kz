@@ -28,7 +28,6 @@ const DangerousGoods = () => {
       <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph9')} />
       <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph10')} />
       <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph11')} />
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph12')} />
       <OurAdvantages />
     </PageWithAsideMenu>
   )
