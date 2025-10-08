@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import './Page.scss'
 import PropTypes from 'prop-types'
 
-const Page = ({ classNamePrefix, children, background }) => {
+const Page = ({ classNamePrefix, children }) => {
   useEffect(() => {
     const background = document.querySelector('#background')
     background?.classList.add(`backgrounds`)
@@ -27,8 +27,7 @@ const Page = ({ classNamePrefix, children, background }) => {
 
 Page.propTypes = {
   classNamePrefix: PropTypes.string,
-  children: PropTypes.any,
-  background: PropTypes.any
+  children: PropTypes.any
 }
 
 export default Page

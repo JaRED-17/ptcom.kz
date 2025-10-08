@@ -12,10 +12,7 @@ const HandlingDostyk = () => {
   const message = setMessages(messages, 'app.page.handlingDostyk.')
 
   return (
-    <PageWithAsideMenu
-      classNamePrefix={classNamePrefix}
-      background={<div className={'backgrounds handling-dostyk-background'} />}
-    >
+    <PageWithAsideMenu classNamePrefix={classNamePrefix}>
       <PageTitle name={'handlingDostyk'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
       <p className={'text-color-gray'}>{message('paragraph2')}</p>

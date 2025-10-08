@@ -12,10 +12,7 @@ const Schema = () => {
   const message = setMessages(messages, 'app.page.schema.')
 
   return (
-    <PageWithAsideMenu
-      classNamePrefix={classNamePrefix}
-      background={<div className={'backgrounds schema-background'} />}
-    >
+    <PageWithAsideMenu classNamePrefix={classNamePrefix}>
       <PageTitle name={'schema'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
       <p className={'text-color-gray'}>{message('paragraph2')}</p>

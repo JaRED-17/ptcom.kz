@@ -4,11 +4,11 @@ import AsideMenu from '../AsideMenu'
 import Page from '../Page'
 import data from '../../data/pages.json'
 
-const PageWithAsideMenu = ({ classNamePrefix, children, background }) => {
+const PageWithAsideMenu = ({ classNamePrefix, children }) => {
   const { pages } = data
 
   return (
-    <Page classNamePrefix={classNamePrefix} background={background}>
+    <Page classNamePrefix={classNamePrefix}>
       <AsideMenu list={pages[1].entries} />
       <div>
         {children}
@@ -19,8 +19,7 @@ const PageWithAsideMenu = ({ classNamePrefix, children, background }) => {
 
 PageWithAsideMenu.propTypes = {
   classNamePrefix: PropTypes.string,
-  children: PropTypes.any,
-  background: PropTypes.any
+  children: PropTypes.any
 }
 
 export default PageWithAsideMenu
