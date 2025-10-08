@@ -45,12 +45,6 @@ const Services = () => {
           to={'/services/cargo-processing'}
         />
       </div>
-      <div className={'backgrounds curve-orange-1'} />
-      <div className={'backgrounds curve-orange-2'} />
-      <div className={'backgrounds curve-turquoise'} />
-      <div className={'backgrounds curve-orange-bottom-1'} />
-      <div className={'backgrounds curve-orange-bottom-2'} />
-      <div className={'backgrounds trains trains-services'} />
     </Page>
   )
 }

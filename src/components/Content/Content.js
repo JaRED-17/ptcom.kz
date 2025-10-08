@@ -57,7 +57,6 @@ const Content = () => {
         <Route path={'/style-guide'} element={<StyleGuide />} exact />
         <Route path={'*'} element={<PageNotFound />} />
       </Routes>
-      <div className={'content__background'} />
     </div>
   )
 }

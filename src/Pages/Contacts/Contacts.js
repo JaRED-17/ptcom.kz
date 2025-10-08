@@ -37,7 +37,6 @@ const Contacts = () => {
         <ContactBlock name={message('list.name6')} position={message('list.position6')} contact={message('list.contact6')} />
         <ContactBlock name={message('list.name7')} position={message('list.position7')} contact={message('list.contact7')} />
       </div>
-      <div className={'backgrounds contacts-page'} />
     </Page>
   )
 }
