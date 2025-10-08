@@ -1,14 +1,27 @@
 import React from 'react'
+import setMessages from '../../helpers/setMessages'
+import messages from './Wagons.messages'
 import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
+import Markdown from '../../components/Markdown'
 
 const Wagons = () => {
   const classNamePrefix = 'wagons'
+  const message = setMessages(messages, 'app.page.wagons.')
 
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={2}>
       <PageTitle name={'wagons'} />
+      <p className={'text-color-gray'}>{message('paragraph1')}</p>
+      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph2')} />
+      <p className={'text-color-gray'}>{message('paragraph3')}</p>
+      <p className={'text-color-gray'}>{message('paragraph4')}</p>
+      <p className={'text-color-gray'}>{message('paragraph5')}</p>
+      <p className={'text-color-gray'}>{message('paragraph6')}</p>
+      <p className={'text-color-gray'}>{message('paragraph7')}</p>
+      <p className={'text-color-gray'}>{message('paragraph8')}</p>
+      <p className={'text-color-gray'}>{message('paragraph9')}</p>
       <OurAdvantages />
     </PageWithAsideMenu>
   )
