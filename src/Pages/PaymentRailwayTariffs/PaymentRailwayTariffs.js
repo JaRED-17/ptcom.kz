@@ -12,7 +12,7 @@ const PaymentRailwayTariffs = () => {
   const message = setMessages(messages, 'app.page.paymentRailwayTariffs.')
 
   return (
-    <PageWithAsideMenu classNamePrefix={classNamePrefix}>
+    <PageWithAsideMenu classNamePrefix={classNamePrefix} index={1}>
       <PageTitle name={'paymentRailwayTariffs'} />
       <p className={'text-color-orange text-bolt text-header'}>{message('header1')}</p>
       <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('list1')} />

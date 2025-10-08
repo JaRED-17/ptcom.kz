@@ -4,12 +4,12 @@ import AsideMenu from '../AsideMenu'
 import Page from '../Page'
 import data from '../../data/pages.json'
 
-const PageWithAsideMenu = ({ classNamePrefix, children }) => {
+const PageWithAsideMenu = ({ classNamePrefix, children, index = 0 }) => {
   const { pages } = data
 
   return (
     <Page classNamePrefix={classNamePrefix} asideMenu>
-      <AsideMenu list={pages[1].entries} />
+      <AsideMenu list={pages[index].entries} />
       <div className={'fade-in-up'}>
         {children}
       </div>
@@ -19,7 +19,8 @@ const PageWithAsideMenu = ({ classNamePrefix, children }) => {
 
 PageWithAsideMenu.propTypes = {
   classNamePrefix: PropTypes.string,
-  children: PropTypes.any
+  children: PropTypes.any,
+  index: PropTypes.number,
 }
 
 export default PageWithAsideMenu

@@ -11,7 +11,7 @@ const ProvisionOfWagons = () => {
   const message = setMessages(messages, 'app.page.provisionOfWagons.')
 
   return (
-    <PageWithAsideMenu classNamePrefix={classNamePrefix}>
+    <PageWithAsideMenu classNamePrefix={classNamePrefix} index={1}>
       <PageTitle name={'provisionOfWagons'} />
       <p className={'text-color-gray'}>{message('paragraph')}</p>
       <div className={`${classNamePrefix}__content--list`}>

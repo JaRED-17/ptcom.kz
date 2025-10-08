@@ -13,7 +13,7 @@ const DriveWays = () => {
   const message = setMessages(messages, 'app.page.driveWays.')
 
   return (
-    <PageWithAsideMenu classNamePrefix={classNamePrefix}>
+    <PageWithAsideMenu classNamePrefix={classNamePrefix} index={1}>
       <PageTitle name={'driveWays'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
       <p className={'text-color-gray'}>{message('paragraph2')}</p>

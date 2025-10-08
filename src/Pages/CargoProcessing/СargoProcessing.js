@@ -12,7 +12,7 @@ const CargoProcessing = () => {
   const message = setMessages(messages, 'app.page.cargoProcessing.')
 
   return (
-    <PageWithAsideMenu classNamePrefix={classNamePrefix}>
+    <PageWithAsideMenu classNamePrefix={classNamePrefix} index={1}>
       <PageTitle name={'cargoProcessing'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
 
