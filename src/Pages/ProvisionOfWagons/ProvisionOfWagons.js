@@ -6,6 +6,7 @@ import Markdown from '../../components/Markdown'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 import WagonsDescription from './WagonsDescription'
+import OurAdvantages from '../../components/OurAdvantages'
 
 const ProvisionOfWagons = () => {
   const classNamePrefix = 'provision-of-wagons'
@@ -487,6 +488,7 @@ const ProvisionOfWagons = () => {
           </tbody>
         </table>
       </WagonsDescription>
+      <OurAdvantages />
     </PageWithAsideMenu>
   )
 }
