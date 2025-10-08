@@ -28,29 +28,28 @@ SiteMapLink.propTypes = {
 const Sitemap = () => {
   const classNamePrefix = 'sitemap'
   const { pages } = data
+  const handlePages = (pages) => {
+    return pages.map((page, index) => {
+      if (page.entries) {
+        return (
+          <div key={index}>
+            <SiteMapLink url={page.url} name={page.name} />
+            <ul className={`${classNamePrefix}-links sub-links`}>
+              {(() => handlePages(page.entries))()}
+            </ul>
+          </div>
+        )
+      }
+
+      return <SiteMapLink key={index} url={page.url} name={page.name} />
+    })
+  }
 
   return (
     <Page classNamePrefix={classNamePrefix}>
       <PageTitle name={'sitemap'} />
       <ul className={`${classNamePrefix}-links`}>
-        {(() => {
-          return pages.map((page, index) => {
-            if (page.entries) {
-              return (
-                <div key={index}>
-                  <SiteMapLink url={page.url} name={page.name} />
-                  <ul className={`${classNamePrefix}-links sub-links`}>
-                    {(() => {
-                      return page.entries.map((page, index) => <SiteMapLink key={index} url={page.url} name={page.name} />)
-                    })()}
-                  </ul>
-                </div>
-              )
-            }
-
-            return <SiteMapLink key={index} url={page.url} name={page.name} />
-          })
-        })()}
+        {(() => handlePages(pages))()}
       </ul>
     </Page>
   )
