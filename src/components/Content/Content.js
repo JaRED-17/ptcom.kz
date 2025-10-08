@@ -19,6 +19,10 @@ import Schema from '../../Pages/Schema'
 import HandlingDostyk from '../../Pages/HandlingDostyk'
 import CargoProcessing from '../../Pages/CargoProcessing'
 import Consultation from '../../Pages/Consultation'
+import DangerousGoods from '../../Pages/dangerousGoods'
+import Containers from '../../Pages/Containers'
+import Wagons from '../../Pages/Wagons'
+import WagonsTypes from '../../Pages/WagonsTypes'
 import Calculation from '../../Pages/Calculation'
 import Contacts from '../../Pages/Contacts'
 import Sitemap from '../../Pages/Sitemap'
@@ -39,6 +43,10 @@ const Content = () => {
     'handlingDostyk': <HandlingDostyk />,
     'cargoProcessing': <CargoProcessing />,
     'consultation': <Consultation />,
+    'dangerousGoods': <DangerousGoods />,
+    'containers': <Containers />,
+    'wagons': <Wagons />,
+    'wagonsTypes': <WagonsTypes />,
     'calculation': <Calculation />,
     'contacts': <Contacts />,
     'sitemap': <Sitemap />

@@ -3,16 +3,16 @@ import './Consultation.scss'
 // import setMessages from '../../helpers/setMessages'
 // import messages from './Consultation.messages'
 import PageTitle from '../../components/PageTitle'
-import Page from '../../components/Page'
+import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 
 const Consultation = () => {
   const classNamePrefix = 'consultation'
   // const message = setMessages(messages, 'app.page.consultation.')
 
   return (
-    <Page classNamePrefix={classNamePrefix}>
+    <PageWithAsideMenu classNamePrefix={classNamePrefix} index={2}>
       <PageTitle name={'consultation'} />
-    </Page>
+    </PageWithAsideMenu>
   )
 }
 
