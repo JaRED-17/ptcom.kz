@@ -4,6 +4,7 @@ import messages from './WagonsTypes.messages'
 import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
+import Markdown from '../../components/Markdown'
 
 const WagonsTypes = () => {
   const classNamePrefix = 'wagons-types'
@@ -13,14 +14,18 @@ const WagonsTypes = () => {
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={2}>
       <PageTitle name={'wagonsTypes'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
+      <p className={'text-color-orange text-bolt text-header'}>{message('header1')}</p>
       <p className={'text-color-gray'}>{message('paragraph2')}</p>
-      <p className={'text-color-gray'}>{message('paragraph3')}</p>
+      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph3')} />
       <p className={'text-color-gray'}>{message('paragraph4')}</p>
-      <p className={'text-color-gray'}>{message('paragraph5')}</p>
-      <p className={'text-color-gray'}>{message('paragraph6')}</p>
+      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph5')} />
+      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph6')} />
       <p className={'text-color-gray'}>{message('paragraph7')}</p>
-      <p className={'text-color-gray'}>{message('paragraph8')}</p>
+      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph8')} />
       <p className={'text-color-gray'}>{message('paragraph9')}</p>
+      <p className={'text-color-gray'}>{message('paragraph10')}</p>
+      <p className={'text-color-orange text-bolt text-header'}>{message('header2')}</p>
+      <p className={'text-color-gray'}>{message('paragraph11')}</p>
       <OurAdvantages />
     </PageWithAsideMenu>
   )

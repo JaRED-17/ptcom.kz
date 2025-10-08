@@ -1,7 +1,10 @@
 .consultation {
-  p {
+  p:not(:last-child) {
     margin-top: 0;
     margin-bottom: 1.5rem;
+  }
+  p:last-child {
+    margin-bottom: 0;
   }
   a {
     font-weight: bold;
