@@ -13,7 +13,7 @@ const AsideMenu = ({ list }) => {
     <div className={classNamePrefix}>
       {(() => {
         return list.map((menuItem, index) => {
-          return <Link key={index} to={menuItem.url} className={'white-link'}>
+          return <Link key={index} to={menuItem.url} className={`white-link${window.location.pathname === menuItem.url ? ' active' : ''}`}>
             {message(menuItem.name + '.title')}
           </Link>
         })
