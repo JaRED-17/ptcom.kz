@@ -1,11 +1,4 @@
 .contacts {
-  &-contacts-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 50px;
-  }
-
   &-with-image {
     display: flex;
     gap: 1rem;
@@ -33,5 +26,9 @@
     &__warning {
       font-size: 0.625rem;
     }
+  }
+
+  .staff-list {
+    margin-top: 50px;
   }
 }

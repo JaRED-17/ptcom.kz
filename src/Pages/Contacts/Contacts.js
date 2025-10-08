@@ -2,7 +2,7 @@ import React from 'react'
 import './Contacts.scss'
 import setMessages from '../../helpers/setMessages'
 import messages from './Contacts.messages'
-import ContactBlock from './ContactBlock'
+import StaffList from '../../components/StaffList'
 import ContactWithImage from './ContactWithImage'
 import PageTitle from '../../components/PageTitle'
 import Page from '../../components/Page'
@@ -28,15 +28,7 @@ const Contacts = () => {
       </div>
       <p className={'text-color-gray'}>{message('address.title')}</p>
       <p className={'text-color-gray'}>{message('address.text')}</p>
-      <div className={'contacts-contacts-list'}>
-        <ContactBlock name={message('list.name1')} position={message('list.position1')} contact={message('list.contact1')} />
-        <ContactBlock name={message('list.name2')} position={message('list.position2')} contact={message('list.contact2')} />
-        <ContactBlock name={message('list.name3')} position={message('list.position3')} contact={message('list.contact3')} />
-        <ContactBlock name={message('list.name4')} position={message('list.position4')} contact={message('list.contact4')} />
-        <ContactBlock name={message('list.name5')} position={message('list.position5')} contact={message('list.contact5')} />
-        <ContactBlock name={message('list.name6')} position={message('list.position6')} contact={message('list.contact6')} />
-        <ContactBlock name={message('list.name7')} position={message('list.position7')} contact={message('list.contact7')} />
-      </div>
+      <StaffList />
     </Page>
   )
 }
