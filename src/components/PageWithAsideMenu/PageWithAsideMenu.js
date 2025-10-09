@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import AsideMenu from '../AsideMenu'
 import Page from '../Page'
-import data from '../../data/pages.json'
+import data from '../../media/data/pages.json'
 
 const PageWithAsideMenu = ({ classNamePrefix, children, index = 0 }) => {
   const { pages } = data

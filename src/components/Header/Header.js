@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.scss'
-import logo from '../../media/Logo.png'
+import logo from '../../media/images/Logo.png'
 import Markdown from '../Markdown'
 import messages from './Header.messages'
 import setMessages from '../../helpers/setMessages'

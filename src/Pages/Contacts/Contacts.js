@@ -21,8 +21,8 @@ const Contacts = () => {
         <ContactWithImage image={'petropavl'} title={message('petropavl.title')} contact={message('petropavl.contact')} />
       </div>
       <div className={'contacts-sipnet'}>
-        <img className={'contacts-sipnet__image'} src={'../../../media/icons/sipnet.png'} alt={''} />
-        <img className={'contacts-sipnet__phone-image'} src={'../../../media/icons/phone.png'} alt={''} />
+        <img className={'contacts-sipnet__image'} src={'../../../media/images/icons/sipnet.png'} alt={''} />
+        <img className={'contacts-sipnet__phone-image'} src={'../../../media/images/icons/phone.png'} alt={''} />
         <div className={'contacts-sipnet__phone-text'}>{message('sipnet.phone')}</div>
         <div className={'contacts-sipnet__warning text-color-gray'}>{message('sipnet.warning')}</div>
       </div>

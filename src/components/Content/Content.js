@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import './Content.scss'
-import data from '../../data/pages.json'
+import data from '../../media/data/pages.json'
 
 /* Pages */
 import Home from '../../Pages/Home'

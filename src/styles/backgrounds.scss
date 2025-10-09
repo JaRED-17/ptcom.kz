@@ -7,29 +7,29 @@
   z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('../media/background.png');
+  background-image: url('../media/images/background.png');
 
   &.background {
     &__home-page {
-      background-image: url('../media/page-backgrounds/background__home-page.png');
+      background-image: url('../media/images/page-backgrounds/background__home-page.png');
     }
     &__services-page {
-      background-image: url('../media/page-backgrounds/background__services-page.png');
+      background-image: url('../media/images/page-backgrounds/background__services-page.png');
     }
     &__contacts-page {
-      background-image: url('../media/page-backgrounds/background__contacts-page.png');
+      background-image: url('../media/images/page-backgrounds/background__contacts-page.png');
     }
     &__drive-ways-page {
-      background-image: url('../media/page-backgrounds/background__drive-ways-page.png');
+      background-image: url('../media/images/page-backgrounds/background__drive-ways-page.png');
     }
     &__provision-of-wagons-page {
-      background-image: url('../media/page-backgrounds/background__provision-of-wagons-page.png');
+      background-image: url('../media/images/page-backgrounds/background__provision-of-wagons-page.png');
     }
     &__payment-railway-tariffs-page {
-      background-image: url('../media/page-backgrounds/background__payment-railway-tariffs-page.png');
+      background-image: url('../media/images/page-backgrounds/background__payment-railway-tariffs-page.png');
     }
     &__schema-page {
-      background-image: url('../media/page-backgrounds/background__schema-page.png');
+      background-image: url('../media/images/page-backgrounds/background__schema-page.png');
     }
   }
 }
