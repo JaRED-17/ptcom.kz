@@ -6,7 +6,7 @@ const ContactWithImage = ({ image, title, contact }) => {
   return (
     <div className={'contact-with-image'}>
       <div className={'contact-with-image__image--block'}>
-        <img className={'contact-with-image__image'} src={`../../../media/images/icons/${image}.png`} alt={''} />
+        <img className={'contact-with-image__image'} src={`../../../cms/images/icons/${image}.png`} alt={''} />
       </div>
       <div className={'contact-with-image__text--block'}>
         <div className={'contact-with-image__title'}>

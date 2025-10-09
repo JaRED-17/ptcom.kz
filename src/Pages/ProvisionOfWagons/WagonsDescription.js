@@ -13,7 +13,7 @@ const WagonsDescription = ({ header, description, image, children }) => {
         <div className={`${classNamePrefix}__description-block--text`}>
           <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={description} />
         </div>
-        <img className={`${classNamePrefix}__description-block--text`} src={`../../../media/images/${image}.jpg`} alt={''} />
+        <img className={`${classNamePrefix}__description-block--text`} src={`../../../cms/images/${image}.jpg`} alt={''} />
       </div>
       <div className={`${classNamePrefix}__table-block`}>
         {children}

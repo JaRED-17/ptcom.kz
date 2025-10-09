@@ -36,8 +36,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, './src/media'),
-          to: path.resolve(__dirname, './build/media')
+          from: path.resolve(__dirname, './src/cms'),
+          to: path.resolve(__dirname, './build/cms')
         }
       ]
     })
