@@ -116,9 +116,5 @@ export default defineMessages({
   'app.page.zvezda2015.title': {
     id: 'app.page.zvezda2015.title',
     defaultMessage: 'Получена новая награда «Звезда качества 2015»'
-  },
-  'app.page.staticPage.title': {
-    id: 'app.page.staticPage.title',
-    defaultMessage: 'HTML контент'
   }
 })

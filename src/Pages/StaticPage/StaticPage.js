@@ -4,13 +4,13 @@ import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 import PropTypes from 'prop-types'
 
-const StaticPage = ({ name, path }) => {
+const StaticPage = ({ name }) => {
   const classNamePrefix = 'static-page'
   const [content, setContent] = useState(null)
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('/cms/static/ru.html')
+    fetch('/cms/static/' + name + '/ru.html')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok')
@@ -25,7 +25,7 @@ const StaticPage = ({ name, path }) => {
 
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={0}>
-      <PageTitle name={'staticPage'} />
+      <PageTitle name={name} />
       {error ? <p>Ошибка: {error}</p> : content ? <div className={`${classNamePrefix}__content`} dangerouslySetInnerHTML={{ __html: content }} /> : 'Загрузка...'}
       <OurAdvantages />
     </PageWithAsideMenu>
@@ -33,8 +33,7 @@ const StaticPage = ({ name, path }) => {
 }
 
 StaticPage.propTypes = {
-  name: PropTypes.string,
-  path: PropTypes.string
+  name: PropTypes.string
 }
 
 export default StaticPage
