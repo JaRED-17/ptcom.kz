@@ -2,11 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import AsideMenu from '../AsideMenu'
 import Page from '../Page'
-import data from '../../cms/data/pages.json'
+import pages from '../../cms/data/pages.json'
 
 const PageWithAsideMenu = ({ classNamePrefix, children, index = 0 }) => {
-  const { pages } = data
-
   return (
     <Page classNamePrefix={classNamePrefix} asideMenu>
       <AsideMenu list={pages[index].entries} />

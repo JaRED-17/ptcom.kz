@@ -2,7 +2,7 @@ import React from 'react'
 import './Sitemap.scss'
 import setMessages from '../../helpers/setMessages'
 import pageTitles from '../../components/PageTitle/PageTitle.messages'
-import data from '../../cms/data/pages.json'
+import pages from '../../cms/data/pages.json'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import PageTitle from '../../components/PageTitle'
@@ -27,7 +27,6 @@ SiteMapLink.propTypes = {
 
 const Sitemap = () => {
   const classNamePrefix = 'sitemap'
-  const { pages } = data
   const handlePages = (pages) => {
     return pages.map((page, index) => {
       if (page.entries) {

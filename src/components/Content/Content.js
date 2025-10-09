@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import './Content.scss'
-import data from '../../cms/data/pages.json'
+import pages from '../../cms/data/pages.json'
 
 /* Pages */
 import Home from '../../Pages/Home'
@@ -51,7 +51,6 @@ const Content = () => {
     'contacts': <Contacts />,
     'sitemap': <Sitemap />
   }
-  const { pages } = data
 
   return (
     <div className={'content'}>
