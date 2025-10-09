@@ -27,6 +27,7 @@ import Calculation from '../../Pages/Calculation'
 import Contacts from '../../Pages/Contacts'
 import Sitemap from '../../Pages/Sitemap'
 import StyleGuide from '../../Pages/StyleGuide'
+import StaticPage from '../../Pages/StaticPage'
 
 const Content = () => {
   const components = {
@@ -49,7 +50,8 @@ const Content = () => {
     'wagonsTypes': <WagonsTypes />,
     'calculation': <Calculation />,
     'contacts': <Contacts />,
-    'sitemap': <Sitemap />
+    'sitemap': <Sitemap />,
+    'staticPage': <StaticPage />
   }
 
   return (

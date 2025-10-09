@@ -114,5 +114,9 @@
   {
     "name": "contacts",
     "url": "/contacts"
+  },
+  {
+    "name": "staticPage",
+    "url": "static-page"
   }
 ]
