@@ -53,23 +53,33 @@ const Content = () => {
     'sitemap': <Sitemap />,
     'staticPage': <StaticPage />
   }
+  const handlePages = (pages) => {
+    return pages.map((page, index) => {
+      if (page.entries) {
+        return (
+          <>
+            <Route key={index} path={page.url} element={components[page.name] || <PageNotFound />} exact />
+            {(() => handlePages(page.entries))()}
+          </>
+        )
+      } else if (page.static) {
+        return (
+          <>
+            <Route key={index} path={page.url} element={components[page.name] || <PageNotFound />} exact />
+            {(() => page.static.map((page, index) => <Route key={index} path={page.url} element={<StaticPage name={page.name} />} exact />))()}
+          </>
+        )
+      }
+
+      return <Route key={index} path={page.url} element={components[page.name] || <PageNotFound />} exact />
+    })
+  }
 
   return (
     <div className={'content'}>
       <Routes>
         <Route path={'/'} element={<Home />} exact />
-        {(() => pages.map((page, index) => {
-          if (page.entries) {
-            return (
-              <>
-                <Route key={index} path={page.url} element={components[page.name] || <PageNotFound />} exact />
-                {(() => page.entries.map((page, index) => <Route key={index} path={page.url} element={components[page.name] || <PageNotFound />} exact />))()}
-              </>
-            )
-          }
-
-          return <Route key={index} path={page.url} element={components[page.name] || <PageNotFound />} exact />
-        }))()}
+        {(() => handlePages(pages))()}
         <Route path={'/sitemap'} element={<Sitemap />} exact />
         <Route path={'/style-guide'} element={<StyleGuide />} exact />
         <Route path={'*'} element={<PageNotFound />} />

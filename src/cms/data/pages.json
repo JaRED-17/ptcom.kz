@@ -10,7 +10,7 @@
       {
         "name": "news",
         "url": "/company/news",
-        "entries": [
+        "static": [
           {
             "name": "stRkIso90012009",
             "url": "/company/news/st-rk-iso-90012009"
@@ -114,9 +114,5 @@
   {
     "name": "contacts",
     "url": "/contacts"
-  },
-  {
-    "name": "staticPage",
-    "url": "static-page"
   }
 ]

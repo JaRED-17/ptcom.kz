@@ -29,12 +29,14 @@ const Sitemap = () => {
   const classNamePrefix = 'sitemap'
   const handlePages = (pages) => {
     return pages.map((page, index) => {
-      if (page.entries) {
+      const entries = page.entries || page.static
+
+      if (entries) {
         return (
           <div key={index}>
             <SiteMapLink url={page.url} name={page.name} />
             <ul className={`${classNamePrefix}-links sub-links`}>
-              {(() => handlePages(page.entries))()}
+              {(() => handlePages(entries))()}
             </ul>
           </div>
         )
