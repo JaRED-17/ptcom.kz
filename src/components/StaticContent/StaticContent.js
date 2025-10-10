@@ -36,7 +36,7 @@ const StaticContent = React.memo(
               const href = targetLink.getAttribute('href') || ''
               const target = targetLink.getAttribute('target')
 
-              if (target && target !== '_self') return
+              if ((target && target !== '_self') || href.startsWith('mailto')) return
 
               e.preventDefault()
 
