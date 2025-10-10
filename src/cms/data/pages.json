@@ -10,38 +10,46 @@
       {
         "name": "news",
         "url": "/company/news",
-        "static": [
+        "entries": [
           {
             "name": "stRkIso90012009",
-            "url": "/company/news/st-rk-iso-90012009"
+            "url": "/company/news/st-rk-iso-90012009",
+            "static": true
           },
           {
             "name": "5years",
-            "url": "/company/news/5years"
+            "url": "/company/news/5years",
+            "static": true
           },
           {
             "name": "tl2015",
-            "url": "/company/news/tl2015"
+            "url": "/company/news/tl2015",
+            "static": true
           },
           {
             "name": "tr2015",
-            "url": "/company/news/tr2015"
+            "url": "/company/news/tr2015",
+            "static": true
           },
           {
             "name": "iso",
-            "url": "/company/news/iso"
+            "url": "/company/news/iso",
+            "static": true
           },
           {
             "name": "transit",
-            "url": "/company/news/transit"
+            "url": "/company/news/transit",
+            "static": true
           },
           {
             "name": "crocus",
-            "url": "/company/news/crocus"
+            "url": "/company/news/crocus",
+            "static": true
           },
           {
             "name": "zvezda2015",
-            "url": "/company/news/zvezda-2015"
+            "url": "/company/news/zvezda-2015",
+            "static": true
           }
         ]
       },

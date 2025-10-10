@@ -58,20 +58,13 @@ const Content = () => {
       if (page.entries) {
         return (
           <>
-            <Route key={index} path={page.url} element={components[page.name] || <PageNotFound />} exact />
+            <Route key={index} path={page.url} element={page.static ? <StaticPage name={page.name} /> : components[page.name] || <PageNotFound />} exact />
             {(() => handlePages(page.entries))()}
-          </>
-        )
-      } else if (page.static) {
-        return (
-          <>
-            <Route key={index} path={page.url} element={components[page.name] || <PageNotFound />} exact />
-            {(() => page.static.map((page, index) => <Route key={index} path={page.url} element={<StaticPage name={page.name} />} exact />))()}
           </>
         )
       }
 
-      return <Route key={index} path={page.url} element={components[page.name] || <PageNotFound />} exact />
+      return <Route key={index} path={page.url} element={page.static ? <StaticPage name={page.name} /> : components[page.name] || <PageNotFound />} exact />
     })
   }
 
