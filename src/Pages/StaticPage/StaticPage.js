@@ -21,7 +21,7 @@ const StaticPage = ({ name }) => {
       })
       .then(html => setContent(html))
       .catch(err => setError(err.message))
-  }, [])
+  })
 
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={0}>
