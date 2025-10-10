@@ -1,44 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
-import Loading from '../../components/Loading'
+import StaticContent from '../../components/StaticContent'
 import PropTypes from 'prop-types'
 
-const StaticPage = React.memo(
-  ({ name }) => {
-    const classNamePrefix = 'static-page'
-    const [content, setContent] = useState(null)
-    const [error, setError] = useState(null)
+const StaticPage = ({ name }) => {
+  const classNamePrefix = 'static-page'
 
-    useEffect(() => {
-      fetch('/cms/static/' + name + '/ru.html')
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok')
-          }
-
-          return response.text()
-        })
-        .then(html => setContent(html))
-        .catch(err => setError(err.message))
-    }, [name])
-
-    return (
-      <PageWithAsideMenu classNamePrefix={classNamePrefix} index={0}>
-        <PageTitle name={name} />
-        {error
-          ? <p>Ошибка: {error}</p>
-          : content
-            ? <div className={`${classNamePrefix}__content`} dangerouslySetInnerHTML={{ __html: content }} />
-            : <Loading />
-        }
-        <OurAdvantages />
-      </PageWithAsideMenu>
-    )
-  },
-  (prevProps, nextProps) => prevProps.name === nextProps.name
-)
+  return (
+    <PageWithAsideMenu classNamePrefix={classNamePrefix} index={0}>
+      <PageTitle name={name} />
+      <StaticContent name={name} />
+      <OurAdvantages />
+    </PageWithAsideMenu>
+  )
+}
 
 StaticPage.propTypes = {
   name: PropTypes.string
