@@ -2,4 +2,21 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  .contact-block {
+    max-width: 23%;
+    min-width: 23%;
+
+    &__icon {
+      width: 20px;
+    }
+
+    &__name {
+      font-weight: bold;
+    }
+
+    &__position {
+      color: var(--text-color-orange);
+    }
+  }
 }
