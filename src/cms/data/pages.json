@@ -10,6 +10,7 @@
       {
         "name": "news",
         "url": "/company/news",
+        "static": true,
         "entries": [
           {
             "name": "stRkIso90012009",
