@@ -1,22 +1,43 @@
-import React from 'react'
+import React, {useEffect, useState } from 'react'
 import './StaffList.scss'
 import messages from './StaffList.messages'
 import setMessages from '../../helpers/setMessages'
 import ContactBlock from './ContactBlock'
+import Loading from '../Loading'
 
 const StaffList = () => {
   const classNamePrefix = 'staff-list'
   const message = setMessages(messages, 'app.staff.list.')
+  const [employees, setEmployees] = useState(null)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    fetch('/cms/data/employees.json')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok')
+        }
+        return response.json()
+      })
+      .then(json => setEmployees(json))
+      .catch(err => setError(err.message))
+  }, [])
 
   return (
     <div className={classNamePrefix}>
-      <ContactBlock name={message('name1')} position={message('position1')} contact={message('contact1')} />
-      <ContactBlock name={message('name2')} position={message('position2')} contact={message('contact2')} />
-      <ContactBlock name={message('name3')} position={message('position3')} contact={message('contact3')} />
-      <ContactBlock name={message('name4')} position={message('position4')} contact={message('contact4')} />
-      <ContactBlock name={message('name5')} position={message('position5')} contact={message('contact5')} />
-      <ContactBlock name={message('name6')} position={message('position6')} contact={message('contact6')} />
-      <ContactBlock name={message('name7')} position={message('position7')} contact={message('contact7')} />
+      {error
+        ? <p>Ошибка: {error}</p>
+        : employees
+          ? employees.map((employee, index) => (
+            <ContactBlock
+              key={index}
+              name={message(employee.name)}
+              position={message(employee.position)}
+              contact={message(employee.contact)}
+            />
+          ))
+          : <Loading />
+      }
     </div>
   )
 }
