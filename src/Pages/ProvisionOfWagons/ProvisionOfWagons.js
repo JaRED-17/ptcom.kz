@@ -29,7 +29,7 @@ const ProvisionOfWagons = () => {
       <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('list3')} />
       <WagonsDescription header={message('header3')} description={message('description1')} image={'kv'}>
         <table>
-          <caption>Технические характеристики:</caption>
+          <caption className={'text-bolt text-color-orange'}>Технические характеристики:</caption>
           <tbody>
             <tr>
               <td>Модель вагона</td>
@@ -56,8 +56,7 @@ const ProvisionOfWagons = () => {
               <td>37.125 м<sup>2</sup></td>
             </tr>
             <tr>
-              <td>Внутренние размеры кузова</td>
-              <td />
+              <td colSpan={2}>Внутренние размеры кузова</td>
             </tr>
             <tr>
               <td>- ширина</td>
@@ -72,16 +71,14 @@ const ProvisionOfWagons = () => {
               <td>2365 мм</td>
             </tr>
             <tr>
-              <td>Наличие торцовых дверей нет</td>
-              <td />
+              <td colSpan={2}>Наличие торцовых дверей нет</td>
             </tr>
             <tr>
               <td>Количество разгрузочных люков</td>
               <td>14 шт</td>
             </tr>
             <tr>
-              <td>Угол открывания крышек люков</td>
-              <td />
+              <td colSpan={2}>Угол открывания крышек люков</td>
             </tr>
             <tr>
               <td>- средних</td>
@@ -100,8 +97,7 @@ const ProvisionOfWagons = () => {
               <td>8650 мм</td>
             </tr>
             <tr>
-              <td>Длина</td>
-              <td />
+              <td colSpan={2}>Длина</td>
             </tr>
             <tr>
               <td>- по осям сцепления автосцепок</td>
@@ -116,8 +112,7 @@ const ProvisionOfWagons = () => {
               <td>3158 мм</td>
             </tr>
             <tr>
-              <td>Высота от уровня верха головок рельсов</td>
-              <td />
+              <td colSpan={2}>Высота от уровня верха головок рельсов</td>
             </tr>
             <tr>
               <td>- максимальная</td>
@@ -136,7 +131,7 @@ const ProvisionOfWagons = () => {
       </WagonsDescription>
       <WagonsDescription header={message('header4')} description={message('description2')} image={'pv'}>
         <table>
-          <caption>Технические характеристики:</caption>
+          <caption className={'text-bolt text-color-orange'}>Технические характеристики:</caption>
           <tbody>
             <tr>
               <td>Модель вагона</td>
@@ -163,8 +158,7 @@ const ProvisionOfWagons = () => {
               <td>37.125 м<sup>2</sup></td>
             </tr>
             <tr>
-              <td>Внутренние размеры кузова</td>
-              <td />
+              <td colSpan={2}>Внутренние размеры кузова</td>
             </tr>
             <tr>
               <td>- ширина</td>
@@ -179,16 +173,14 @@ const ProvisionOfWagons = () => {
               <td>2365 мм</td>
             </tr>
             <tr>
-              <td>Наличие торцовых дверей нет</td>
-              <td />
+              <td colSpan={2}>Наличие торцовых дверей нет</td>
             </tr>
             <tr>
               <td>Количество разгрузочных люков</td>
               <td>14 шт</td>
             </tr>
             <tr>
-              <td>Угол открывания крышек люков</td>
-              <td />
+              <td colSpan={2}>Угол открывания крышек люков</td>
             </tr>
             <tr>
               <td>- средних</td>
@@ -207,8 +199,7 @@ const ProvisionOfWagons = () => {
               <td>8650 мм</td>
             </tr>
             <tr>
-              <td>Длина</td>
-              <td />
+              <td colSpan={2}>Длина</td>
             </tr>
             <tr>
               <td>- по осям сцепления автосцепок</td>
@@ -223,8 +214,7 @@ const ProvisionOfWagons = () => {
               <td>3158 мм</td>
             </tr>
             <tr>
-              <td>Высота от уровня верха головок рельсов</td>
-              <td />
+              <td colSpan={2}>Высота от уровня верха головок рельсов</td>
             </tr>
             <tr>
               <td>- максимальная</td>
@@ -242,15 +232,15 @@ const ProvisionOfWagons = () => {
         </table>
       </WagonsDescription>
       <WagonsDescription header={message('header5')} description={message('description3')} image={'pl'}>
-        <table><caption>Технические характеристики:</caption>
+        <table>
+          <caption className={'text-bolt text-color-orange'}>Технические характеристики:</caption>
           <tbody>
             <tr>
               <td>Модель вагона</td>
               <td><strong>13-2114</strong></td>
             </tr>
             <tr>
-              <td>Грузоподъемность</td>
-              <td />
+              <td colSpan={2}>Грузоподъемность</td>
             </tr>
             <tr>
               <td>- при равномерно распределенном грузе</td>
@@ -285,23 +275,20 @@ const ProvisionOfWagons = () => {
               <td>9720 мм</td>
             </tr>
             <tr>
-              <td>Длина</td>
-              <td />
+              <td colSpan={2}>Длина</td>
             </tr>
             <tr>
-              <td>- по осям сцепления автосцепок 14620 мм</td>
+              <td colSpan={2}>- по осям сцепления автосцепок 14620 мм</td>
             </tr>
             <tr>
-              <td>- по концевым балкам рамы 13400 мм</td>
-              <td />
+              <td colSpan={2}>- по концевым балкам рамы 13400 мм</td>
             </tr>
             <tr>
               <td>Ширина максимальная</td>
               <td>2870 мм</td>
             </tr>
             <tr>
-              <td>Высота от уровня верха головок рельсов</td>
-              <td />
+              <td colSpan={2}>Высота от уровня верха головок рельсов</td>
             </tr>
             <tr>
               <td>- максимальная</td>
@@ -339,7 +326,8 @@ const ProvisionOfWagons = () => {
         </table>
       </WagonsDescription>
       <WagonsDescription header={message('header6')} description={message('description4')} image={'kvh'}>
-        <table><caption>Технические характеристики:</caption>
+        <table>
+          <caption className={'text-bolt text-color-orange'}>Технические характеристики:</caption>
           <tbody>
             <tr>
               <td>Модель вагона</td>
@@ -354,8 +342,7 @@ const ProvisionOfWagons = () => {
               <td>18.5 т</td>
             </tr>
             <tr>
-              <td>Нагрузка</td>
-              <td />
+              <td colSpan={2}>Нагрузка</td>
             </tr>
             <tr>
               <td>- статическая осевая</td>
@@ -374,8 +361,7 @@ const ProvisionOfWagons = () => {
               <td>7700 мм</td>
             </tr>
             <tr>
-              <td>Длина</td>
-              <td />
+              <td colSpan={2}>Длина</td>
             </tr>
             <tr>
               <td>- по осям сцепления автосцепок</td>
@@ -390,8 +376,7 @@ const ProvisionOfWagons = () => {
               <td>3278 мм</td>
             </tr>
             <tr>
-              <td>Высота от уровня верха головок рельсов</td>
-              <td />
+              <td colSpan={2}>Высота от уровня верха головок рельсов</td>
             </tr>
             <tr>
               <td>- максимальная</td>
@@ -426,8 +411,7 @@ const ProvisionOfWagons = () => {
               <td>55 м<sup>3</sup></td>
             </tr>
             <tr>
-              <td>Длина</td>
-              <td />
+              <td colSpan={2}>Длина</td>
             </tr>
             <tr>
               <td>- по верхней обвязке</td>
@@ -438,8 +422,7 @@ const ProvisionOfWagons = () => {
               <td>7910 мм</td>
             </tr>
             <tr>
-              <td>Ширина максимальная</td>
-              <td />
+              <td colSpan={2}>Ширина максимальная</td>
             </tr>
             <tr>
               <td>- по крыше</td>
@@ -450,8 +433,7 @@ const ProvisionOfWagons = () => {
               <td>3240 мм</td>
             </tr>
             <tr>
-              <td>Количество люков</td>
-              <td />
+              <td colSpan={2}>Количество люков</td>
             </tr>
             <tr>
               <td>- загрузочных</td>
@@ -462,8 +444,7 @@ const ProvisionOfWagons = () => {
               <td>4 шт</td>
             </tr>
             <tr>
-              <td>Размеры люка в свету</td>
-              <td />
+              <td colSpan={2}>Размеры люка в свету</td>
             </tr>
             <tr>
               <td>- загрузочных</td>

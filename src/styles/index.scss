@@ -77,3 +77,19 @@ strong {
   border-radius: 20px;
 }
 
+table {
+  tr:nth-child(odd) {
+    background: var(--body-background);
+  }
+
+  tr:nth-child(even) {
+    background: lighten(#383d45, 50);
+    color: black;
+  }
+
+  th, td {
+    border: 1px solid black;
+    padding: 0.313rem;
+  }
+}
+
