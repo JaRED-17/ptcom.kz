@@ -9,7 +9,7 @@ const StaticPage = ({ name }) => {
   const classNamePrefix = 'static-page'
 
   return (
-    <PageWithAsideMenu classNamePrefix={classNamePrefix} index={0} entries={1}>
+    <PageWithAsideMenu classNamePrefix={classNamePrefix} index={0} entries={name === 'news' ? null : 1}>
       <PageTitle name={name} />
       <StaticContent name={name} />
       <OurAdvantages />
