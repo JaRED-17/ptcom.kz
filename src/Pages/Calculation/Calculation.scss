@@ -1,1 +1,8 @@
-.calculation {}
+.calculation {
+  &__content {
+    &--block.page__content--block {
+      max-width: 600px;
+      margin-right: auto;
+    }
+  }
+}
