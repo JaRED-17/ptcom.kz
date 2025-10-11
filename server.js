@@ -1,10 +1,11 @@
 const express = require('express')
 const webpack = require('webpack')
 const nodemailer = require('nodemailer')
-const bodyParser = require('body-parser')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const path = require('path')
+const dotenv = require('dotenv')
 
+dotenv.config()
 const app = express()
 const env = process.env.NODE_ENV || 'development'
 const config = require(env === 'development' ? './webpack.config.dev.js' : './webpack.config.prod.js')
@@ -12,8 +13,8 @@ const compiler = webpack(config)
 const PORT = process.env.PORT || 3000
 
 app.use(webpackDevMiddleware(compiler, { publicPath: config.output.publicPath }))
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 app.use(express.static('dist'))
 
 app.get('*', (req, res) => {
@@ -21,7 +22,10 @@ app.get('*', (req, res) => {
 })
 
 app.post('/api/send-email', async (req, res) => {
-  const { name, email, message } = req.body;
+  if (!req.body || Object.keys(req.body).length === 0) {
+    return res.json({ status: 'error' })
+  }
+  const { name, email, message } = req.body
 
   try {
     const transporter = nodemailer.createTransport({
@@ -34,7 +38,7 @@ app.post('/api/send-email', async (req, res) => {
 
     await transporter.sendMail({
       from: process.env.SMTP_USER,
-      to: 'you@example.com',
+      to: process.env.TARGET_EMAIL,
       subject: `Новое сообщение от ${name}`,
       text: `Email: ${email}\n\nСообщение:\n${message}`
     })
