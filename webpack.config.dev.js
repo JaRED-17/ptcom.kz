@@ -2,9 +2,13 @@ const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const webpack = require('webpack')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    'webpack-hot-middleware/client?reload=true',
+    './src/index.js'
+  ],
   mode: 'development',
   devtool: 'inline-source-map',
   output: {
@@ -18,20 +22,10 @@ module.exports = {
       chunks: 'all'
     }
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    historyApiFallback: true,
-    port: 8080,
-    watchContentBase: true,
-    progress: true
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      minify: {
-        collapseWhitespace: false
-      }
+      minify: false
     }),
     new MiniCssExtractPlugin({
       filename: '[name]-[hash].css'
@@ -43,7 +37,8 @@ module.exports = {
           to: path.resolve(__dirname, './dist/cms')
         }
       ]
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     rules: [
@@ -59,9 +54,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
+          'style-loader',
           'css-loader',
           'sass-loader'
         ]
