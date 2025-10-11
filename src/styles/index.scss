@@ -37,6 +37,10 @@ a {
   }
   &.orange-link {
     color: var(--text-color-orange);
+
+    &:hover {
+      color: lighten(#fe5e00, 10);
+    }
   }
 }
 
