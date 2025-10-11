@@ -1,0 +1,25 @@
+.input.input-default {
+  & .Mui-focused {
+    color: var(--text-color-white);
+    border-color: white;
+
+    .MuiOutlinedInput-notchedOutline {
+      border-color: white;
+    }
+  }
+  .MuiOutlinedInput-notchedOutline {
+    border-color: black;
+  }
+  input {
+    background-color: var(--button-primary-background);
+    color: var(--text-color-white);
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-text-fill-color: var(--text-color-white) !important;
+      -webkit-box-shadow: 0 0 0 1000px var(--button-primary-background) inset !important;
+      transition: background-color 5000s ease-in-out 0s !important;
+    }
+  }
+}
