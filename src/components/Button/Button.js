@@ -3,9 +3,10 @@ import './Button.scss'
 import {Button as ButtonUI} from '@mui/material'
 import PropTypes from 'prop-types'
 
-const Button = ({ onClick = () => {}, children, className }) => {
+const Button = ({ type, onClick = () => {}, children, className }) => {
   return (
     <ButtonUI
+      type={type}
       variant={'contained'}
       className={`button button-default ${className}`}
       onClick={onClick}
@@ -16,6 +17,7 @@ const Button = ({ onClick = () => {}, children, className }) => {
 }
 
 Button.propTypes = {
+  type: PropTypes.string,
   onClick: PropTypes.func,
   children: PropTypes.any,
   className: PropTypes.string
