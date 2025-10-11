@@ -2,6 +2,7 @@ const express = require('express')
 const webpack = require('webpack')
 const nodemailer = require('nodemailer')
 const webpackDevMiddleware = require('webpack-dev-middleware')
+const webpackHotMiddleware = require('webpack-hot-middleware')
 const path = require('path')
 const dotenv = require('dotenv')
 
@@ -12,14 +13,30 @@ const config = require(env === 'development' ? './webpack.config.dev.js' : './we
 const compiler = webpack(config)
 const PORT = process.env.PORT || 3000
 
-app.use(webpackDevMiddleware(compiler, { publicPath: config.output.publicPath }))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-app.use(express.static('dist'))
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
-})
+if (env === 'development') {
+  app.use(webpackDevMiddleware(compiler, { publicPath: config.output.publicPath }))
+  app.use(webpackHotMiddleware(compiler))
+
+  app.get('*', (req, res, next) => {
+    const filename = path.join(compiler.outputPath, 'index.html')
+    compiler.outputFileSystem.readFile(filename, (err, result) => {
+      if (err) {
+        return next(err)
+      }
+      res.set('content-type', 'text/html')
+      res.send(result)
+      res.end()
+    })
+  })
+} else {
+  app.use(express.static('dist'))
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
+  })
+}
 
 app.post('/api/send-email', async (req, res) => {
   if (!req.body || Object.keys(req.body).length === 0) {
