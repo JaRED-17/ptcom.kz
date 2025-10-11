@@ -1,5 +1,6 @@
 const express = require('express')
 const webpack = require('webpack')
+const nodemailer = require('nodemailer')
 const bodyParser = require('body-parser')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const path = require('path')
@@ -17,6 +18,32 @@ app.use(express.static('dist'))
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
+})
+
+app.post('/api/send-email', async (req, res) => {
+  const { name, email, message } = req.body;
+
+  try {
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
+      }
+    })
+
+    await transporter.sendMail({
+      from: process.env.SMTP_USER,
+      to: 'you@example.com',
+      subject: `Новое сообщение от ${name}`,
+      text: `Email: ${email}\n\nСообщение:\n${message}`
+    })
+
+    res.json({ status: 'ok' })
+  } catch (err) {
+    console.error(err)
+    res.json({ status: 'error' })
+  }
 })
 
 app.listen(PORT, () => {
