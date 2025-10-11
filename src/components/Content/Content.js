@@ -50,8 +50,7 @@ const Content = () => {
     'wagonsTypes': <WagonsTypes />,
     'calculation': <Calculation />,
     'contacts': <Contacts />,
-    'sitemap': <Sitemap />,
-    'staticPage': <StaticPage />
+    'sitemap': <Sitemap />
   }
   const handlePages = (pages) => {
     return pages.map((page, index) => {
