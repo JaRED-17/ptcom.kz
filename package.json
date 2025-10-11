@@ -25,8 +25,7 @@
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.9.3",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "webpack": "^5.102.0"
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.28.4",
@@ -57,13 +56,15 @@
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.1.1",
-    "webpack": "^5.24.2",
-    "webpack-cli": "^4.5.0",
-    "webpack-dev-middleware": "^4.1.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack": "^5.102.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-middleware": "^4.3.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-hot-middleware": "^2.26.1"
   },
   "scripts": {
     "start": "webpack serve --config webpack.config.dev.js --mode development",
+    "dist": "webpack --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
     "test": "react-scripts test",
     "development": "cross-env NODE_ENV=development node server.js",
