@@ -15,10 +15,10 @@ const PORT = process.env.PORT || 3000
 app.use(webpackDevMiddleware(compiler, { publicPath: config.output.publicPath }))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-app.use(express.static('build'))
+app.use(express.static('dist'))
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
+  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
 })
 
 app.post('/api/send-email', async (req, res) => {
