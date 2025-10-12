@@ -1,8 +1,26 @@
+@import '../../styles/vars';
+
 .calculation {
   &__content {
     &--block.page__content--block {
       max-width: 600px;
       margin-right: auto;
+
+      .submit-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .button-default {
+          min-width: 40%;
+
+          @include media-sm {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }

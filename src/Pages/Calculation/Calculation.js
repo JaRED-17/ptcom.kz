@@ -184,18 +184,20 @@ const Calculation = () => {
           )
         })}
 
-        <ReCAPTCHA
-          ref={recaptchaRef}
-          sitekey={'6Lc01uMZAAAAAGjxQ9-nEW56O7nOKzcS-TEeSsxd'}
-          onChange={() => {}}
-        />
+        <div className={'submit-container'}>
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey={'6Lc01uMZAAAAAGjxQ9-nEW56O7nOKzcS-TEeSsxd'}
+            onChange={() => {}}
+          />
 
-        <Button
-          type={'submit'}
-          className={'button-secondary'}
-        >
-          {message('form.button')}
-        </Button>
+          <Button
+            type={'submit'}
+            className={'button-secondary'}
+          >
+            {message('form.button')}
+          </Button>
+        </div>
       </Box>
       <Notification
         open={successNotification}

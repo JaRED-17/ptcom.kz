@@ -40,7 +40,6 @@ $size-xs: 480px;
     @content;
   }
 }
-
 @mixin media-sm {
   @media (max-width: $size-sm) {
     @content;
