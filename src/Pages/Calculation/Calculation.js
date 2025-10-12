@@ -5,32 +5,116 @@ import messages from './Calculation.messages'
 import PageTitle from '../../components/PageTitle'
 import Page from '../../components/Page'
 import {sendEmail} from '../../helpers/sendEmail'
-import {Box, TextField, Typography} from '@mui/material'
+import {Box} from '@mui/material'
 import Button from '../../components/Button'
+import TextField from '../../components/TextField'
+import Notification from '../../components/Notification'
 
 const Calculation = () => {
   const classNamePrefix = 'calculation'
   const message = setMessages(messages, 'app.page.calculation.')
   const [form, setForm] = useState({
+    company: '',
     name: '',
+    phone: '',
     email: '',
+    weightName: '',
+    cargoCodes: '',
+    packing: '',
+    weight: '',
+    from: '',
+    to: '',
+    typeWagons: '',
     message: ''
   })
+  const [successNotification, setSuccessNotification] = useState(false)
+  const [errorNotification, setErrorNotification] = useState(false)
   const handleSubmit = async (e) => {
     e.preventDefault()
     const data = {
       name: e.target.name.value,
       email: e.target.email.value,
-      message: e.target.message.value
+      subject: message('subject'),
+      message: message('email', {
+        company: e.target.company.value,
+        name: e.target.name.value,
+        phone: e.target.phone.value,
+        email: e.target.email.value,
+        weightName: e.target.weightName.value,
+        cargoCodes: e.target.cargoCodes.value,
+        packing: e.target.packing.value,
+        weight: e.target.weight.value,
+        from: e.target.from.value,
+        to: e.target.to.value,
+        typeWagons: e.target.typeWagons.value,
+        message: e.target.message.value
+      })
     }
 
     const res = await sendEmail(data)
-    window.alert(res.status === 'ok' ? 'Письмо отправлено!' : 'Ошибка!')
+    if (res.status === 'success') {
+      setSuccessNotification(true)
+    } else {
+      setErrorNotification(true)
+    }
   }
-
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
+  const form1 = [
+    {
+      'name': 'company',
+      'value': form.company
+    },
+    {
+      'name': 'name',
+      'value': form.name
+    },
+    {
+      'name': 'phone',
+      'value': form.phone
+    },
+    {
+      'name': 'email',
+      'value': form.email
+    }
+  ]
+  const form2 = [
+    {
+      'name': 'weightName',
+      'value': form.weightName
+    },
+    {
+      'name': 'cargoCodes',
+      'value': form.cargoCodes
+    },
+    {
+      'name': 'packing',
+      'value': form.packing
+    },
+    {
+      'name': 'weight',
+      'value': form.weight
+    }
+  ]
+  const form3 = [
+    {
+      'name': 'from',
+      'value': form.from
+    },
+    {
+      'name': 'to',
+      'value': form.to
+    },
+    {
+      'name': 'typeWagons',
+      'value': form.typeWagons
+    },
+    {
+      'name': 'message',
+      'value': form.message
+    }
+  ]
 
   return (
     <Page classNamePrefix={classNamePrefix}>
@@ -41,53 +125,83 @@ const Calculation = () => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          gap: 2,
-          maxWidth: 400,
+          gap: 1,
+          maxWidth: 600,
           mx: 'auto',
           mt: 4
         }}
       >
-        <Typography variant={'h5'} textAlign={'center'}>
-          {message('form.header')}
-        </Typography>
+        <p className={'text-color-orange text-bolt'}>{message('form.header1')}</p>
+        {form1.map((field, index) => {
+          return (
+            <TextField
+              key={index}
+              label={message(`form.${field.name}`)}
+              name={field.name}
+              value={field.value}
+              onChange={handleChange}
+              required
+            />
+          )
+        })}
 
-        <TextField
-          label={message('form.name')}
-          name={'name'}
-          value={form.name}
-          onChange={handleChange}
-          required
-          fullWidth
-        />
+        <p className={'text-color-orange text-bolt'}>{message('form.header2')}</p>
+        {form2.map((field, index) => {
+          return (
+            <TextField
+              key={index}
+              label={message(`form.${field.name}`)}
+              name={field.name}
+              value={field.value}
+              onChange={handleChange}
+              required
+            />
+          )
+        })}
 
-        <TextField
-          label={message('form.email')}
-          name={'email'}
-          type={'email'}
-          value={form.email}
-          onChange={handleChange}
-          required
-          fullWidth
-        />
-
-        <TextField
-          label={message('form.message')}
-          name={'message'}
-          value={form.message}
-          onChange={handleChange}
-          required
-          fullWidth
-          multiline
-          rows={4}
-        />
+        <p className={'text-color-orange text-bolt'}>{message('form.header3')}</p>
+        {form3.map((field, index) => {
+          return (
+            <TextField
+              key={index}
+              label={message(`form.${field.name}`)}
+              name={field.name}
+              value={field.value}
+              onChange={handleChange}
+              multiline={form3.length === index + 1}
+              rows={form3.length === index + 1 ? 4 : 1}
+              required
+            />
+          )
+        })}
 
         <Button
           type={'submit'}
-          className={'button-primary'}
+          className={'button-secondary'}
         >
           {message('form.button')}
         </Button>
       </Box>
+      <Notification
+        open={successNotification}
+        variant={'success'}
+        autoHideDuration={5000}
+        onClose={() => {
+          setSuccessNotification(false)
+        }}
+      >
+        {message('notification.success')}
+      </Notification>
+      <Notification
+        open={errorNotification}
+        variant={'error'}
+        autoHideDuration={5000}
+        onClose={() => {
+          setErrorNotification(false)
+        }}
+      >
+        {message('notification.error')}
+      </Notification>
     </Page>
   )
 }
