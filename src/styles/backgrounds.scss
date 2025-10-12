@@ -6,8 +6,10 @@
   right: 0;
   z-index: -1;
   background-size: cover;
+  background-position: bottom center;
   background-repeat: no-repeat;
   background-image: url('../cms/images/background.png');
+  background-attachment: fixed;
 
   &.background {
     &__home-page {
