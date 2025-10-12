@@ -73,6 +73,10 @@ export default defineMessages({
     id: 'app.page.calculation.notification.error',
     defaultMessage: 'Произошла ошибка во время отправки письма'
   },
+  'app.page.calculation.notification.warning': {
+    id: 'app.page.calculation.notification.warning',
+    defaultMessage: 'Пожалуста, проверьте Captcha'
+  },
   'app.page.calculation.email': {
     id: 'app.page.calculation.email',
     defaultMessage: 'Наименование компании: {company}\n\n' +

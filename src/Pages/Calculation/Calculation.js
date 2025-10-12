@@ -9,8 +9,10 @@ import {Box} from '@mui/material'
 import Button from '../../components/Button'
 import TextField from '../../components/TextField'
 import Notification from '../../components/Notification'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 const Calculation = () => {
+  const recaptchaRef = React.useRef()
   const classNamePrefix = 'calculation'
   const message = setMessages(messages, 'app.page.calculation.')
   const [form, setForm] = useState({
@@ -29,33 +31,40 @@ const Calculation = () => {
   })
   const [successNotification, setSuccessNotification] = useState(false)
   const [errorNotification, setErrorNotification] = useState(false)
+  const [warningNotification, setWarningNotification] = useState(false)
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const data = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      subject: message('subject'),
-      message: message('email', {
-        company: e.target.company.value,
-        name: e.target.name.value,
-        phone: e.target.phone.value,
-        email: e.target.email.value,
-        weightName: e.target.weightName.value,
-        cargoCodes: e.target.cargoCodes.value,
-        packing: e.target.packing.value,
-        weight: e.target.weight.value,
-        from: e.target.from.value,
-        to: e.target.to.value,
-        typeWagons: e.target.typeWagons.value,
-        message: e.target.message.value
-      })
-    }
+    const recaptchaValue = recaptchaRef.current.getValue()
 
-    const res = await sendEmail(data)
-    if (res.status === 'success') {
-      setSuccessNotification(true)
+    if (recaptchaValue) {
+      const data = {
+        name: e.target.name.value,
+        email: e.target.email.value,
+        subject: message('subject'),
+        message: message('email', {
+          company: e.target.company.value,
+          name: e.target.name.value,
+          phone: e.target.phone.value,
+          email: e.target.email.value,
+          weightName: e.target.weightName.value,
+          cargoCodes: e.target.cargoCodes.value,
+          packing: e.target.packing.value,
+          weight: e.target.weight.value,
+          from: e.target.from.value,
+          to: e.target.to.value,
+          typeWagons: e.target.typeWagons.value,
+          message: e.target.message.value
+        })
+      }
+
+      const res = await sendEmail(data)
+      if (res.status === 'success') {
+        setSuccessNotification(true)
+      } else {
+        setErrorNotification(true)
+      }
     } else {
-      setErrorNotification(true)
+      setWarningNotification(true)
     }
   }
   const handleChange = (e) => {
@@ -175,6 +184,12 @@ const Calculation = () => {
           )
         })}
 
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={'6Lc01uMZAAAAAGjxQ9-nEW56O7nOKzcS-TEeSsxd'}
+          onChange={() => {}}
+        />
+
         <Button
           type={'submit'}
           className={'button-secondary'}
@@ -201,6 +216,16 @@ const Calculation = () => {
         }}
       >
         {message('notification.error')}
+      </Notification>
+      <Notification
+        open={warningNotification}
+        variant={'warning'}
+        autoHideDuration={5000}
+        onClose={() => {
+          setWarningNotification(false)
+        }}
+      >
+        {message('notification.warning')}
       </Notification>
     </Page>
   )
