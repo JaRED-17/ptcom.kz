@@ -40,7 +40,10 @@ if (env === 'development') {
 
 app.post('/api/send-email', async (req, res) => {
   if (!req.body || Object.keys(req.body).length === 0) {
-    return res.json({ status: 'error' })
+    return res.json({
+      status: 'error',
+      errorCode: 'emptyData'
+    })
   }
   const { name, email, message } = req.body
 
@@ -60,10 +63,14 @@ app.post('/api/send-email', async (req, res) => {
       text: `Email: ${email}\n\nСообщение:\n${message}`
     })
 
-    res.json({ status: 'ok' })
+    res.json({
+      status: 'success'
+    })
   } catch (err) {
-    console.error(err)
-    res.json({ status: 'error' })
+    res.json({
+      status: 'error',
+      errorCode: err
+    })
   }
 })
 
