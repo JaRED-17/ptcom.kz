@@ -13,7 +13,7 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name]-[hash]-bundle.js',
+    filename: '[name]-[fullhash]-bundle.js',
     clean: true,
     publicPath: '/'
   },
@@ -28,7 +28,7 @@ module.exports = {
       minify: false
     }),
     new MiniCssExtractPlugin({
-      filename: '[name]-[hash].css'
+      filename: '[name]-[fullhash].css'
     }),
     new CopyWebpackPlugin({
       patterns: [

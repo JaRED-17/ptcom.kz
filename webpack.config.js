@@ -11,7 +11,7 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name]-[hash]-bundle.js',
+    filename: '[name]-[fullhash]-bundle.js',
     clean: true,
     publicPath: '/'
   },
@@ -35,12 +35,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      minify: {
-        collapseWhitespace: true
-      }
+      minify: false
     }),
     new MiniCssExtractPlugin({
-      filename: '[name]-[hash].css'
+      filename: '[name]-[fullhash].css'
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -65,9 +63,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
+          'style-loader',
           'css-loader',
           'sass-loader'
         ]

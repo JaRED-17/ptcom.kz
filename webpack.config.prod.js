@@ -10,7 +10,7 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: '[name]-[hash]-bundle.js',
+    filename: '[name]-[fullhash]-bundle.js',
     clean: true,
     publicPath: '/'
   },
@@ -31,7 +31,7 @@ module.exports = {
       }
     }),
     new MiniCssExtractPlugin({
-      filename: '[name]-[hash].css'
+      filename: '[name]-[fullhash].css'
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -56,9 +56,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
+          'style-loader',
           'css-loader',
           'sass-loader'
         ]
