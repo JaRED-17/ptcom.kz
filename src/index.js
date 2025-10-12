@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
 import { IntlProvider } from 'react-intl'
 import { ErrorBoundary } from 'react-error-boundary'
+import { SnackbarProvider } from 'notistack'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -23,7 +24,15 @@ root.render(
     >
       <BrowserRouter>
         <ErrorBoundary FallbackComponent={ErrorFallback}>
-          <App />
+          <SnackbarProvider
+            maxSnack={3}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'right'
+            }}
+          >
+            <App />
+          </SnackbarProvider>
         </ErrorBoundary>
       </BrowserRouter>
     </IntlProvider>
