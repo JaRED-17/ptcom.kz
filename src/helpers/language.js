@@ -7,7 +7,7 @@ export default {
   set: (language) => {
     window.localStorage.setItem('_lang', language)
   },
-  setDefault: (language) => {
+  setDefault: () => {
     window.localStorage.setItem('_lang', settings?.defaultLanguage || 'ru')
   }
 }
