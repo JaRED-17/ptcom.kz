@@ -42,10 +42,12 @@ app.post('/api/send-email', async (req, res) => {
   if (!req.body || Object.keys(req.body).length === 0) {
     return res.json({
       status: 'error',
-      errorCode: 'emptyData'
+      error: {
+        errorCode: 'emptyData'
+      }
     })
   }
-  const { name, email, message } = req.body
+  const { email, message, subject } = req.body
 
   try {
     const transporter = nodemailer.createTransport({
@@ -57,10 +59,10 @@ app.post('/api/send-email', async (req, res) => {
     })
 
     await transporter.sendMail({
-      from: process.env.SMTP_USER,
+      from: email,
       to: process.env.TARGET_EMAIL,
-      subject: `Новое сообщение от ${name}`,
-      text: `Email: ${email}\n\nСообщение:\n${message}`
+      subject: subject,
+      text: message
     })
 
     res.json({
@@ -69,7 +71,7 @@ app.post('/api/send-email', async (req, res) => {
   } catch (err) {
     res.json({
       status: 'error',
-      errorCode: err
+      error: err
     })
   }
 })
