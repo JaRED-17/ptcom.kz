@@ -10,6 +10,7 @@ import Button from '../../components/Button'
 import TextField from '../../components/TextField'
 import Notification from '../../components/Notification'
 import ReCAPTCHA from 'react-google-recaptcha'
+import settings from '../../cms/data/settings.json'
 
 const Calculation = () => {
   const recaptchaRef = React.useRef()
@@ -36,7 +37,7 @@ const Calculation = () => {
     e.preventDefault()
     const recaptchaValue = recaptchaRef.current.getValue()
 
-    if (recaptchaValue) {
+    if (recaptchaValue || !settings.captchaSiteKey) {
       const data = {
         name: e.target.name.value,
         email: e.target.email.value,
@@ -187,7 +188,7 @@ const Calculation = () => {
         <div className={'submit-container'}>
           <ReCAPTCHA
             ref={recaptchaRef}
-            sitekey={'6Lc01uMZAAAAAGjxQ9-nEW56O7nOKzcS-TEeSsxd'}
+            sitekey={settings?.captchaSiteKey || '1234'}
             onChange={() => {}}
           />
 
