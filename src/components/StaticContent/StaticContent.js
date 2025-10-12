@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Loading from '../Loading'
 import PropTypes from 'prop-types'
 import withRoute from '../../helpers/withRoute'
+import language from '../../helpers/language'
 
 const StaticContent = React.memo(
   ({ name, navigate }) => {
@@ -10,7 +11,7 @@ const StaticContent = React.memo(
     const [error, setError] = useState(null)
 
     useEffect(() => {
-      fetch('/cms/static/' + name + '/ru.html')
+      fetch('/cms/static/' + name + '/' + language.get() + '.html')
         .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok')

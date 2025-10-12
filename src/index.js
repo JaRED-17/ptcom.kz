@@ -8,12 +8,17 @@ import { BrowserRouter } from 'react-router-dom'
 import { IntlProvider } from 'react-intl'
 import { ErrorBoundary } from 'react-error-boundary'
 import { SnackbarProvider } from 'notistack'
+import language from './helpers/language'
+
+if (!window.localStorage.getItem('_lang')) {
+  language.setDefault()
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <IntlProvider
-      locale={'ru'}
+      locale={language.get()}
       onError={(err) => {
         if (err.code === 'MISSING_TRANSLATION') {
           console.warn('Missing translation:', err.message)
