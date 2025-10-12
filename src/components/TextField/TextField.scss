@@ -7,9 +7,20 @@
       border-color: white;
     }
   }
-  .MuiOutlinedInput-notchedOutline {
-    border-color: black;
+
+  .MuiInputBase-input {
+    padding: 10px 15px;
   }
+
+  .MuiInputLabel-root {
+    color: var(--text-color-gray);
+    line-height: 0.9;
+  }
+
+  .MuiOutlinedInput-root fieldset {
+    border-color: var(--text-color-gray);
+  }
+
   input {
     background-color: var(--button-primary-background);
     color: var(--text-color-white);

@@ -134,7 +134,7 @@ const Calculation = () => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          gap: 1,
+          gap: 2,
           maxWidth: 600,
           mx: 'auto',
           mt: 4
