@@ -3,7 +3,7 @@ import './TextField.scss'
 import {TextField as TextFieldUI} from '@mui/material'
 import PropTypes from 'prop-types'
 
-const TextField = ({ label, name, value, onChange = () => {}, required, fullWidth, rows, children }) => {
+const TextField = ({ label, name, value, onChange = () => {}, required, fullWidth = true, rows, children }) => {
   return (
     <TextFieldUI
       className={`input input-default`}
