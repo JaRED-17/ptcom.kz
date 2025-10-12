@@ -5,7 +5,7 @@ import Markdown from '../Markdown'
 import messages from './Header.messages'
 import setMessages from '../../helpers/setMessages'
 import { Link } from 'react-router-dom'
-import Button from '../Button'
+import Button from '../../ui/Button'
 import withRoute from '../../helpers/withRoute'
 import PropTypes from 'prop-types'
 
