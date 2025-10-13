@@ -40,7 +40,8 @@ const Calculation = () => {
           from: e.target.from.value,
           to: e.target.to.value,
           typeWagons: e.target.typeWagons.value,
-          message: e.target.message.value
+          message: e.target.message.value,
+          dateTime: new Date().toLocaleString('ru-RU')
         })
       }
 

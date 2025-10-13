@@ -90,7 +90,8 @@ export default defineMessages({
       'Станция отправления: {from}\n\n' +
       'Станция назначения: {to}\n\n' +
       'Тип вагонов: {typeWagons}\n\n' +
-      'Дополнительно: {message}'
+      'Дополнительно: {message}\n\n' +
+      'Дата и время создания запроса: {dateTime}'
   },
   'app.page.calculation.subject': {
     id: 'app.page.calculation.subject',
