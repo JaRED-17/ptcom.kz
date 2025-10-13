@@ -1,5 +1,63 @@
 {
   "captchaSiteKey": "6Lc01uMZAAAAAGjxQ9-nEW56O7nOKzcS-TEeSsxd",
   "languages": ["ru"],
-  "defaultLanguage": "ru"
+  "defaultLanguage": "ru",
+  "calculationFields": {
+    "form1": [
+      {
+        "name": "company",
+        "mandatory": true
+      },
+      {
+        "name": "name",
+        "mandatory": true
+      },
+      {
+        "name": "phone",
+        "mandatory": true
+      },
+      {
+        "name": "email",
+        "mandatory": true
+      }
+    ],
+    "form2": [
+      {
+        "name": "weightName",
+        "mandatory": true
+      },
+      {
+        "name": "cargoCodes",
+        "mandatory": true
+      },
+      {
+        "name": "packing",
+        "mandatory": true
+      },
+      {
+        "name": "weight",
+        "mandatory": true
+      }
+    ],
+    "form3": [
+      {
+        "name": "from",
+        "mandatory": true
+      },
+      {
+        "name": "to",
+        "mandatory": true
+      },
+      {
+        "name": "typeWagons",
+        "mandatory": true
+      },
+      {
+        "name": "message",
+        "multiline": true,
+        "rows": 4,
+        "mandatory": false
+      }
+    ]
+  }
 }

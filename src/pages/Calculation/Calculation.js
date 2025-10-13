@@ -29,18 +29,18 @@ const Calculation = () => {
         email: e.target.email.value,
         subject: message('subject'),
         message: message('email', {
-          company: e.target.company.value,
-          name: e.target.name.value,
-          phone: e.target.phone.value,
-          email: e.target.email.value,
-          weightName: e.target.weightName.value,
-          cargoCodes: e.target.cargoCodes.value,
-          packing: e.target.packing.value,
-          weight: e.target.weight.value,
-          from: e.target.from.value,
-          to: e.target.to.value,
-          typeWagons: e.target.typeWagons.value,
-          message: e.target.message.value,
+          company: e.target.company.value || '-',
+          name: e.target.name.value || '-',
+          phone: e.target.phone.value || '-',
+          email: e.target.email.value || '-',
+          weightName: e.target.weightName.value || '-',
+          cargoCodes: e.target.cargoCodes.value || '-',
+          packing: e.target.packing.value || '-',
+          weight: e.target.weight.value || '-',
+          from: e.target.from.value || '-',
+          to: e.target.to.value || '-',
+          typeWagons: e.target.typeWagons.value || '-',
+          message: e.target.message.value || '-',
           dateTime: new Date().toLocaleString('ru-RU')
         })
       }
@@ -55,24 +55,6 @@ const Calculation = () => {
       setWarningNotification(true)
     }
   }
-  const form1 = [
-    'company',
-    'name',
-    'phone',
-    'email'
-  ]
-  const form2 = [
-    'weightName',
-    'cargoCodes',
-    'packing',
-    'weight'
-  ]
-  const form3 = [
-    'from',
-    'to',
-    'typeWagons',
-    'message'
-  ]
 
   return (
     <Page classNamePrefix={classNamePrefix}>
@@ -90,39 +72,43 @@ const Calculation = () => {
         }}
       >
         <p className={'text-color-orange text-bolt'}>{message('form.header1')}</p>
-        {form1.map((field, index) => {
+        {(settings?.calculationFields?.form1 || []).map((field, index) => {
           return (
             <TextField
               key={index}
-              label={message(`form.${field}`)}
-              name={field}
-              required
+              label={message(`form.${field.name}`)}
+              name={field.name}
+              multiline={field.multiline || false}
+              rows={field.rows || 1}
+              required={field.mandatory}
             />
           )
         })}
 
         <p className={'text-color-orange text-bolt'}>{message('form.header2')}</p>
-        {form2.map((field, index) => {
+        {(settings?.calculationFields?.form2 || []).map((field, index) => {
           return (
             <TextField
               key={index}
-              label={message(`form.${field}`)}
-              name={field}
-              required
+              label={message(`form.${field.name}`)}
+              name={field.name}
+              multiline={field.multiline || false}
+              rows={field.rows || 1}
+              required={field.mandatory}
             />
           )
         })}
 
         <p className={'text-color-orange text-bolt'}>{message('form.header3')}</p>
-        {form3.map((field, index) => {
+        {(settings?.calculationFields?.form3 || []).map((field, index) => {
           return (
             <TextField
               key={index}
-              label={message(`form.${field}`)}
-              name={field}
-              multiline={form3.length === index + 1}
-              rows={form3.length === index + 1 ? 4 : 1}
-              required
+              label={message(`form.${field.name}`)}
+              name={field.name}
+              multiline={field.multiline || false}
+              rows={field.rows || 1}
+              required={field.mandatory}
             />
           )
         })}
