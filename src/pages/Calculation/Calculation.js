@@ -13,26 +13,12 @@ import ReCAPTCHA from 'react-google-recaptcha'
 import settings from '../../cms/data/settings.json'
 
 const Calculation = () => {
-  const recaptchaRef = React.useRef()
   const classNamePrefix = 'calculation'
   const message = setMessages(messages, 'app.page.calculation.')
-  const [form, setForm] = useState({
-    company: '',
-    name: '',
-    phone: '',
-    email: '',
-    weightName: '',
-    cargoCodes: '',
-    packing: '',
-    weight: '',
-    from: '',
-    to: '',
-    typeWagons: '',
-    message: ''
-  })
   const [successNotification, setSuccessNotification] = useState(false)
   const [errorNotification, setErrorNotification] = useState(false)
   const [warningNotification, setWarningNotification] = useState(false)
+  const recaptchaRef = React.useRef()
   const handleSubmit = async (e) => {
     e.preventDefault()
     const recaptchaValue = recaptchaRef.current.getValue()
@@ -68,62 +54,23 @@ const Calculation = () => {
       setWarningNotification(true)
     }
   }
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
   const form1 = [
-    {
-      'name': 'company',
-      'value': form.company
-    },
-    {
-      'name': 'name',
-      'value': form.name
-    },
-    {
-      'name': 'phone',
-      'value': form.phone
-    },
-    {
-      'name': 'email',
-      'value': form.email
-    }
+    'company',
+    'name',
+    'phone',
+    'email'
   ]
   const form2 = [
-    {
-      'name': 'weightName',
-      'value': form.weightName
-    },
-    {
-      'name': 'cargoCodes',
-      'value': form.cargoCodes
-    },
-    {
-      'name': 'packing',
-      'value': form.packing
-    },
-    {
-      'name': 'weight',
-      'value': form.weight
-    }
+    'weightName',
+    'cargoCodes',
+    'packing',
+    'weight'
   ]
   const form3 = [
-    {
-      'name': 'from',
-      'value': form.from
-    },
-    {
-      'name': 'to',
-      'value': form.to
-    },
-    {
-      'name': 'typeWagons',
-      'value': form.typeWagons
-    },
-    {
-      'name': 'message',
-      'value': form.message
-    }
+    'from',
+    'to',
+    'typeWagons',
+    'message'
   ]
 
   return (
@@ -146,10 +93,8 @@ const Calculation = () => {
           return (
             <TextField
               key={index}
-              label={message(`form.${field.name}`)}
-              name={field.name}
-              value={field.value}
-              onChange={handleChange}
+              label={message(`form.${field}`)}
+              name={field}
               required
             />
           )
@@ -160,10 +105,8 @@ const Calculation = () => {
           return (
             <TextField
               key={index}
-              label={message(`form.${field.name}`)}
-              name={field.name}
-              value={field.value}
-              onChange={handleChange}
+              label={message(`form.${field}`)}
+              name={field}
               required
             />
           )
@@ -174,10 +117,8 @@ const Calculation = () => {
           return (
             <TextField
               key={index}
-              label={message(`form.${field.name}`)}
-              name={field.name}
-              value={field.value}
-              onChange={handleChange}
+              label={message(`form.${field}`)}
+              name={field}
               multiline={form3.length === index + 1}
               rows={form3.length === index + 1 ? 4 : 1}
               required
