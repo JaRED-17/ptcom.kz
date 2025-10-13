@@ -1,0 +1,127 @@
+[
+  {
+    "name": "aboutUs",
+    "url": "/company/about-us",
+    "entries": [
+      {
+        "name": "staffs",
+        "url": "/company/staffs"
+      },
+      {
+        "name": "news",
+        "url": "/company/news",
+        "static": true,
+        "entries": [
+          {
+            "name": "stRkIso90012009",
+            "url": "/company/news/st-rk-iso-90012009",
+            "static": true
+          },
+          {
+            "name": "5years",
+            "url": "/company/news/5years",
+            "static": true
+          },
+          {
+            "name": "tl2015",
+            "url": "/company/news/tl2015",
+            "static": true
+          },
+          {
+            "name": "tr2015",
+            "url": "/company/news/tr2015",
+            "static": true
+          },
+          {
+            "name": "iso",
+            "url": "/company/news/iso",
+            "static": true
+          },
+          {
+            "name": "transit",
+            "url": "/company/news/transit",
+            "static": true
+          },
+          {
+            "name": "crocus",
+            "url": "/company/news/crocus",
+            "static": true
+          },
+          {
+            "name": "zvezda2015",
+            "url": "/company/news/zvezda-2015",
+            "static": true
+          }
+        ]
+      },
+      {
+        "name": "licenses",
+        "url": "/company/licenses"
+      },
+      {
+        "name": "vacancies",
+        "url": "/company/vacancies"
+      }
+    ]
+  },
+  {
+    "name": "services",
+    "url": "/services",
+    "entries": [
+      {
+        "name": "provisionOfWagons",
+        "url": "/services/provision-of-wagons"
+      },
+      {
+        "name": "paymentRailwayTariffs",
+        "url": "/services/payment-railway-tariffs"
+      },
+      {
+        "name": "driveWays",
+        "url": "/services/drive-ways"
+      },
+      {
+        "name": "schema",
+        "url": "/services/schema"
+      },
+      {
+        "name": "handlingDostyk",
+        "url": "/services/handling-dostyk"
+      },
+      {
+        "name": "cargoProcessing",
+        "url": "/services/cargo-processing"
+      }
+    ]
+  },
+  {
+    "name": "consultation",
+    "url": "/consultation",
+    "entries": [
+      {
+        "name": "wagonsTypes",
+        "url": "/consultation/wagons-types"
+      },
+      {
+        "name": "wagons",
+        "url": "/consultation/wagons"
+      },
+      {
+        "name": "containers",
+        "url": "/consultation/containers"
+      },
+      {
+        "name": "dangerousGoods",
+        "url": "/consultation/dangerous-goods"
+      }
+    ]
+  },
+  {
+    "name": "calculation",
+    "url": "/calculation"
+  },
+  {
+    "name": "contacts",
+    "url": "/contacts"
+  }
+]

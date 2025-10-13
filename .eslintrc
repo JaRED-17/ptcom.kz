@@ -1,0 +1,30 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-indent-props": ["error", 2],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      {
+        "props": "always",
+        "children": "ignore"
+      }
+    ],
+    "eol-last": 0
+  },
+  "extends": [
+    "eslint:recommended",
+    "standard",
+    "standard-react"
+  ],
+  "env": {
+    "jest": true
+  }
+}
