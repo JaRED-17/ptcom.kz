@@ -1,5 +1,5 @@
-@import '../../styles/vars';
-@import '../../styles/mixins';
+@use '../../styles/vars';
+@use '../../styles/mixins';
 
 .aside-menu {
   position: sticky;
@@ -12,9 +12,9 @@
   max-height: 600px;
   max-width: 220px;
   border-radius: 20px;
-  @include glass;
+  @include mixins.glass;
 
-  @include media-md {
+  @include vars.media-md {
     display: none;
   }
 
@@ -24,7 +24,7 @@
     padding: 1rem;
     border-radius: 20px;
     min-height: 568px;
-    @include glass;
+    @include mixins.glass;
   }
 
   a:not(:last-child) {

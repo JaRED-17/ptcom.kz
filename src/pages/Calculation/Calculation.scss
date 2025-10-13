@@ -1,4 +1,4 @@
-@import '../../styles/vars';
+@use '../../styles/vars';
 
 .calculation {
   &__content {
@@ -16,7 +16,7 @@
         .button-default {
           min-width: 40%;
 
-          @include media-sm {
+          @include vars.media-sm {
             width: 100%;
           }
         }

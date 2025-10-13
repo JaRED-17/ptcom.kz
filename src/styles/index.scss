@@ -1,6 +1,7 @@
-@import './vars';
-@import './backgrounds';
-@import './mixins';
+@use './vars';
+@use './backgrounds';
+@use './mixins';
+@use "sass:color";
 
 body {
   margin: 0;
@@ -39,7 +40,7 @@ a {
     color: var(--text-color-orange);
 
     &:hover {
-      color: lighten(#fe5e00, 10);
+      color: color.adjust(#fe5e00, $lightness: 10%);
     }
   }
 }
@@ -76,7 +77,7 @@ strong {
 }
 
 .glass-effect {
-  @include glass;
+  @include mixins.glass;
   padding: 1rem;
   border-radius: 20px;
 }
@@ -87,7 +88,7 @@ table {
   }
 
   tr:nth-child(even) {
-    background: lighten(#383d45, 50);
+    background: color.adjust(#383d45, $lightness: 50%);
     color: black;
   }
 

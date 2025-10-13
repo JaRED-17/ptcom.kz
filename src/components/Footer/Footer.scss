@@ -1,14 +1,14 @@
-@import '../../styles/vars';
-@import '../../styles/mixins';
+@use '../../styles/vars';
+@use '../../styles/mixins';
 
 .footer {
   padding: 1.25rem 1rem 12.5rem;
-  @include glass;
+  @include mixins.glass;
 
   &__content {
     display: flex;
     justify-content: space-between;
-    max-width: $size-ml;
+    max-width: vars.$size-ml;
     margin: 0 auto;
   }
 

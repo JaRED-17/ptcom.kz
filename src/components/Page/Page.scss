@@ -1,13 +1,13 @@
-@import '../../styles/vars';
-@import '../../styles/mixins';
+@use '../../styles/vars';
+@use '../../styles/mixins';
 
 .page {
   &__content {
-    max-width: $size-ml;
+    max-width: vars.$size-ml;
     margin: 0 auto;
 
     &--block {
-      max-width: $size-ml;
+      max-width: vars.$size-ml;
       margin-right: auto;
     }
   }
