@@ -1,7 +1,7 @@
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 
@@ -20,7 +20,7 @@ module.exports = {
       chunks: 'all'
     },
     minimizer: [
-      new OptimizeCssAssetWebpackPlugin(),
+      new CssMinimizerPlugin(),
       new TerserWebpackPlugin()
     ]
   },
@@ -69,12 +69,11 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader'
-          }
-        ]
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'cms/images/[path][name][ext]'
+        }
       }
     ]
   }
