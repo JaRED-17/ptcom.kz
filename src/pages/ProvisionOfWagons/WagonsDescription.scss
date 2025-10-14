@@ -1,8 +1,19 @@
+@use '../../styles/vars';
+
 .wagons-description {
   &__description-block {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+
+    @include vars.media-sm {
+      display: block;
+
+      &--img {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
   }
 
   &__table-block {

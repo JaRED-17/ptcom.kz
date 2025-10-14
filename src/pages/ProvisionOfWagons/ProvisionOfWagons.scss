@@ -1,11 +1,36 @@
+@use '../../styles/vars';
+
 .provision-of-wagons {
   &__content {
     &--list {
       display: flex;
+
+      @include vars.media-xs {
+        display: block;
+
+        ul {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
   &__list1 {
     margin-right: 2rem;
+
+    @include vars.media-sm {
+      margin-right: 1rem;
+    }
+
+    @include vars.media-xs {
+      margin-right: 0;
+    }
+  }
+  &__list2 {
+    ul {
+      @include vars.media-xs {
+        margin-top: 0;
+      }
+    }
   }
 }
