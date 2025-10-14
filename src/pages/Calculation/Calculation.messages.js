@@ -96,5 +96,9 @@ export default defineMessages({
   'app.page.calculation.subject': {
     id: 'app.page.calculation.subject',
     defaultMessage: 'Новый запрос на расчет тарифов'
+  },
+  'app.page.calculation.mandatory': {
+    id: 'app.page.calculation.mandatory',
+    defaultMessage: '* - обязательные поля'
   }
 })

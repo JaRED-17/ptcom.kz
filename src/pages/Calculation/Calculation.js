@@ -59,6 +59,7 @@ const Calculation = () => {
   return (
     <Page classNamePrefix={classNamePrefix}>
       <PageTitle name={'calculation'} />
+      <p className={'text-color-gray'}>{message('mandatory')}</p>
       <Box
         component={'form'}
         onSubmit={handleSubmit}
