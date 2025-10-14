@@ -6,55 +6,91 @@
     "form1": [
       {
         "name": "company",
-        "mandatory": true
+        "type": "text",
+        "mandatory": true,
+        "minWidth": 3,
+        "maxWidth": 100
       },
       {
         "name": "name",
-        "mandatory": true
+        "type": "text",
+        "mandatory": true,
+        "minWidth": 2,
+        "maxWidth": 100
       },
       {
         "name": "phone",
-        "mandatory": true
+        "type": "text",
+        "mandatory": true,
+        "minWidth": 5,
+        "maxWidth": 11
       },
       {
         "name": "email",
-        "mandatory": true
+        "type": "email",
+        "mandatory": true,
+        "minWidth": 2,
+        "maxWidth": 100
       }
     ],
     "form2": [
       {
         "name": "weightName",
-        "mandatory": true
+        "type": "text",
+        "mandatory": true,
+        "minWidth": 1,
+        "maxWidth": 100
       },
       {
         "name": "cargoCodes",
-        "mandatory": true
+        "type": "text",
+        "mandatory": true,
+        "minWidth": 1,
+        "maxWidth": 100
       },
       {
         "name": "packing",
-        "mandatory": true
+        "type": "text",
+        "mandatory": true,
+        "minWidth": 1,
+        "maxWidth": 100
       },
       {
         "name": "weight",
-        "mandatory": true
+        "type": "text",
+        "mandatory": true,
+        "minWidth": 1,
+        "maxWidth": 100
       }
     ],
     "form3": [
       {
         "name": "from",
-        "mandatory": true
+        "type": "text",
+        "mandatory": true,
+        "minWidth": 1,
+        "maxWidth": 100
       },
       {
         "name": "to",
-        "mandatory": true
+        "type": "text",
+        "mandatory": true,
+        "minWidth": 1,
+        "maxWidth": 100
       },
       {
         "name": "typeWagons",
-        "mandatory": true
+        "type": "text",
+        "mandatory": true,
+        "minWidth": 1,
+        "maxWidth": 100
       },
       {
         "name": "message",
+        "type": "text",
         "multiline": true,
+        "minWidth": 1,
+        "maxWidth": 100,
         "rows": 4,
         "mandatory": false
       }
