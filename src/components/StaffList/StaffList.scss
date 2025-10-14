@@ -1,3 +1,5 @@
+@use '../../styles/vars';
+
 .staff-list {
   .static-content__content {
     display: flex;
@@ -7,6 +9,21 @@
     .contact-block {
       max-width: 23%;
       min-width: 23%;
+
+      @include vars.media-md {
+        max-width: 30%;
+        min-width: 30%;
+      }
+
+      @include vars.media-sm {
+        max-width: 47%;
+        min-width: 47%;
+      }
+
+      @include vars.media-xs {
+        max-width: 100%;
+        min-width: 100%;
+      }
 
       &__icon {
         width: 20px;
