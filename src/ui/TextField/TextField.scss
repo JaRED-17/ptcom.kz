@@ -1,35 +1,40 @@
 .input.input-default {
-  & .Mui-focused {
-    color: var(--text-color-white);
-    border-color: white;
-
-    .MuiOutlinedInput-notchedOutline {
-      border-color: white;
-    }
-  }
-
   .MuiInputBase-input {
     padding: 10px 15px;
+    color: var(--input-text-color);
   }
 
   .MuiInputLabel-root {
-    color: var(--text-color-gray);
+    color: var(--input-label-color);
     line-height: 0.9;
+
+    &.Mui-error {
+      color: var(--input-error-label-color);
+    }
   }
 
-  .MuiOutlinedInput-root fieldset {
-    border-color: var(--text-color-gray);
+  .MuiFormHelperText-root.Mui-error {
+    color: var(--input-error-text-color);
+  }
+
+  .MuiOutlinedInput-root {
+    &.Mui-error fieldset {
+      border-color: var(--input-error-border-color);
+    }
+
+    fieldset {
+      border-color: var(--input-border-color);
+    }
   }
 
   input {
-    background-color: var(--button-primary-background);
-    color: var(--text-color-white);
+    background-color: var(--input-background-color);
 
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus {
-      -webkit-text-fill-color: var(--text-color-white) !important;
-      -webkit-box-shadow: 0 0 0 1000px var(--button-primary-background) inset !important;
+      -webkit-text-fill-color: var(--input-text-color) !important;
+      -webkit-box-shadow: 0 0 0 1000px var(--input-background-color) inset !important;
       transition: background-color 5000s ease-in-out 0s !important;
     }
   }

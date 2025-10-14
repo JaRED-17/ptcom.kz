@@ -78,6 +78,14 @@ $size-xs: 480px;
   --custom-button-background: #fff;
   --custom-button-background-hover: #c2c3c6;
 
+  --input-text-color: var(--text-color-white);
+  --input-label-color: var(--text-color-gray);
+  --input-background-color: var(--body-background);
+  --input-border-color: var(--text-color-gray);
+  --input-error-text-color: red;
+  --input-error-label-color: red;
+  --input-error-border-color: red;
+
   --block-primary-border: black;
 
   .light-theme {
