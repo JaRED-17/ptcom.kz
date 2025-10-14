@@ -79,6 +79,7 @@ const Calculation = () => {
               key={index}
               label={message(`form.${field.name}`)}
               name={field.name}
+              type={field.type}
               multiline={field.multiline || false}
               minWidth={field.minWidth}
               maxWidth={field.maxWidth}
@@ -95,6 +96,7 @@ const Calculation = () => {
               key={index}
               label={message(`form.${field.name}`)}
               name={field.name}
+              type={field.type}
               multiline={field.multiline || false}
               minWidth={field.minWidth}
               maxWidth={field.maxWidth}
@@ -111,6 +113,7 @@ const Calculation = () => {
               key={index}
               label={message(`form.${field.name}`)}
               name={field.name}
+              type={field.type}
               multiline={field.multiline || false}
               minWidth={field.minWidth}
               maxWidth={field.maxWidth}

@@ -6,24 +6,28 @@
     "form1": [
       {
         "name": "company",
+        "type": "text",
         "mandatory": true,
         "minWidth": 3,
         "maxWidth": 100
       },
       {
         "name": "name",
+        "type": "text",
         "mandatory": true,
         "minWidth": 2,
         "maxWidth": 100
       },
       {
         "name": "phone",
+        "type": "text",
         "mandatory": true,
         "minWidth": 5,
         "maxWidth": 11
       },
       {
         "name": "email",
+        "type": "email",
         "mandatory": true,
         "minWidth": 2,
         "maxWidth": 100
@@ -32,24 +36,28 @@
     "form2": [
       {
         "name": "weightName",
+        "type": "text",
         "mandatory": true,
         "minWidth": 1,
         "maxWidth": 100
       },
       {
         "name": "cargoCodes",
+        "type": "text",
         "mandatory": true,
         "minWidth": 1,
         "maxWidth": 100
       },
       {
         "name": "packing",
+        "type": "text",
         "mandatory": true,
         "minWidth": 1,
         "maxWidth": 100
       },
       {
         "name": "weight",
+        "type": "text",
         "mandatory": true,
         "minWidth": 1,
         "maxWidth": 100
@@ -58,24 +66,28 @@
     "form3": [
       {
         "name": "from",
+        "type": "text",
         "mandatory": true,
         "minWidth": 1,
         "maxWidth": 100
       },
       {
         "name": "to",
+        "type": "text",
         "mandatory": true,
         "minWidth": 1,
         "maxWidth": 100
       },
       {
         "name": "typeWagons",
+        "type": "text",
         "mandatory": true,
         "minWidth": 1,
         "maxWidth": 100
       },
       {
         "name": "message",
+        "type": "text",
         "multiline": true,
         "minWidth": 1,
         "maxWidth": 100,

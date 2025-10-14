@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 const TextField = ({
   label,
   name,
+  type,
   value,
   onChange = () => {},
   required,
@@ -57,6 +58,7 @@ const TextField = ({
       className={`input input-default`}
       label={label}
       name={name}
+      type={type}
       value={value}
       onChange={onChange}
       onBlur={onBlur}
@@ -75,6 +77,7 @@ const TextField = ({
 TextField.propTypes = {
   label: PropTypes.string,
   name: PropTypes.string,
+  type: PropTypes.string,
   value: PropTypes.object,
   onChange: PropTypes.func,
   required: PropTypes.bool,
