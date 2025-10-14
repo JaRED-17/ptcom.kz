@@ -5,11 +5,21 @@
   padding: 1.25rem 1rem 12.5rem;
   @include mixins.glass;
 
+  @include vars.media-xs {
+    padding: 1.25rem 1rem 2.25rem;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
     max-width: vars.$size-ml;
     margin: 0 auto;
+
+    @include vars.media-sm {
+      gap: 1rem;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
   }
 
   p {
@@ -20,6 +30,13 @@
   &__block {
     text-align: left;
     max-width: 25%;
+
+    @include vars.media-sm {
+      max-width: 47%;
+    }
+    @include vars.media-xs {
+      max-width: 100%;
+    }
 
     &-header {
       color: var(--text-color-orange);
