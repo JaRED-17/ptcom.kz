@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import Button from '../../ui/Button'
 import withRoute from '../../helpers/withRoute'
 import PropTypes from 'prop-types'
+import Menu from '../Menu'
 
 const Header = ({ navigate }) => {
   const message = setMessages(messages, 'app.header.')
@@ -26,6 +27,7 @@ const Header = ({ navigate }) => {
             text={message('navigation.links')}
           />
         </div>
+        <Menu />
         <div className={'header__button'}>
           <Button
             className={'button-primary'}

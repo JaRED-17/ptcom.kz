@@ -8,27 +8,79 @@
   @include mixins.glass;
   z-index: 10;
 
+  @include vars.media-xs {
+    padding: 10px;
+  }
+
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2.813rem;
+    gap: 1rem;
     max-width: vars.$size-ml;
     margin: 0 auto;
+
+    @include vars.media-md {
+      gap: 0.5rem;
+    }
   }
 
   &__logo {
     display: flex;
     align-items: center;
 
+    @include vars.media-sm {
+      order: 2;
+    }
+
     &-img {
       width: 200px;
+
+      @include vars.media-xs {
+        width: 150px;
+      }
     }
   }
 
   &__navigation {
+    text-align: center;
+
+    @include vars.media-sm {
+      display: none;
+    }
+
     a {
       margin: 1rem;
+
+      @include vars.media-md {
+        margin: 0.5rem;
+      }
+    }
+  }
+
+  .menu {
+    @include vars.media(null, vars.$size-sm) {
+      display: none;
+    }
+    @include vars.media-sm {
+      order: 1;
+    }
+  }
+
+  &__button {
+    @include vars.media-sm {
+      order: 3;
+    }
+
+    .button-default.button-primary {
+      @include vars.media-md {
+        padding: 0.625rem 1rem
+      }
+
+      @include vars.media-xs {
+        max-width: 100px;
+        padding: 0.375rem 1rem;
+      }
     }
   }
 }
