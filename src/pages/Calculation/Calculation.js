@@ -23,7 +23,7 @@ const Calculation = () => {
     e.preventDefault()
     const recaptchaValue = recaptchaRef.current.getValue()
 
-    if (recaptchaValue || !settings.captchaSiteKey) {
+    if (recaptchaValue || settings.skipCaptchaCheck) {
       const data = {
         name: e.target.name.value,
         email: e.target.email.value,

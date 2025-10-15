@@ -2,6 +2,7 @@
   "captchaSiteKey": "6Lc01uMZAAAAAGjxQ9-nEW56O7nOKzcS-TEeSsxd",
   "languages": ["ru"],
   "defaultLanguage": "ru",
+  "skipCaptchaCheck": true,
   "calculationFields": {
     "form1": [
       {
