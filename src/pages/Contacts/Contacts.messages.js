@@ -7,7 +7,7 @@ export default defineMessages({
   },
   'app.page.contacts.hint': {
     id: 'app.page.contacts.hint',
-    defaultMessage: 'Для того, чтобы получить интересующую вас в компании «Петропавл Экспресс Логистика» информация свяжитесь с нами по удобным для вас телефонам'
+    defaultMessage: 'Для того, чтобы получить интересующую вас в компании «Петропавл Экспресс Логистика» информацию свяжитесь с нами по удобным для вас телефонам'
   },
   'app.page.contacts.astana.title': {
     id: 'app.page.contacts.astana.title',
