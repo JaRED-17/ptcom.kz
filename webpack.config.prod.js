@@ -12,7 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: '[name]-[fullhash]-bundle.js',
     clean: true,
-    publicPath: './'
+    publicPath: '/'
   },
   optimization: {
     splitChunks: {
