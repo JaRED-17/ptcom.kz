@@ -1,3 +1,5 @@
+@use '../../styles/vars';
+
 .services__custom-button {
   display: flex;
   justify-content: space-between;
@@ -11,9 +13,19 @@
   padding: 0.625rem;
   transition: background-color .5s;
 
+  @include vars.media-xs {
+    max-width: 150px;
+    min-width: 150px;
+    height: 45px;
+  }
+
   &-icon {
     height: auto;
     width: 70px;
+
+    @include vars.media-xs {
+      width: 50px;
+    }
   }
 
   &-text {
@@ -22,6 +34,11 @@
     font-weight: bold;
     max-width: 120px;
     font-size: 0.75rem;
+
+    @include vars.media-xs {
+      max-width: 95px;
+      font-size: 0.563rem;
+    }
   }
 
   &:hover {
