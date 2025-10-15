@@ -30,7 +30,7 @@ export default defineMessages({
       '- Украина;\n' +
       '- Литва;\n' +
       '- Латвия;\n' +
-      '- Страны Европы.ие вагонов.'
+      '- Страны Европы.'
   },
   'app.page.provisionOfWagons.header2': {
     id: 'app.page.provisionOfWagons.header2',
@@ -38,7 +38,7 @@ export default defineMessages({
   },
   'app.page.provisionOfWagons.list3': {
     id: 'app.page.provisionOfWagons.list3',
-    defaultMessage: '- Кратчайшие сроки рассмотрения ваших заявок на подачу вагонов под погрузку\n' +
+    defaultMessage: '- Кратчайшие сроки рассмотрения ваших заявок на подачу вагонов под погрузку;\n' +
       '- Наличие партнерских соглашений с операторами железнодорожных вагонов во всех странах СНГ и Балтии;\n' +
       '- Слежение за вагонами от подачи под погрузку до поступления на станцию назначения.'
   },
