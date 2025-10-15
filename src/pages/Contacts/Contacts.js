@@ -21,9 +21,11 @@ const Contacts = () => {
         <ContactWithImage image={'petropavl'} title={message('petropavl.title')} contact={message('petropavl.contact')} />
       </div>
       <div className={'contacts-sipnet'}>
-        <img className={'contacts-sipnet__image'} src={'/cms/images/icons/sipnet.png'} alt={''} />
-        <img className={'contacts-sipnet__phone-image'} src={'/cms/images/icons/phone.png'} alt={''} />
-        <div className={'contacts-sipnet__phone-text'}>{message('sipnet.phone')}</div>
+        <div className={'contacts-sipnet__phone'}>
+          <img className={'contacts-sipnet__image'} src={'/cms/images/icons/sipnet.png'} alt={''} />
+          <img className={'contacts-sipnet__phone-image'} src={'/cms/images/icons/phone.png'} alt={''} />
+          <div className={'contacts-sipnet__phone-text'}>{message('sipnet.phone')}</div>
+        </div>
         <div className={'contacts-sipnet__warning text-color-gray'}>{message('sipnet.warning')}</div>
       </div>
       <p className={'text-color-gray'}>{message('address.title')}</p>

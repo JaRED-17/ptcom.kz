@@ -1,7 +1,13 @@
+@use '../../styles/vars';
+
 .contacts {
   &-with-image {
     display: flex;
     gap: 1rem;
+
+    @include vars.media-sm {
+      display: block;
+    }
   }
 
   &-sipnet {
@@ -9,18 +15,28 @@
     align-items: center;
     gap: 1rem;
 
+    @include vars.media-sm {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
     &__image {
       height: auto;
       width: 80px;
     }
 
-    &__phone-image {
-      height: 30px;
-      width: auto;
-    }
+    &__phone {
+      display: flex;
+      gap: 1rem;
 
-    &__phone-text {
-      font-size: 1.25rem;
+      &-image {
+        height: 30px;
+        width: auto;
+      }
+
+      &-text {
+        font-size: 1.25rem;
+      }
     }
 
     &__warning {
