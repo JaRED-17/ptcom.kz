@@ -1,0 +1,10 @@
+.hamburger-menu {}
+
+#menu {
+  .MuiPaper-root {
+    background: var(--body-background);
+    color: var(--text-color-white);
+    min-width: 80%;
+    max-width: 80%;
+  }
+}

@@ -31,6 +31,10 @@ const CollapseMenuItem = ({ navigate, handleMenuClose, name, items }) => {
           {items.map((item, index) => (
             <MenuItem
               key={index}
+              sx={{
+                whiteSpace: 'normal',
+                wordBreak: 'break-word',
+              }}
               onClick={() => {
                 navigate(item.url)
                 closeMainMenu()
