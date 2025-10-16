@@ -17,6 +17,10 @@
         flex-wrap: wrap;
         gap: 10px;
 
+        @include vars.media-sm {
+          justify-content: center;
+        }
+
         .button-default {
           min-width: 40%;
 
