@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 import Button from '../../ui/Button'
 import withRoute from '../../helpers/withRoute'
 import PropTypes from 'prop-types'
-import Menu from '../Menu'
+import SiteMenu from '../SiteMenu'
 
 const Header = ({ navigate }) => {
   const message = setMessages(messages, 'app.header.')
@@ -22,12 +22,8 @@ const Header = ({ navigate }) => {
           </Link>
         </div>
         <div className={'header__navigation'}>
-          <Markdown
-            childrenClassName={{target: 'link', className: 'white-link'}}
-            text={message('navigation.links')}
-          />
+          <SiteMenu />
         </div>
-        <Menu />
         <div className={'header__button'}>
           <Button
             className={'button-primary'}

@@ -1,0 +1,25 @@
+@use '../../styles/vars';
+
+.site-menu {
+  &__desktop {
+    @include vars.media-sm {
+      display: none;
+    }
+
+    text-align: center;
+
+    a {
+      margin: 1rem;
+
+      @include vars.media-md {
+        margin: 0.5rem;
+      }
+    }
+  }
+
+  &__mobile {
+    @include vars.media(null, vars.$size-sm) {
+      display: none;
+    }
+  }
+}

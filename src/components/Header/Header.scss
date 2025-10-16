@@ -43,25 +43,6 @@
   }
 
   &__navigation {
-    text-align: center;
-
-    @include vars.media-sm {
-      display: none;
-    }
-
-    a {
-      margin: 1rem;
-
-      @include vars.media-md {
-        margin: 0.5rem;
-      }
-    }
-  }
-
-  .menu {
-    @include vars.media(null, vars.$size-sm) {
-      display: none;
-    }
     @include vars.media-sm {
       order: 1;
     }
