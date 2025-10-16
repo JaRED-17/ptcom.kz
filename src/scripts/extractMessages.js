@@ -8,7 +8,6 @@ const files = await glob('src/**/**.messages.js')
 const allMessages = {}
 
 for (const file of files) {
-  // Чтобы import работал с относительным путём
   const moduleUrl = pathToFileURL(path.resolve(file)).href
   const messages = (await import(moduleUrl)).default
 
@@ -17,7 +16,14 @@ for (const file of files) {
   }
 }
 
+const sortedAllMessages = Object.keys(allMessages)
+  .sort()
+  .reduce((acc, key) => {
+    acc[key] = allMessages[key]
+    return acc
+  }, {})
+
 const outputPath = 'src/locales/ru.json'
-await fs.outputJson(outputPath, allMessages, { spaces: 2 })
+await fs.outputJson(outputPath, sortedAllMessages, { spaces: 2 })
 
 console.log(`✅ Готово! Файл сохранён: ${outputPath}`)
