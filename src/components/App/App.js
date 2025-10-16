@@ -12,7 +12,6 @@ const App = () => {
       <Header />
       <Content />
       <Footer />
-      <div id={'background'} />
     </div>
   )
 }

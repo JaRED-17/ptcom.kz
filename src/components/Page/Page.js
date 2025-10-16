@@ -5,11 +5,9 @@ import PropTypes from 'prop-types'
 const Page = ({ classNamePrefix, children, asideMenu = false }) => {
   useEffect(() => {
     const background = document.querySelector('body')
-    background?.classList.add('backgrounds')
     background?.classList.add(`background__${classNamePrefix}-page`)
 
     return () => {
-      background?.classList.remove('backgrounds')
       background?.classList.remove(`background__${classNamePrefix}-page`)
     }
   }, [])
