@@ -1,7 +1,9 @@
 .input.input-default {
-  .MuiInputBase-input {
+  input.MuiInputBase-input,
+  .MuiInputBase-multiline {
     padding: 10px 15px;
     color: var(--input-text-color);
+    background-color: var(--input-background-color);
   }
 
   .MuiInputLabel-root {
@@ -28,8 +30,6 @@
   }
 
   input {
-    background-color: var(--input-background-color);
-
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus {
