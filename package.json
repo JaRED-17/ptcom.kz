@@ -17,6 +17,8 @@
     "@testing-library/user-event": "^13.5.0",
     "body-parser": "^2.2.0",
     "dotenv": "^17.2.3",
+    "fs-extra": "^11.3.2",
+    "glob": "^11.0.3",
     "nodemailer": "^7.0.9",
     "notistack": "^3.0.2",
     "prop-types": "^15.8.1",
@@ -71,7 +73,8 @@
     "production": "cross-env NODE_ENV=production node server.js",
     "lint": "eslint ./src",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "extract-messages": "node src/scripts/extractMessages.js"
   },
   "eslintConfig": {
     "extends": [

@@ -11,14 +11,32 @@ import { SnackbarProvider } from 'notistack'
 import language from './helpers/language'
 
 if (!window.localStorage.getItem('_lang')) {
-  language.setDefault()
+  language.setDefaultLanguage()
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
-  <React.StrictMode>
+export const getMessages = async (locale) => {
+  try {
+    const messages = await import(`/src/locales/${locale}.json`)
+    return messages.default
+  } catch (e) {
+    console.warn(`Нет перевода для ${locale}, используется ru`)
+    const fallback = await import('/src/locales/ru.json')
+    return fallback.default
+  }
+}
+
+const IntlWrapper = ({ locale, children }) => {
+  const [messages, setMessages] = React.useState(null)
+
+  React.useEffect(() => {
+    getMessages(locale).then(setMessages)
+  }, [locale])
+
+  if (!messages) return null
+
+  return (
     <IntlProvider
-      locale={language.get()}
+      locale={locale}
       onError={(err) => {
         if (err.code === 'MISSING_TRANSLATION') {
           console.warn('Missing translation:', err.message)
@@ -26,7 +44,18 @@ root.render(
           throw err
         }
       }}
+      messages={messages}
+      defaultLocale={language.getDefaultLanguage()}
     >
+      {children}
+    </IntlProvider>
+  )
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+  <React.StrictMode>
+    <IntlWrapper locale={language.getCurrentLanguage()}>
       <BrowserRouter>
         <ErrorBoundary FallbackComponent={ErrorFallback}>
           <SnackbarProvider
@@ -40,7 +69,7 @@ root.render(
           </SnackbarProvider>
         </ErrorBoundary>
       </BrowserRouter>
-    </IntlProvider>
+    </IntlWrapper>
   </React.StrictMode>
 )
 

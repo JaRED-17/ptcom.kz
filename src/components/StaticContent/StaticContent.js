@@ -11,7 +11,7 @@ const StaticContent = React.memo(
     const [error, setError] = useState(null)
 
     useEffect(() => {
-      fetch('/cms/static/' + name + '/' + language.get() + '.html')
+      fetch('/cms/static/' + name + '/' + language.getCurrentLanguage() + '.html')
         .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok')
