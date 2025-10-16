@@ -1,40 +1,52 @@
 .backgrounds {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  background-size: cover;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-image: url('../cms/images/background.png');
-  background-attachment: fixed;
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: url('../cms/images/background.png') bottom center / cover no-repeat;
+  }
 
   &.background {
     &__home-page {
-      background-image: url('../cms/images/page-backgrounds/background__home-page.png');
+      &::before {
+        background-image: url('../cms/images/page-backgrounds/background__home-page.png');
+      }
     }
     &__services-page {
-      background-image: url('../cms/images/page-backgrounds/background__services-page.png');
+      &::before {
+        background-image: url('../cms/images/page-backgrounds/background__services-page.png');
+      }
     }
     &__contacts-page {
-      background-image: url('../cms/images/page-backgrounds/background__contacts-page.png');
+      &::before {
+        background-image: url('../cms/images/page-backgrounds/background__contacts-page.png');
+      }
     }
     &__drive-ways-page {
-      background-image: url('../cms/images/page-backgrounds/background__drive-ways-page.png');
+      &::before {
+        background-image: url('../cms/images/page-backgrounds/background__drive-ways-page.png');
+      }
     }
     &__provision-of-wagons-page {
-      background-image: url('../cms/images/page-backgrounds/background__provision-of-wagons-page.png');
+      &::before {
+        background-image: url('../cms/images/page-backgrounds/background__provision-of-wagons-page.png');
+      }
     }
     &__payment-railway-tariffs-page {
-      background-image: url('../cms/images/page-backgrounds/background__payment-railway-tariffs-page.png');
+      &::before {
+        background-image: url('../cms/images/page-backgrounds/background__payment-railway-tariffs-page.png');
+      }
     }
     &__schema-page {
-      background-image: url('../cms/images/page-backgrounds/background__schema-page.png');
+      &::before {
+        background-image: url('../cms/images/page-backgrounds/background__schema-page.png');
+      }
     }
     &__calculation-page {
-      background-image: url('../cms/images/page-backgrounds/background__calculation-page.png');
+      &::before {
+        background-image: url('../cms/images/page-backgrounds/background__calculation-page.png');
+      }
     }
   }
 }
