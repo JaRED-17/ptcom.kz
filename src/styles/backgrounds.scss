@@ -1,11 +1,13 @@
+@use '../styles/vars';
+
 .backgrounds {
   &::before {
     content: '';
     position: fixed;
     inset: 0;
     z-index: -1;
-    height: calc(var(--vh, 1vh) * 100);
-    background: url('../cms/images/background.png') bottom center / cover no-repeat;
+    min-height: 100dvh;
+    background: url('../cms/images/background.png') bottom right / cover no-repeat;
   }
 
   &.background {
