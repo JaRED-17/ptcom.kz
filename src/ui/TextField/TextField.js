@@ -16,7 +16,8 @@ const TextField = ({
   minWidth = 1,
   maxWidth,
   rows,
-  children
+  children,
+  disabled = false
 }) => {
   const [error, setError] = useState({
     errorCode: '',
@@ -63,6 +64,7 @@ const TextField = ({
       onChange={onChange}
       onBlur={onBlur}
       required={required}
+      disabled={disabled}
       fullWidth={fullWidth}
       multiline={multiline}
       error={!!error.errorCode}
@@ -86,7 +88,8 @@ TextField.propTypes = {
   minWidth: PropTypes.number,
   maxWidth: PropTypes.number,
   rows: PropTypes.number,
-  children: PropTypes.any
+  children: PropTypes.any,
+  disabled: PropTypes.bool
 }
 
 export default TextField
