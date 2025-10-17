@@ -3,6 +3,9 @@ import './StyleGuide.scss'
 import PropTypes from 'prop-types'
 import {Helmet} from 'react-helmet'
 import Page from '../../components/Page'
+import Button from '../../ui/Button'
+import TextField from '../../ui/TextField'
+import LanguageSelector from '../../ui/LanguageSelector'
 
 const StyleGuideBlock = ({title, children}) => {
   return (
@@ -115,6 +118,30 @@ const StyleGuide = () => {
             </table>
           )
         })()}
+      </StyleGuideBlock>
+      <StyleGuideBlock title={'Buttons block'}>
+        <Button
+          className={'button-primary'}
+          onClick={() => {}}
+        >
+          {'Button primary'}
+        </Button>
+        <Button
+          className={'button-secondary'}
+          onClick={() => {}}
+        >
+          {'Button secondary'}
+        </Button>
+      </StyleGuideBlock>
+      <StyleGuideBlock title={'Inputs block'}>
+        <TextField
+          label={'Input example'}
+          name={'text'}
+          type={'text'}
+          multiline={false}
+          required={false}
+        />
+        <LanguageSelector />
       </StyleGuideBlock>
     </Page>
   )
