@@ -10,7 +10,9 @@ import { ErrorBoundary } from 'react-error-boundary'
 import { SnackbarProvider } from 'notistack'
 import language from './helpers/language'
 
-if (!window.localStorage.getItem('_lang')) {
+const _lang = window.localStorage.getItem('_lang')
+
+if (!_lang || !language.checkLanguageInTheList(_lang)) {
   language.setDefaultLanguage()
 }
 
