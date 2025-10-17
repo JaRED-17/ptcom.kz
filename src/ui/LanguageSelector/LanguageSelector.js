@@ -30,7 +30,7 @@ const LanguageSelector = () => {
           {(settings?.languages || []).map((language, index) => (
             <MenuItem key={index} value={language}>
               <img
-                src={`cms/images/icons/${language}.svg`}
+                src={`/cms/images/icons/${language}.svg`}
                 alt={message('language.' + language)}
                 style={{
                   width: 28,
