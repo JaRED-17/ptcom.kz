@@ -1,7 +1,6 @@
 import React from 'react'
 import './Header.scss'
 import logo from '../../cms/images/Logo.png'
-import Markdown from '../Markdown'
 import messages from './Header.messages'
 import setMessages from '../../helpers/setMessages'
 import { Link } from 'react-router-dom'
