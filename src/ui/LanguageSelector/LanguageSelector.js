@@ -17,15 +17,15 @@ const LanguageSelector = () => {
   return (
     <div className={classNamePrefix}>
       <FormControl size={'small'} variant={'outlined'}>
-        <InputLabel id={'language-select-label'}>
-          {message('language')}
-        </InputLabel>
         <Select
           labelId={'language-select-label'}
           value={language.getCurrentLanguage()}
           onChange={onChange}
           label={'Language'}
           sx={{ minWidth: 120 }}
+          MenuProps={{
+            disableScrollLock: true
+          }}
         >
           {(settings?.languages || []).map((language, index) => (
             <MenuItem key={index} value={language}>

@@ -1,30 +1,32 @@
 .language-selector {
+  margin-top: 1rem;
+
   .MuiFormControl-root {
-    .MuiInputBase-root .MuiSelect-select,
-    .MuiInputLabel-root {
-      color: var(--input-text-color);
-      display: flex;
-      gap: 0.5rem;
-      background-color: var(--input-background-color);
+    .MuiInputBase-root {
+      & fieldset,
+      &:hover fieldset,
+      &.Mui-focused fieldset {
+        border-color: transparent;
+      }
+      & .MuiSelect-select {
+        color: var(--input-text-color);
+        display: flex;
+        gap: 0.5rem;
+      }
+      .MuiSvgIcon-root {
+        display: none;
+      }
     }
   }
+}
 
-  input.MuiInputBase-input,
-  .MuiInputBase-multiline {
-    padding: 10px 15px;
-    color: var(--input-text-color);
-    background-color: var(--input-background-color);
-  }
+#menu- {
+  .MuiPaper-root {
+    background: var(--body-background);
+    color: var(--text-color-white);
 
-  .MuiInputLabel-root {
-    color: var(--input-label-color);
-    line-height: 0.9;
-  }
-
-  .MuiOutlinedInput-root {
-    fieldset {
-      border-color: var(--input-border-color);
-
+    .MuiMenuItem-root img {
+      margin-right: 0.5rem;
     }
   }
 }
