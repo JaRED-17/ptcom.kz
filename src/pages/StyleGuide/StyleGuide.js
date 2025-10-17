@@ -127,10 +127,24 @@ const StyleGuide = () => {
           {'Button primary'}
         </Button>
         <Button
+          className={'button-primary'}
+          onClick={() => {}}
+          disabled={true}
+        >
+          {'Button primary disabled'}
+        </Button>
+        <Button
           className={'button-secondary'}
           onClick={() => {}}
         >
           {'Button secondary'}
+        </Button>
+        <Button
+          className={'button-secondary'}
+          onClick={() => {}}
+          disabled={true}
+        >
+          {'Button secondary disabled'}
         </Button>
       </StyleGuideBlock>
       <StyleGuideBlock title={'Inputs block'}>
