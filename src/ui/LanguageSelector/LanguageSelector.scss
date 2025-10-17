@@ -1,0 +1,30 @@
+.language-selector {
+  .MuiFormControl-root {
+    .MuiInputBase-root .MuiSelect-select,
+    .MuiInputLabel-root {
+      color: var(--input-text-color);
+      display: flex;
+      gap: 0.5rem;
+      background-color: var(--input-background-color);
+    }
+  }
+
+  input.MuiInputBase-input,
+  .MuiInputBase-multiline {
+    padding: 10px 15px;
+    color: var(--input-text-color);
+    background-color: var(--input-background-color);
+  }
+
+  .MuiInputLabel-root {
+    color: var(--input-label-color);
+    line-height: 0.9;
+  }
+
+  .MuiOutlinedInput-root {
+    fieldset {
+      border-color: var(--input-border-color);
+
+    }
+  }
+}

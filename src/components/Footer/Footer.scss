@@ -2,6 +2,9 @@
 @use '../../styles/mixins';
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1.25rem 1rem 12.5rem;
   @include mixins.glass;
 

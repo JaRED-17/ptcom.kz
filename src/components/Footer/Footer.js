@@ -3,6 +3,7 @@ import './Footer.scss'
 import messages from './Footer.messages'
 import setMessages from '../../helpers/setMessages'
 import Markdown from '../Markdown'
+import LanguageSelector from '../../ui/LanguageSelector'
 
 const Footer = () => {
   const message = setMessages(messages, 'app.footer.')
@@ -38,6 +39,7 @@ const Footer = () => {
           />
         </div>
       </div>
+      <LanguageSelector />
     </div>
   )
 }
