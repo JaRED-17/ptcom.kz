@@ -1,13 +1,13 @@
 import React from 'react'
 import './StyleGuide.scss'
 import PropTypes from 'prop-types'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import Page from '../../components/Page'
 import Button from '../../ui/Button'
 import TextField from '../../ui/TextField'
 import LanguageSelector from '../../ui/LanguageSelector'
 
-const StyleGuideBlock = ({title, children}) => {
+const StyleGuideBlock = ({ title, children }) => {
   return (
     <div className={'style-guide__block'}>
       <div className={'style-guide__block-title'}>{title}</div>

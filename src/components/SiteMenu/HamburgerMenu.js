@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 import './HamburgerMenu.scss'
 import IconButton from '@mui/material/IconButton'
 import Menu from '@mui/material/Menu'
@@ -50,8 +50,8 @@ const HamburgerMenu = ({ navigate }) => {
                   name={message(page.name)}
                   items={[
                     {
-                      "name": page.name,
-                      "url": page.url
+                      name: page.name,
+                      url: page.url
                     },
                     ...page.entries
                   ]}

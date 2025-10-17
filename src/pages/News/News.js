@@ -14,28 +14,28 @@ const News = () => {
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={0}>
       <PageTitle name={'news'} />
-      <Markdown childrenClassName={{target: 'link', className: 'orange-link'}} text={message('header1')} />
+      <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header1')} />
       <p className={'text-color-gray'}>{message('description1')}</p>
 
-      <Markdown childrenClassName={{target: 'link', className: 'orange-link'}} text={message('header2')} />
+      <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header2')} />
       <p className={'text-color-gray'}>{message('description2')}</p>
 
-      <Markdown childrenClassName={{target: 'link', className: 'orange-link'}} text={message('header3')} />
+      <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header3')} />
       <p className={'text-color-gray'}>{message('description3')}</p>
 
-      <Markdown childrenClassName={{target: 'link', className: 'orange-link'}} text={message('header4')} />
+      <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header4')} />
       <p className={'text-color-gray'}>{message('description4')}</p>
 
-      <Markdown childrenClassName={{target: 'link', className: 'orange-link'}} text={message('header5')} />
+      <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header5')} />
       <p className={'text-color-gray'}>{message('description5')}</p>
 
-      <Markdown childrenClassName={{target: 'link', className: 'orange-link'}} text={message('header6')} />
+      <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header6')} />
       <p className={'text-color-gray'}>{message('description6')}</p>
 
-      <Markdown childrenClassName={{target: 'link', className: 'orange-link'}} text={message('header7')} />
+      <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header7')} />
       <p className={'text-color-gray'}>{message('description7')}</p>
 
-      <Markdown childrenClassName={{target: 'link', className: 'orange-link'}} text={message('header8')} />
+      <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header8')} />
       <p className={'text-color-gray'}>{message('description8')}</p>
       <OurAdvantages />
     </PageWithAsideMenu>

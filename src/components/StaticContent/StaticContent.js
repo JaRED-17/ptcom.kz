@@ -57,6 +57,8 @@ const StaticContent = React.memo(
   (prevProps, nextProps) => prevProps.name === nextProps.name
 )
 
+StaticContent.displayName = 'StaticContent'
+
 StaticContent.propTypes = {
   name: PropTypes.string,
   navigate: PropTypes.object

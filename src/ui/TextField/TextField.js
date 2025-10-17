@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './TextField.scss'
-import {TextField as TextFieldUI} from '@mui/material'
+import { TextField as TextFieldUI } from '@mui/material'
 import ErrorMessage from '../../components/ErrorMessage'
 import PropTypes from 'prop-types'
 
@@ -25,7 +25,7 @@ const TextField = ({
   })
 
   const onBlur = (e) => {
-    const val = e.target.value;
+    const val = e.target.value
 
     if (val.length === 0 && required) {
       setError({
@@ -36,14 +36,14 @@ const TextField = ({
       setError({
         errorCode: 'minWidth',
         replacements: {
-          'amount': minWidth
+          amount: minWidth
         }
       })
     } else if (maxWidth && val.length > maxWidth) {
       setError({
         errorCode: 'maxWidth',
         replacements: {
-          'amount': maxWidth
+          amount: maxWidth
         }
       })
     } else {
@@ -56,7 +56,7 @@ const TextField = ({
 
   return (
     <TextFieldUI
-      className={`input input-default`}
+      className={'input input-default'}
       label={label}
       name={name}
       type={type}
@@ -68,7 +68,7 @@ const TextField = ({
       fullWidth={fullWidth}
       multiline={multiline}
       error={!!error.errorCode}
-      helperText={!!error.errorCode ? <ErrorMessage code={error.errorCode} replacements={error.replacements} /> : ''}
+      helperText={Boolean(error.errorCode) ? <ErrorMessage code={error.errorCode} replacements={error.replacements} /> : ''}
       rows={rows}
     >
       {children}

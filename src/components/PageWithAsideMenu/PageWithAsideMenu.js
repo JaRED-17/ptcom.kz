@@ -13,11 +13,13 @@ const AnimatedWrapper = ({ children }) => {
     setKey(prev => prev + 1)
   }, [children])
 
-  return child ? (
-    <div key={key} className={'fade-in-up'}>
-      {child}
-    </div>
-  ) : <div />
+  return child
+    ? (
+      <div key={key} className={'fade-in-up'}>
+        {child}
+      </div>
+    )
+    : <div />
 }
 
 AnimatedWrapper.propTypes = {
@@ -28,7 +30,9 @@ const PageWithAsideMenu = ({ classNamePrefix, children, index = 0, entries }) =>
   return (
     <Page classNamePrefix={classNamePrefix} asideMenu>
       <AsideMenu list={entries ? pages[index].entries[entries].entries : pages[index].entries} />
-      <AnimatedWrapper children={children} />
+      <AnimatedWrapper>
+        {children}
+      </AnimatedWrapper>
     </Page>
   )
 }

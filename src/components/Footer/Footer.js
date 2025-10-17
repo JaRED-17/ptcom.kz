@@ -34,7 +34,7 @@ const Footer = () => {
             {message('navigation.title')}
           </h4>
           <Markdown
-            childrenClassName={{target: 'link', className: 'grey-link'}}
+            childrenClassName={{ target: 'link', className: 'grey-link' }}
             text={message('navigation.text')}
           />
         </div>

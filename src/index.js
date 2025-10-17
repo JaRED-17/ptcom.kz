@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import './styles/index.scss'
 import App from './components/App/App'
@@ -9,6 +9,7 @@ import { IntlProvider } from 'react-intl'
 import { ErrorBoundary } from 'react-error-boundary'
 import { SnackbarProvider } from 'notistack'
 import language from './helpers/language'
+import PropTypes from 'prop-types'
 
 const _lang = window.localStorage.getItem('_lang')
 
@@ -52,6 +53,11 @@ const IntlWrapper = ({ locale, children }) => {
       {children}
     </IntlProvider>
   )
+}
+
+IntlWrapper.propTypes = {
+  locale: PropTypes.string,
+  children: PropTypes.any
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'))

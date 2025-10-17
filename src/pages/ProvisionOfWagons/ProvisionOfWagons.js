@@ -19,14 +19,14 @@ const ProvisionOfWagons = () => {
       <p className={'text-color-orange text-bolt text-header'}>{message('header1')}</p>
       <div className={`${classNamePrefix}__content--list`}>
         <div className={`${classNamePrefix}__list1`}>
-          <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('list1')} />
+          <Markdown childrenClassName={{ target: 'list', className: 'text-color-gray' }} text={message('list1')} />
         </div>
         <div className={`${classNamePrefix}__list2`}>
-          <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('list2')} />
+          <Markdown childrenClassName={{ target: 'list', className: 'text-color-gray' }} text={message('list2')} />
         </div>
       </div>
       <p className={'text-color-orange text-bolt text-header'}>{message('header2')}</p>
-      <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('list3')} />
+      <Markdown childrenClassName={{ target: 'list', className: 'text-color-gray' }} text={message('list3')} />
       <WagonsDescription header={message('header3')} description={message('description1')} image={'kv'}>
         <table>
           <caption className={'text-bolt text-color-orange'}>Технические характеристики:</caption>

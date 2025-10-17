@@ -31,26 +31,26 @@ import StaticPage from '../../pages/StaticPage'
 
 const Content = () => {
   const components = {
-    'aboutUs': <AboutUs />,
-    'staffs': <Staffs />,
-    'news': <News />,
-    'licenses': <Licenses />,
-    'vacancies': <Vacancies />,
-    'services': <Services />,
-    'provisionOfWagons': <ProvisionOfWagons />,
-    'paymentRailwayTariffs': <PaymentRailwayTariffs />,
-    'driveWays': <DriveWays />,
-    'schema': <Schema />,
-    'handlingDostyk': <HandlingDostyk />,
-    'cargoProcessing': <CargoProcessing />,
-    'consultation': <Consultation />,
-    'dangerousGoods': <DangerousGoods />,
-    'containers': <Containers />,
-    'wagons': <Wagons />,
-    'wagonsTypes': <WagonsTypes />,
-    'calculation': <Calculation />,
-    'contacts': <Contacts />,
-    'sitemap': <Sitemap />
+    aboutUs: <AboutUs />,
+    staffs: <Staffs />,
+    news: <News />,
+    licenses: <Licenses />,
+    vacancies: <Vacancies />,
+    services: <Services />,
+    provisionOfWagons: <ProvisionOfWagons />,
+    paymentRailwayTariffs: <PaymentRailwayTariffs />,
+    driveWays: <DriveWays />,
+    schema: <Schema />,
+    handlingDostyk: <HandlingDostyk />,
+    cargoProcessing: <CargoProcessing />,
+    consultation: <Consultation />,
+    dangerousGoods: <DangerousGoods />,
+    containers: <Containers />,
+    wagons: <Wagons />,
+    wagonsTypes: <WagonsTypes />,
+    calculation: <Calculation />,
+    contacts: <Contacts />,
+    sitemap: <Sitemap />
   }
   const handlePages = (pages) => {
     return pages.map((page, index) => {

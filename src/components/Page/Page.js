@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import './Page.scss'
 import PropTypes from 'prop-types'
 
@@ -10,7 +10,7 @@ const Page = ({ classNamePrefix, children, asideMenu = false }) => {
     return () => {
       background?.classList.remove(`background__${classNamePrefix}-page`)
     }
-  }, [])
+  }, [classNamePrefix])
 
   return (
     <div className={`${classNamePrefix} page`}>

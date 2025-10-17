@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import PageTitle from '../../components/PageTitle'
 import Page from '../../components/Page'
 
-const SiteMapLink = ({url, name}) => {
+const SiteMapLink = ({ url, name }) => {
   const pageTitle = setMessages(pageTitles, 'app.page.')
 
   return (

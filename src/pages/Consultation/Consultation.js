@@ -13,16 +13,16 @@ const Consultation = () => {
   return (
     <Page classNamePrefix={classNamePrefix}>
       <PageTitle name={'consultation'} />
-      <Markdown childrenClassName={{target: 'link', className: 'orange-link'}} text={message('header1')} />
+      <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header1')} />
       <p className={'text-color-gray'}>{message('description1')}</p>
 
-      <Markdown childrenClassName={{target: 'link', className: 'orange-link'}} text={message('header2')} />
+      <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header2')} />
       <p className={'text-color-gray'}>{message('description2')}</p>
 
-      <Markdown childrenClassName={{target: 'link', className: 'orange-link'}} text={message('header3')} />
+      <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header3')} />
       <p className={'text-color-gray'}>{message('description3')}</p>
 
-      <Markdown childrenClassName={{target: 'link', className: 'orange-link'}} text={message('header4')} />
+      <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header4')} />
       <p className={'text-color-gray'}>{message('description4')}</p>
     </Page>
   )

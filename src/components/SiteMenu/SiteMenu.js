@@ -16,7 +16,7 @@ const SiteMenu = () => {
       </div>
       <div className={`${classNamePrefix}__desktop`}>
         <Markdown
-          childrenClassName={{target: 'link', className: 'white-link'}}
+          childrenClassName={{ target: 'link', className: 'white-link' }}
           text={message('all')}
         />
       </div>

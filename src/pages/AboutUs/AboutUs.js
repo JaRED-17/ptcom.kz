@@ -18,7 +18,7 @@ const AboutUs = () => {
       <p className={'text-color-gray'}>{message('paragraph2')}</p>
       <p className={'text-color-orange text-bolt text-header'}>{message('header')}</p>
       <p className={'text-color-gray'}>{message('paragraph3')}</p>
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph4')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph4')} />
       <p className={'text-color-gray'}>{message('paragraph5')}</p>
       <OurAdvantages />
     </PageWithAsideMenu>

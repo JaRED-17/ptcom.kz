@@ -1,6 +1,6 @@
 import React from 'react'
 import './LanguageSelector.scss'
-import { FormControl, Select, MenuItem, InputLabel } from '@mui/material'
+import { FormControl, Select, MenuItem } from '@mui/material'
 import language from '../../helpers/language'
 import messages from './LanguageSelector.messages'
 import setMessages from '../../helpers/setMessages'
@@ -37,7 +37,7 @@ const LanguageSelector = () => {
                   height: 20,
                   objectFit: 'cover',
                   borderRadius: 3,
-                  border: '1px solid #ccc',
+                  border: '1px solid #ccc'
                 }}
               />
               {message('language.' + language)}

@@ -14,10 +14,10 @@ const OurAdvantages = () => {
         <p className={'text-color-orange text-bolt text-header'}>{message('title')}</p>
         <div className={`${classNamePrefix}__content--list`}>
           <div className={`${classNamePrefix}__list1`}>
-            <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('list1')} />
+            <Markdown childrenClassName={{ target: 'list', className: 'text-color-gray' }} text={message('list1')} />
           </div>
           <div className={`${classNamePrefix}__list2`}>
-            <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('list2')} />
+            <Markdown childrenClassName={{ target: 'list', className: 'text-color-gray' }} text={message('list2')} />
           </div>
         </div>
       </div>

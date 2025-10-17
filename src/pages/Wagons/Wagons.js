@@ -14,7 +14,7 @@ const Wagons = () => {
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={2}>
       <PageTitle name={'wagons'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph2')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph2')} />
       <p className={'text-color-gray'}>{message('paragraph3')}</p>
       <p className={'text-color-gray'}>{message('paragraph4')}</p>
       <p className={'text-color-gray'}>{message('paragraph5')}</p>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Button.scss'
-import {Button as ButtonUI} from '@mui/material'
+import { Button as ButtonUI } from '@mui/material'
 import PropTypes from 'prop-types'
 
 const Button = ({ type, onClick = () => {}, children, className, disabled = false }) => {

@@ -20,7 +20,7 @@ const Schema = () => {
       <p className={'text-color-gray'}>{message('paragraph4')}</p>
 
       <p className={'text-color-orange text-bolt text-header'}>{message('header')}</p>
-      <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('list')} />
+      <Markdown childrenClassName={{ target: 'list', className: 'text-color-gray' }} text={message('list')} />
 
       <p className={'text-color-gray'}>{message('paragraph5')}</p>
 

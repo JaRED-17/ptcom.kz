@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-const Markdown = ({text, inline, childrenClassName}) => {
+const Markdown = ({ text, inline, childrenClassName }) => {
   const getComponents = (inline, childrenClassName) => {
     if (inline) {
       return {
@@ -40,10 +40,9 @@ const Markdown = ({text, inline, childrenClassName}) => {
   }
 
   return (
-    <ReactMarkdown
-      components={getComponents(inline, childrenClassName)}
-      children={text}
-    />
+    <ReactMarkdown components={getComponents(inline, childrenClassName)}>
+      {text}
+    </ReactMarkdown>
   )
 }
 

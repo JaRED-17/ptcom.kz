@@ -33,7 +33,7 @@ const CollapseMenuItem = ({ navigate, handleMenuClose, name, items }) => {
               key={index}
               sx={{
                 whiteSpace: 'normal',
-                wordBreak: 'break-word',
+                wordBreak: 'break-word'
               }}
               onClick={() => {
                 navigate(item.url)

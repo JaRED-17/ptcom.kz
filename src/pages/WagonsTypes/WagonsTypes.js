@@ -16,12 +16,12 @@ const WagonsTypes = () => {
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
       <p className={'text-color-orange text-bolt text-header'}>{message('header1')}</p>
       <p className={'text-color-gray'}>{message('paragraph2')}</p>
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph3')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph3')} />
       <p className={'text-color-gray'}>{message('paragraph4')}</p>
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph5')} />
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph6')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph5')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph6')} />
       <p className={'text-color-gray'}>{message('paragraph7')}</p>
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph8')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph8')} />
       <p className={'text-color-gray'}>{message('paragraph9')}</p>
       <p className={'text-color-gray'}>{message('paragraph10')}</p>
       <p className={'text-color-orange text-bolt text-header'}>{message('header2')}</p>

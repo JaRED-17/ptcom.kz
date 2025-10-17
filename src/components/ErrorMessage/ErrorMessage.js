@@ -1,4 +1,3 @@
-import React from 'react'
 import messages from './ErrorMessage.messages'
 import setMessages from '../../helpers/setMessages'
 import PropTypes from 'prop-types'

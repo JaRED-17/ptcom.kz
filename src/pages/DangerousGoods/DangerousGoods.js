@@ -16,18 +16,18 @@ const DangerousGoods = () => {
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
       <p className={'text-color-gray'}>{message('paragraph2')}</p>
       <p className={'text-color-orange text-bolt text-header'}>{message('header1')}</p>
-      <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('list1')} />
+      <Markdown childrenClassName={{ target: 'list', className: 'text-color-gray' }} text={message('list1')} />
       <p className={'text-color-gray'}>{message('paragraph3')}</p>
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph4')} />
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph5')} />
-      <Markdown childrenClassName={{target: 'list', className: 'text-color-gray'}} text={message('list2')} />
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph6')} />
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph7')} />
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph8')} />
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph9')} />
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph10')} />
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph11')} />
-      <Markdown childrenClassName={{target: 'paragraph', className: 'text-color-gray'}} text={message('paragraph12')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph4')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph5')} />
+      <Markdown childrenClassName={{ target: 'list', className: 'text-color-gray' }} text={message('list2')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph6')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph7')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph8')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph9')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph10')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph11')} />
+      <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph12')} />
       <OurAdvantages />
     </PageWithAsideMenu>
   )
