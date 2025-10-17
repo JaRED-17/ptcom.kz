@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import ReactDOM from 'react-dom/client'
 import './styles/index.scss'
 import App from './components/App/App'
@@ -26,9 +26,9 @@ export const getMessages = async (locale) => {
 }
 
 const IntlWrapper = ({ locale, children }) => {
-  const [messages, setMessages] = React.useState(null)
+  const [messages, setMessages] = useState(null)
 
-  React.useEffect(() => {
+  useEffect(() => {
     getMessages(locale).then(setMessages)
   }, [locale])
 
