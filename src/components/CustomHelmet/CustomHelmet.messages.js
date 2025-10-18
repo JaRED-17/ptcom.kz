@@ -9,12 +9,8 @@ export default defineMessages({
     id: 'app.page.seo.description.home',
     defaultMessage: 'Предоставление вагонов для осуществления перевозки грузов железнодорожным транспортом по СНГ (Россия, Казахстан, Таджикистан) и другим странам (Литва, Латвия).'
   },
-  'app.page.seo.title.aboutUs': {
-    id: 'app.page.seo.title.home',
-    defaultMessage: 'Петропавл Экспресс Логистика | О компании'
-  },
-  'app.page.seo.description.aboutUs': {
-    id: 'app.page.seo.description.home',
-    defaultMessage: 'Предоставление вагонов для осуществления перевозки грузов железнодорожным транспортом по СНГ (Россия, Казахстан, Таджикистан) и другим странам (Литва, Латвия).'
+  'app.page.seo.title.template': {
+    id: 'app.page.seo.title.template',
+    defaultMessage: '{title} | Петропавл Экспресс Логистика'
   }
 })
