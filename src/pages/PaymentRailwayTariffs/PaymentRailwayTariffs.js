@@ -6,6 +6,7 @@ import Markdown from '../../components/Markdown'
 import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const PaymentRailwayTariffs = () => {
   const classNamePrefix = 'payment-railway-tariffs'
@@ -13,6 +14,7 @@ const PaymentRailwayTariffs = () => {
 
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={1}>
+      <CustomHelmet page={'paymentRailwayTariffs'} />
       <PageTitle name={'paymentRailwayTariffs'} />
       <p className={'text-color-orange text-bolt text-header'}>{message('header1')}</p>
       <Markdown childrenClassName={{ target: 'list', className: 'text-color-gray' }} text={message('list1')} />

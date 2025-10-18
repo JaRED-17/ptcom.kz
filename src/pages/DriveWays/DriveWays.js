@@ -7,6 +7,7 @@ import Markdown from '../../components/Markdown'
 import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const DriveWays = () => {
   const classNamePrefix = 'drive-ways'
@@ -14,6 +15,7 @@ const DriveWays = () => {
 
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={1}>
+      <CustomHelmet page={'driveWays'} />
       <PageTitle name={'driveWays'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
       <p className={'text-color-gray'}>{message('paragraph2')}</p>

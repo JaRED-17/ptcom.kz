@@ -5,6 +5,7 @@ import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 import Markdown from '../../components/Markdown'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const WagonsTypes = () => {
   const classNamePrefix = 'wagons-types'
@@ -12,6 +13,7 @@ const WagonsTypes = () => {
 
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={2}>
+      <CustomHelmet page={'wagonsTypes'} />
       <PageTitle name={'wagonsTypes'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
       <p className={'text-color-orange text-bolt text-header'}>{message('header1')}</p>

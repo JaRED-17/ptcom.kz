@@ -6,6 +6,7 @@ import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 import Markdown from '../../components/Markdown'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const News = () => {
   const classNamePrefix = 'news'
@@ -13,6 +14,7 @@ const News = () => {
 
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={0}>
+      <CustomHelmet page={'news'} />
       <PageTitle name={'news'} />
       <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header1')} />
       <p className={'text-color-gray'}>{message('description1')}</p>

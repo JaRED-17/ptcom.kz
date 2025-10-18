@@ -4,6 +4,7 @@ import messages from './PageNotFound.messages'
 import setMessages from '../../helpers/setMessages'
 import PageTitle from '../../components/PageTitle'
 import Page from '../../components/Page'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const PageNotFound = () => {
   const classNamePrefix = 'page-not-found'
@@ -11,6 +12,7 @@ const PageNotFound = () => {
 
   return (
     <Page classNamePrefix={classNamePrefix}>
+      <CustomHelmet page={'pageNotFound'} />
       <PageTitle name={'pageNotFound'} />
       <p className={'text-color-gray'}>{message('text')}</p>
     </Page>

@@ -3,12 +3,14 @@ import './Licenses.scss'
 import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const Licenses = () => {
   const classNamePrefix = 'licenses'
 
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={0}>
+      <CustomHelmet page={'licenses'} />
       <PageTitle name={'licenses'} />
       <div className={`${classNamePrefix}__list`}>
         <img src={'/cms/images/licenses/sert1.jpg'} alt={''} />

@@ -5,6 +5,7 @@ import messages from './Consultation.messages'
 import PageTitle from '../../components/PageTitle'
 import Page from '../../components/Page'
 import Markdown from '../../components/Markdown'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const Consultation = () => {
   const classNamePrefix = 'consultation'
@@ -12,6 +13,7 @@ const Consultation = () => {
 
   return (
     <Page classNamePrefix={classNamePrefix}>
+      <CustomHelmet page={'consultation'} />
       <PageTitle name={'consultation'} />
       <Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={message('header1')} />
       <p className={'text-color-gray'}>{message('description1')}</p>

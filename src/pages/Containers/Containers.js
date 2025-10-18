@@ -4,6 +4,7 @@ import messages from './Containers.messages'
 import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const Containers = () => {
   const classNamePrefix = 'containers'
@@ -11,6 +12,7 @@ const Containers = () => {
 
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={2}>
+      <CustomHelmet page={'containers'} />
       <PageTitle name={'containers'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
       <p className={'text-color-gray'}>{message('paragraph2')}</p>

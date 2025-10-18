@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import PageTitle from '../../components/PageTitle'
 import Page from '../../components/Page'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const SiteMapLink = ({ url, name }) => {
   const pageTitle = setMessages(pageTitles, 'app.page.')
@@ -46,6 +47,7 @@ const Sitemap = () => {
 
   return (
     <Page classNamePrefix={classNamePrefix}>
+      <CustomHelmet page={'sitemap'} />
       <PageTitle name={'sitemap'} />
       <ul className={`${classNamePrefix}-links`}>
         {(() => handlePages(pages))()}

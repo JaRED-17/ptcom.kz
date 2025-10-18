@@ -5,6 +5,7 @@ import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 import Markdown from '../../components/Markdown'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const Vacancies = () => {
   const classNamePrefix = 'vacancies'
@@ -12,6 +13,7 @@ const Vacancies = () => {
 
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={0}>
+      <CustomHelmet page={'vacancies'} />
       <PageTitle name={'vacancies'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
       <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph2')} />

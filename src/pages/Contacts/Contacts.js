@@ -6,6 +6,7 @@ import StaffList from '../../components/StaffList'
 import ContactWithImage from './ContactWithImage'
 import PageTitle from '../../components/PageTitle'
 import Page from '../../components/Page'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const Contacts = () => {
   const classNamePrefix = 'contacts'
@@ -13,6 +14,7 @@ const Contacts = () => {
 
   return (
     <Page classNamePrefix={classNamePrefix}>
+      <CustomHelmet page={'contacts'} />
       <PageTitle name={'contacts'} />
       <p className={'text-color-gray'}>{message('hint')}</p>
       <div className={'contacts-with-image'}>

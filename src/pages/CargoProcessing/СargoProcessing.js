@@ -6,6 +6,7 @@ import Markdown from '../../components/Markdown'
 import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const CargoProcessing = () => {
   const classNamePrefix = 'cargo-processing'
@@ -13,6 +14,7 @@ const CargoProcessing = () => {
 
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={1}>
+      <CustomHelmet page={'cargoProcessing'} />
       <PageTitle name={'cargoProcessing'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
 

@@ -5,6 +5,7 @@ import messages from './Services.messages'
 import ServicesCustomButton from './ServicesCustomButton'
 import PageTitle from '../../components/PageTitle'
 import Page from '../../components/Page'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const Services = () => {
   const classNamePrefix = 'services'
@@ -12,6 +13,7 @@ const Services = () => {
 
   return (
     <Page classNamePrefix={classNamePrefix}>
+      <CustomHelmet page={'services'} />
       <PageTitle name={'services'} />
       <div className={'services__content--block__buttons'}>
         <ServicesCustomButton

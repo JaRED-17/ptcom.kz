@@ -6,6 +6,7 @@ import Button from '../../ui/Button'
 import withRoute from '../../helpers/withRoute'
 import PropTypes from 'prop-types'
 import Page from '../../components/Page'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const Home = ({ navigate }) => {
   const classNamePrefix = 'home'
@@ -13,6 +14,7 @@ const Home = ({ navigate }) => {
 
   return (
     <Page classNamePrefix={classNamePrefix}>
+      <CustomHelmet page={'home'} />
       <div className={'home__content--text'}>
         <h1>{message('title')}</h1>
         <p>{message('text')}</p>

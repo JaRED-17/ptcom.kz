@@ -6,6 +6,7 @@ import Markdown from '../../components/Markdown'
 import OurAdvantages from '../../components/OurAdvantages'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const Schema = () => {
   const classNamePrefix = 'schema'
@@ -13,6 +14,7 @@ const Schema = () => {
 
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={1}>
+      <CustomHelmet page={'schema'} />
       <PageTitle name={'schema'} />
       <p className={'text-color-gray'}>{message('paragraph1')}</p>
       <p className={'text-color-gray'}>{message('paragraph2')}</p>

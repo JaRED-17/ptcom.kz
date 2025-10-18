@@ -11,6 +11,7 @@ import TextField from '../../ui/TextField'
 import Notification from '../../ui/Notification'
 import ReCAPTCHA from 'react-google-recaptcha'
 import settings from '../../cms/data/settings.json'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const Calculation = () => {
   const classNamePrefix = 'calculation'
@@ -58,6 +59,7 @@ const Calculation = () => {
 
   return (
     <Page classNamePrefix={classNamePrefix}>
+      <CustomHelmet page={'calculation'} />
       <PageTitle name={'calculation'} />
       <p className={'text-color-gray'}>{message('mandatory')}</p>
       <Box

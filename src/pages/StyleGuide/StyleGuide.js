@@ -1,11 +1,11 @@
 import React from 'react'
 import './StyleGuide.scss'
 import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
 import Page from '../../components/Page'
 import Button from '../../ui/Button'
 import TextField from '../../ui/TextField'
 import LanguageSelector from '../../ui/LanguageSelector'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const StyleGuideBlock = ({ title, children }) => {
   return (
@@ -41,9 +41,7 @@ const StyleGuide = () => {
 
   return (
     <Page classNamePrefix={classNamePrefix}>
-      <Helmet>
-        <title>{'Style guide'}</title>
-      </Helmet>
+      <CustomHelmet page={'styleGuide'} />
       <StyleGuideBlock title={'Colors'}>
         <div className={'color-blocks'}>
           {(() => {
