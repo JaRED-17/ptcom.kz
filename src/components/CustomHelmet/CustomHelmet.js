@@ -22,7 +22,11 @@ const CustomHelmet = ({ page }) => {
       <meta name={'description'} content={message({
         key: 'description.' + page,
         default: message('description.home')
-      })}/>
+      })} />
+      <meta name={'keywords'} content={message({
+        key: 'keywords.' + page,
+        default: message('keywords.home')
+      })} />
       <link rel={'canonical'} href={window.location.href} />
     </Helmet>
   )
