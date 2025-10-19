@@ -17,13 +17,15 @@ if (!_lang || !language.checkLanguageInTheList(_lang)) {
   language.setDefaultLanguage()
 }
 
+document.documentElement.lang = language.getCurrentLanguage()
+
 export const getMessages = async (locale) => {
   try {
-    const messages = await import(`/src/locales/${locale}.json`)
+    const messages = await import(`./locales/${locale}.json`)
     return messages.default
   } catch (e) {
     console.warn(`Нет перевода для ${locale}, используется ru`)
-    const fallback = await import('/src/locales/ru.json')
+    const fallback = await import('./locales/ru.json')
     return fallback.default
   }
 }
@@ -62,23 +64,21 @@ IntlWrapper.propTypes = {
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <React.StrictMode>
-    <IntlWrapper locale={language.getCurrentLanguage()}>
-      <BrowserRouter>
-        <ErrorBoundary FallbackComponent={ErrorFallback}>
-          <SnackbarProvider
-            maxSnack={3}
-            anchorOrigin={{
-              vertical: 'top',
-              horizontal: 'right'
-            }}
-          >
-            <App />
-          </SnackbarProvider>
-        </ErrorBoundary>
-      </BrowserRouter>
-    </IntlWrapper>
-  </React.StrictMode>
+  <IntlWrapper locale={language.getCurrentLanguage()}>
+    <BrowserRouter>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <SnackbarProvider
+          maxSnack={3}
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'right'
+          }}
+        >
+          <App />
+        </SnackbarProvider>
+      </ErrorBoundary>
+    </BrowserRouter>
+  </IntlWrapper>
 )
 
 // If you want to start measuring performance in your app, pass a function
