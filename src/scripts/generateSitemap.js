@@ -4,17 +4,23 @@ const path = require('path')
 const pages = require('../cms/data/pages.json')
 const settings = require('../cms/data/settings.json')
 
-const handlePages = (pages, languages) => {
+const handlePages = (pages, languages, addHomeUrl = false) => {
   const array = []
+  const generateUrlsByLanguages = (language, url) => {
+    return {
+      url: `/${language}${url}`,
+      lastmod: new Date().toLocaleDateString(),
+      changefreq: 'daily',
+      priority: 1.0
+    }
+  }
+
+  if (addHomeUrl) {
+    languages.map(language => generateUrlsByLanguages(language, '')).forEach(entry => array.push(entry))
+  }
 
   pages.forEach(page => {
-    languages.map((language) => {
-      return {
-        url: `/${language}${page.url}`,
-        changefreq: 'daily',
-        priority: 1.0
-      }
-    }).forEach(entry => array.push(entry))
+    languages.map((language) => generateUrlsByLanguages(language, page.url)).forEach(entry => array.push(entry))
 
     if (page.entries) {
       handlePages(page.entries, languages).forEach(entry => array.push(entry))
@@ -29,10 +35,11 @@ async function generateSitemap () {
   const sitemapPath = path.resolve(__dirname, '../../public/sitemap.xml')
   const writeStream = createWriteStream(sitemapPath)
   const sitemap = new SitemapStream({ hostname: DOMAIN })
+  const pagesForSitemap = handlePages(pages, settings.languages, true)
 
   sitemap.pipe(writeStream)
 
-  for (const page of handlePages(pages, settings.languages)) {
+  for (const page of pagesForSitemap) {
     sitemap.write(page)
   }
 
