@@ -20,7 +20,7 @@ const LanguageSelector = () => {
     if (currentPath === '/' || currentPath === `/${currentLanguage}`) {
       window.location.pathname = `/${newLanguage}`
     } else if (languagePrefixRegexp.test(currentPath)) {
-      window.location.pathname = currentPath.replace(languagePrefixRegexp, '/' + newLanguage + '/')
+      window.location.pathname = currentPath.replace(languagePrefixRegexp, `/${newLanguage}/`)
     } else {
       window.location.pathname = newLanguage + currentPath.replace(languagePrefixRegexp, '')
     }
