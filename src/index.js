@@ -9,11 +9,10 @@ import { IntlProvider } from 'react-intl'
 import { ErrorBoundary } from 'react-error-boundary'
 import { SnackbarProvider } from 'notistack'
 import language from './helpers/language'
+import getSiteBasename from './helpers/getSiteBasename'
 import PropTypes from 'prop-types'
 
-const _lang = window.localStorage.getItem('_lang')
-
-if (!_lang || !language.checkLanguageInTheList(_lang)) {
+if (!language.syncLanguageWithUrl()) {
   language.setDefaultLanguage()
 }
 
@@ -66,7 +65,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <IntlWrapper locale={language.getCurrentLanguage()}>
-      <BrowserRouter>
+      <BrowserRouter basename={getSiteBasename(language.getCurrentLanguage())}>
         <ErrorBoundary FallbackComponent={ErrorFallback}>
           <SnackbarProvider
             maxSnack={3}

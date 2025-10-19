@@ -19,5 +19,21 @@ export default {
   },
   checkLanguageInTheList: (language) => {
     return settings?.languages.includes(language) || false
+  },
+  syncLanguageWithUrl: function () {
+    let success = false
+    const languages = settings?.languages || []
+    const currentPath = window.location.pathname
+
+    languages.forEach(language => {
+      const languagePrefixRegexp = new RegExp(`^/${language}($|/)`)
+
+      if (languagePrefixRegexp.test(currentPath)) {
+        this.setCurrentLanguage(language)
+        success = true
+      }
+    })
+
+    return success
   }
 }

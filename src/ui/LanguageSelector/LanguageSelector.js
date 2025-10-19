@@ -10,8 +10,17 @@ const LanguageSelector = () => {
   const classNamePrefix = 'language-selector'
   const message = setMessages(messages, 'app.languageSelector.')
   const onChange = (event) => {
+    const currentPath = window.location.pathname
+    const lang = language.getCurrentLanguage()
+    const languagePrefixRegexp = new RegExp(`^/${lang}($|/)`)
+
     language.setCurrentLanguage(event.target.value)
-    window.location.reload()
+
+    if (languagePrefixRegexp.test(currentPath)) {
+      window.location.pathname = currentPath.replace(languagePrefixRegexp, '/' + event.target.value + '/')
+    } else {
+      window.location.pathname = event.target.value + currentPath.replace(languagePrefixRegexp, '')
+    }
   }
 
   return (
