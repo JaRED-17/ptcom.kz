@@ -1,10 +1,17 @@
+@use '../../styles/vars';
+
 .hamburger-menu {}
 
 #menu {
   .MuiPaper-root {
     background: var(--body-background);
     color: var(--text-color-white);
-    min-width: 80%;
-    max-width: 80%;
+    width: 80%;
+    max-width: vars.$size-xs;
+
+    @include vars.media-xs {
+      left: 0 !important;
+      width: 100%;
+    }
   }
 }

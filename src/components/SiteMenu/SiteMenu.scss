@@ -2,7 +2,7 @@
 
 .site-menu {
   &__desktop {
-    @include vars.media-sm {
+    @include vars.media-md {
       display: none;
     }
 
@@ -18,7 +18,7 @@
   }
 
   &__mobile {
-    @include vars.media(null, vars.$size-sm) {
+    @include vars.media(null, vars.$size-md) {
       display: none;
     }
   }

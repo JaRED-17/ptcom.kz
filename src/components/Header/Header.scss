@@ -29,7 +29,7 @@
     display: flex;
     align-items: center;
 
-    @include vars.media-sm {
+    @include vars.media-md {
       order: 2;
     }
 
@@ -43,13 +43,13 @@
   }
 
   &__navigation {
-    @include vars.media-sm {
+    @include vars.media-md {
       order: 1;
     }
   }
 
   &__button {
-    @include vars.media-sm {
+    @include vars.media-md {
       order: 3;
     }
 
