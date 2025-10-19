@@ -20,6 +20,9 @@ if (env === 'development') {
   app.use(webpackDevMiddleware(compiler, { publicPath: config.output.publicPath }))
   app.use(webpackHotMiddleware(compiler))
 
+  app.use('/robots.txt', express.static(path.join(__dirname, 'public', 'robots.txt')))
+  app.use('/sitemap.xml', express.static(path.join(__dirname, 'public', 'sitemap.xml')))
+
   app.get('*', (req, res, next) => {
     const filename = path.join(compiler.outputPath, 'index.html')
     compiler.outputFileSystem.readFile(filename, (err, result) => {
@@ -33,6 +36,10 @@ if (env === 'development') {
   })
 } else {
   app.use(express.static('build'))
+
+  app.use('/robots.txt', express.static(path.join(__dirname, 'build', 'robots.txt')))
+  app.use('/sitemap.xml', express.static(path.join(__dirname, 'build', 'sitemap.xml')))
+
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
   })
