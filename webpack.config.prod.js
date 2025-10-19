@@ -38,6 +38,14 @@ module.exports = {
         {
           from: path.resolve(__dirname, './src/cms'),
           to: path.resolve(__dirname, './build/cms')
+        },
+        {
+          from: path.resolve(__dirname, './public/robots.txt'),
+          to: 'robots.txt'
+        },
+        {
+          from: path.resolve(__dirname, './public/sitemap.xml'),
+          to: 'sitemap.xml'
         }
       ]
     })
