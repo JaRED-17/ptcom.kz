@@ -64,21 +64,23 @@ IntlWrapper.propTypes = {
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <IntlWrapper locale={language.getCurrentLanguage()}>
-    <BrowserRouter>
-      <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <SnackbarProvider
-          maxSnack={3}
-          anchorOrigin={{
-            vertical: 'top',
-            horizontal: 'right'
-          }}
-        >
-          <App />
-        </SnackbarProvider>
-      </ErrorBoundary>
-    </BrowserRouter>
-  </IntlWrapper>
+  <React.StrictMode>
+    <IntlWrapper locale={language.getCurrentLanguage()}>
+      <BrowserRouter>
+        <ErrorBoundary FallbackComponent={ErrorFallback}>
+          <SnackbarProvider
+            maxSnack={3}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'right'
+            }}
+          >
+            <App />
+          </SnackbarProvider>
+        </ErrorBoundary>
+      </BrowserRouter>
+    </IntlWrapper>
+  </React.StrictMode>
 )
 
 // If you want to start measuring performance in your app, pass a function
