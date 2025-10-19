@@ -68,7 +68,7 @@ const TextField = ({
       fullWidth={fullWidth}
       multiline={multiline}
       error={!!error.errorCode}
-      helperText={Boolean(error.errorCode) ? <ErrorMessage code={error.errorCode} replacements={error.replacements} /> : ''}
+      helperText={error.errorCode ? <ErrorMessage code={error.errorCode} replacements={error.replacements} /> : ''}
       rows={rows}
     >
       {children}
