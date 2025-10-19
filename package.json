@@ -59,6 +59,7 @@
     "mini-css-extract-plugin": "^2.9.4",
     "sass": "^1.93.2",
     "sass-loader": "^16.0.5",
+    "sitemap": "^8.0.0",
     "style-loader": "^3.3.4",
     "terser-webpack-plugin": "^5.3.14",
     "webpack": "^5.102.1",
@@ -76,7 +77,8 @@
     "lint": "eslint ./src",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "extract-messages": "node src/scripts/extractMessages.js"
+    "extract-messages": "node src/scripts/extractMessages.js",
+    "generate-sitemap": "node src/scripts/generateSitemap.js"
   },
   "eslintConfig": {
     "extends": [
