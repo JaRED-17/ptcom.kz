@@ -23,43 +23,11 @@ const StaticContent = React.memo(
         .catch(err => setError(err.message))
     }, [name])
 
-    const addMetaTag = (name, content) => {
-      const description = document.querySelector('meta[name="' + name + '"]')
-
-      if (description) {
-        description.setAttribute('content', content)
-      } else {
-        const newMetaTag = document.createElement('meta')
-
-        newMetaTag.setAttribute('name', name)
-        newMetaTag.setAttribute('content', content)
-        document.head.appendChild(newMetaTag)
-      }
-    }
-
-    const updateMetaTags = (ref) => {
-      if (!ref) return null
-      const meta = ref.querySelectorAll('meta')
-
-      meta.forEach((meta) => {
-        if (meta.name === 'fp:title') {
-          document.title = meta.content
-        } else if (meta.name === 'fp:description') {
-          addMetaTag('description', meta.content)
-        } else if (meta.name === 'fp:keywords') {
-          addMetaTag('keywords', meta.content)
-        }
-      })
-    }
-
     return error
       ? <p>Ошибка: {error}</p>
       : content
         ? (
           <div
-            ref={(ref) => {
-              updateMetaTags(ref)
-            }}
             className={`${classNamePrefix}__content`}
             onClick={(e) => {
               const targetLink = e.target.closest('a')

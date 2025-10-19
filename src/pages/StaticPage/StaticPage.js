@@ -4,12 +4,14 @@ import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 import StaticContent from '../../components/StaticContent'
 import PropTypes from 'prop-types'
+import CustomHelmet from '../../components/CustomHelmet'
 
 const StaticPage = ({ name }) => {
   const classNamePrefix = 'static-page'
 
   return (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={0} entries={name === 'news' ? null : 1}>
+      <CustomHelmet page={name} />
       <PageTitle name={name} />
       <StaticContent name={name} />
       <OurAdvantages />
