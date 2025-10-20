@@ -48,6 +48,7 @@
   "app.page.calculation.form.weightName": "Cargo name",
   "app.page.calculation.mandatory": "* - required fields",
   "app.page.calculation.notification.error": "An error occurred while sending the message",
+  "app.page.calculation.notification.form.error": "Please check the highlighted fields",
   "app.page.calculation.notification.success": "The message was sent successfully",
   "app.page.calculation.notification.warning": "Please check the Captcha",
   "app.page.calculation.subject": "New tariff calculation request",
