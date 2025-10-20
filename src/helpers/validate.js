@@ -55,6 +55,30 @@ export default {
       errorDetails: {}
     }
   },
+  validatePhoneOrEmail: function (regex, field, value, errorCode) {
+    if (this.isEmpty(field, value)) {
+      return {
+        error: true,
+        errorDetails: {
+          errorCode: 'mandatory',
+          replacements: {}
+        }
+      }
+    }
+
+    return regex.test(value)
+      ? {
+        error: false,
+        errorDetails: {}
+      }
+      : {
+        error: true,
+        errorDetails: {
+          errorCode,
+          replacements: {}
+        }
+      }
+  },
   company: function (value) {
     return this.baseFieldValidation('company', value)
   },
@@ -62,10 +86,14 @@ export default {
     return this.baseFieldValidation('name', value)
   },
   phone: function (value) {
-    return this.baseFieldValidation('phone', value)
+    const phoneRegex = /^\+?\d{10,15}$/
+
+    return this.validatePhoneOrEmail(phoneRegex, 'phone', value, 'wrongPhone')
   },
   email: function (value) {
-    return this.baseFieldValidation('email', value)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+    return this.validatePhoneOrEmail(emailRegex, 'email', value, 'wrongEmail')
   },
   weightName: function (value) {
     return this.baseFieldValidation('weightName', value)

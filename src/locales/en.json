@@ -2,6 +2,8 @@
   "app.error.code.mandatory": "This field is mandatory",
   "app.error.code.maxWidth": "The content of this field must be a maximum of {amount} characters",
   "app.error.code.minWidth": "The content of this field must be at least {amount} character(s)",
+  "app.error.code.wrongEmail": "Enter a valid email address",
+  "app.error.code.wrongPhone": "Enter a valid phone number",
   "app.footer.about-us.text": "Petropavl Express Logistics cooperates with a wide network of partners in the territories of the CIS countries, Latvia, Lithuania, Estonia, and Georgia.",
   "app.footer.about-us.title": "About the Company",
   "app.footer.address.text": "Republic of Kazakhstan, Petropavlovsk, Satpaeva St. 46",

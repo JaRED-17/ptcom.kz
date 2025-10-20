@@ -12,5 +12,13 @@ export default defineMessages({
   'app.error.code.maxWidth': {
     id: 'app.error.code.maxWidth',
     defaultMessage: 'Содержимое этого поля должно быть максимум {amount} символов'
+  },
+  'app.error.code.wrongEmail': {
+    id: 'app.error.code.wrongEmail',
+    defaultMessage: 'Введите корректный email'
+  },
+  'app.error.code.wrongPhone': {
+    id: 'app.error.code.wrongPhone',
+    defaultMessage: 'Введите корректный номер телефонв'
   }
 })
