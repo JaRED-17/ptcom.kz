@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './TextField.scss'
 import { TextField as TextFieldUI } from '@mui/material'
 import ErrorMessage from '../../components/ErrorMessage'
 import PropTypes from 'prop-types'
+import validate from '../../helpers/validate'
 
 const TextField = ({
   label,
@@ -10,42 +11,29 @@ const TextField = ({
   type,
   value,
   onChange = () => {},
-  required,
   fullWidth = true,
   multiline = false,
-  minWidth = 1,
-  maxWidth,
   rows,
   children,
-  disabled = false
+  disabled = false,
+  addRef = () => {}
 }) => {
+  const inputRef = useRef(null)
   const [error, setError] = useState({
     errorCode: '',
     replacements: {}
   })
 
-  const onBlur = (e) => {
-    const val = e.target.value
+  useEffect(() => {
+    inputRef.current.onBlur = onBlur
+    addRef(name, inputRef)
+  }, [])
 
-    if (val.length === 0 && required) {
-      setError({
-        ...error,
-        errorCode: 'mandatory'
-      })
-    } else if (val.length < minWidth) {
-      setError({
-        errorCode: 'minWidth',
-        replacements: {
-          amount: minWidth
-        }
-      })
-    } else if (maxWidth && val.length > maxWidth) {
-      setError({
-        errorCode: 'maxWidth',
-        replacements: {
-          amount: maxWidth
-        }
-      })
+  const onBlur = () => {
+    const result = validate[name](inputRef.current.value)
+
+    if (result.error) {
+      setError({ ...result.errorDetails })
     } else {
       setError({
         errorCode: '',
@@ -56,6 +44,7 @@ const TextField = ({
 
   return (
     <TextFieldUI
+      inputRef={inputRef}
       className={'input input-default'}
       label={label}
       name={name}
@@ -63,7 +52,6 @@ const TextField = ({
       value={value}
       onChange={onChange}
       onBlur={onBlur}
-      required={required}
       disabled={disabled}
       fullWidth={fullWidth}
       multiline={multiline}
@@ -82,14 +70,12 @@ TextField.propTypes = {
   type: PropTypes.string,
   value: PropTypes.object,
   onChange: PropTypes.func,
-  required: PropTypes.bool,
   fullWidth: PropTypes.bool,
   multiline: PropTypes.bool,
-  minWidth: PropTypes.number,
-  maxWidth: PropTypes.number,
   rows: PropTypes.number,
   children: PropTypes.any,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  addRef: PropTypes.func
 }
 
 export default TextField

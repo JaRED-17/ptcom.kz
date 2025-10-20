@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useRef, useState} from 'react'
 import './Calculation.scss'
 import setMessages from '../../helpers/setMessages'
 import messages from './Calculation.messages'
@@ -12,19 +12,63 @@ import Notification from '../../ui/Notification'
 import ReCAPTCHA from 'react-google-recaptcha'
 import settings from '../../cms/data/settings.json'
 import CustomHelmet from '../../components/CustomHelmet'
+import validate from '../../helpers/validate'
+import PropTypes from 'prop-types'
+
+const CustomForm = ({ name, header, message, addRef }) => {
+  return (
+    <>
+      <p className={'text-color-orange text-bolt'}>{message(`form.${header}`)}</p>
+      {(settings?.calculationFields?.[name] || []).map((field, index) => {
+        return (
+          <TextField
+            key={index}
+            label={message(`form.${field.name}`)}
+            name={field.name}
+            type={field.type}
+            multiline={field.multiline || false}
+            rows={field.rows || 1}
+            addRef={(name, ref) => addRef(name, ref)}
+          />
+        )
+      })}
+    </>
+  )
+}
+
+CustomForm.propTypes = {
+  name: PropTypes.string,
+  header: PropTypes.string,
+  message: PropTypes.func,
+  addRef: PropTypes.func
+}
 
 const Calculation = () => {
   const classNamePrefix = 'calculation'
   const message = setMessages(messages, 'app.page.calculation.')
+  const inputsRef = useRef({})
   const [successNotification, setSuccessNotification] = useState(false)
   const [errorNotification, setErrorNotification] = useState(false)
+  const [formErrorNotification, setFormErrorNotification] = useState(false)
   const [warningNotification, setWarningNotification] = useState(false)
   const recaptchaRef = React.useRef()
-  const handleSubmit = async (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault()
     const recaptchaValue = recaptchaRef.current.getValue()
+    let formHasError = false
 
-    if (recaptchaValue || settings.skipCaptchaCheck) {
+    for (const form in settings.calculationFields) {
+      settings.calculationFields[form].forEach(field => {
+        if (validate[field.name](e.target[field.name].value).error) {
+          inputsRef[field.name].current.onBlur()
+          formHasError = true
+        }
+      })
+    }
+
+    if (formHasError) {
+      setFormErrorNotification(true)
+    } else if (recaptchaValue || settings.skipCaptchaCheck) {
       const data = {
         name: e.target.name.value,
         email: e.target.email.value,
@@ -64,7 +108,7 @@ const Calculation = () => {
       <p className={'text-color-gray'}>{message('mandatory')}</p>
       <Box
         component={'form'}
-        onSubmit={handleSubmit}
+        onSubmit={onSubmit}
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -74,56 +118,32 @@ const Calculation = () => {
           mt: 4
         }}
       >
-        <p className={'text-color-orange text-bolt'}>{message('form.header1')}</p>
-        {(settings?.calculationFields?.form1 || []).map((field, index) => {
-          return (
-            <TextField
-              key={index}
-              label={message(`form.${field.name}`)}
-              name={field.name}
-              type={field.type}
-              multiline={field.multiline || false}
-              minWidth={field.minWidth}
-              maxWidth={field.maxWidth}
-              rows={field.rows || 1}
-              required={field.mandatory}
-            />
-          )
-        })}
+        <CustomForm
+          name={'form1'}
+          header={'header1'}
+          message={message}
+          addRef={(name, ref) => {
+            inputsRef[name] = ref
+          }}
+        />
 
-        <p className={'text-color-orange text-bolt'}>{message('form.header2')}</p>
-        {(settings?.calculationFields?.form2 || []).map((field, index) => {
-          return (
-            <TextField
-              key={index}
-              label={message(`form.${field.name}`)}
-              name={field.name}
-              type={field.type}
-              multiline={field.multiline || false}
-              minWidth={field.minWidth}
-              maxWidth={field.maxWidth}
-              rows={field.rows || 1}
-              required={field.mandatory}
-            />
-          )
-        })}
+        <CustomForm
+          name={'form2'}
+          header={'header2'}
+          message={message}
+          addRef={(name, ref) => {
+            inputsRef[name] = ref
+          }}
+        />
 
-        <p className={'text-color-orange text-bolt'}>{message('form.header3')}</p>
-        {(settings?.calculationFields?.form3 || []).map((field, index) => {
-          return (
-            <TextField
-              key={index}
-              label={message(`form.${field.name}`)}
-              name={field.name}
-              type={field.type}
-              multiline={field.multiline || false}
-              minWidth={field.minWidth}
-              maxWidth={field.maxWidth}
-              rows={field.rows || 1}
-              required={field.mandatory}
-            />
-          )
-        })}
+        <CustomForm
+          name={'form3'}
+          header={'header3'}
+          message={message}
+          addRef={(name, ref) => {
+            inputsRef[name] = ref
+          }}
+        />
 
         <div className={'submit-container'}>
           <ReCAPTCHA
@@ -159,6 +179,16 @@ const Calculation = () => {
         }}
       >
         {message('notification.error')}
+      </Notification>
+      <Notification
+        open={formErrorNotification}
+        variant={'error'}
+        autoHideDuration={5000}
+        onClose={() => {
+          setFormErrorNotification(false)
+        }}
+      >
+        {message('notification.form.error')}
       </Notification>
       <Notification
         open={warningNotification}

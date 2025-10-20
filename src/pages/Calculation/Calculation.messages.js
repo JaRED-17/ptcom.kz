@@ -73,6 +73,10 @@ export default defineMessages({
     id: 'app.page.calculation.notification.error',
     defaultMessage: 'Произошла ошибка во время отправки письма'
   },
+  'app.page.calculation.notification.form.error': {
+    id: 'app.page.calculation.notification.form.error',
+    defaultMessage: 'Пожалуйста, проверьте подствеченные поля'
+  },
   'app.page.calculation.notification.warning': {
     id: 'app.page.calculation.notification.warning',
     defaultMessage: 'Пожалуста, проверьте Captcha'

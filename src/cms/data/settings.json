@@ -39,28 +39,28 @@
         "name": "weightName",
         "type": "text",
         "mandatory": true,
-        "minWidth": 1,
+        "minWidth": 2,
         "maxWidth": 100
       },
       {
         "name": "cargoCodes",
         "type": "text",
         "mandatory": true,
-        "minWidth": 1,
+        "minWidth": 2,
         "maxWidth": 100
       },
       {
         "name": "packing",
         "type": "text",
         "mandatory": true,
-        "minWidth": 1,
+        "minWidth": 2,
         "maxWidth": 100
       },
       {
         "name": "weight",
         "type": "text",
         "mandatory": true,
-        "minWidth": 1,
+        "minWidth": 2,
         "maxWidth": 100
       }
     ],
@@ -69,28 +69,28 @@
         "name": "from",
         "type": "text",
         "mandatory": true,
-        "minWidth": 1,
+        "minWidth": 2,
         "maxWidth": 100
       },
       {
         "name": "to",
         "type": "text",
         "mandatory": true,
-        "minWidth": 1,
+        "minWidth": 2,
         "maxWidth": 100
       },
       {
         "name": "typeWagons",
         "type": "text",
         "mandatory": true,
-        "minWidth": 1,
+        "minWidth": 2,
         "maxWidth": 100
       },
       {
         "name": "message",
         "type": "text",
         "multiline": true,
-        "minWidth": 1,
+        "minWidth": 2,
         "maxWidth": 100,
         "rows": 4,
         "mandatory": false
