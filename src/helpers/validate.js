@@ -1,0 +1,94 @@
+import settings from '../cms/data/settings.json'
+
+const allFieldSettings = [
+  ...(settings?.calculationFields?.form1 || []),
+  ...(settings?.calculationFields?.form2 || []),
+  ...(settings?.calculationFields?.form3 || [])
+]
+
+export default {
+  getFieldSettingsByName: (name) => {
+    return allFieldSettings.filter(field => field.name === name)[0]
+  },
+  isEmpty: function (field, value) {
+    const fieldSettings = this.getFieldSettingsByName(field)
+
+    return !!(fieldSettings.mandatory && value.length === 0)
+  },
+  baseFieldValidation: function (field, value) {
+    const fieldSettings = this.getFieldSettingsByName(field)
+    const minWidth = fieldSettings.minWidth
+    const maxWidth = fieldSettings.maxWidth
+
+    if (this.isEmpty(field, value)) {
+      return {
+        error: true,
+        errorDetails: {
+          errorCode: 'mandatory',
+          replacements: {}
+        }
+      }
+    } else if (value.length && value.length < minWidth) {
+      return {
+        error: true,
+        errorDetails: {
+          errorCode: 'minWidth',
+          replacements: {
+            amount: minWidth
+          }
+        }
+      }
+    } else if (value.length && maxWidth && value.length > maxWidth) {
+      return {
+        error: true,
+        errorDetails: {
+          errorCode: 'maxWidth',
+          replacements: {
+            amount: maxWidth
+          }
+        }
+      }
+    }
+
+    return {
+      error: false,
+      errorDetails: {}
+    }
+  },
+  company: function (value) {
+    return this.baseFieldValidation('company', value)
+  },
+  name: function (value) {
+    return this.baseFieldValidation('name', value)
+  },
+  phone: function (value) {
+    return this.baseFieldValidation('phone', value)
+  },
+  email: function (value) {
+    return this.baseFieldValidation('email', value)
+  },
+  weightName: function (value) {
+    return this.baseFieldValidation('weightName', value)
+  },
+  cargoCodes: function (value) {
+    return this.baseFieldValidation('cargoCodes', value)
+  },
+  packing: function (value) {
+    return this.baseFieldValidation('packing', value)
+  },
+  weight: function (value) {
+    return this.baseFieldValidation('weight', value)
+  },
+  from: function (value) {
+    return this.baseFieldValidation('from', value)
+  },
+  to: function (value) {
+    return this.baseFieldValidation('to', value)
+  },
+  typeWagons: function (value) {
+    return this.baseFieldValidation('typeWagons', value)
+  },
+  message: function (value) {
+    return this.baseFieldValidation('message', value)
+  }
+}
