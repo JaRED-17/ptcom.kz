@@ -75,6 +75,7 @@
     "development": "cross-env NODE_ENV=development node server.js",
     "production": "cross-env NODE_ENV=production node server.js",
     "lint": "eslint ./src",
+    "lint-fix": "eslint ./src --fix",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "extract-messages": "node src/scripts/extractMessages.js",
