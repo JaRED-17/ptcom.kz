@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useRef, useState} from 'react'
+import React, { forwardRef, useEffect, useRef, useState } from 'react'
 import './TextField.scss'
 import { TextField as TextFieldUI } from '@mui/material'
 import ErrorMessage from '../../components/ErrorMessage'
@@ -73,9 +73,11 @@ const TextField = ({
       error={!!error.errorCode}
       helperText={error.errorCode ? <ErrorMessage code={error.errorCode} replacements={error.replacements} /> : ''}
       rows={rows}
-      InputProps={{
-        inputComponent: name === 'phone' ? PhoneMask : null
-      }}
+      InputProps={name === 'phone'
+        ? {
+          inputComponent: PhoneMask
+        }
+        : null}
     >
       {children}
     </TextFieldUI>
