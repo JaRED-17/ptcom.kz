@@ -29,6 +29,7 @@ const CustomForm = ({ name, header, message, addRef, disabled }) => {
             multiline={field.multiline || false}
             rows={field.rows || 1}
             disabled={disabled}
+            mandatory={field.mandatory}
             addRef={(name, ref) => addRef(name, ref)}
           />
         )

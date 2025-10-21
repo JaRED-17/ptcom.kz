@@ -31,6 +31,7 @@ const TextField = ({
   rows,
   children,
   disabled = false,
+  mandatory = false,
   addRef = () => {}
 }) => {
   const inputRef = useRef(null)
@@ -61,7 +62,7 @@ const TextField = ({
     <TextFieldUI
       inputRef={inputRef}
       className={'input input-default'}
-      label={label}
+      label={mandatory ? `${label}*` : label}
       name={name}
       type={type}
       value={value}
@@ -95,6 +96,7 @@ TextField.propTypes = {
   rows: PropTypes.number,
   children: PropTypes.any,
   disabled: PropTypes.bool,
+  mandatory: PropTypes.bool,
   addRef: PropTypes.func
 }
 
