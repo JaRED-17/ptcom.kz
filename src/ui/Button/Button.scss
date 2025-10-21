@@ -34,5 +34,9 @@
       }
     }
   }
+
+  .MuiButton-loadingIndicator {
+    color: var(--button-loading-color);
+  }
 }
 

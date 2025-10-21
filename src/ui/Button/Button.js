@@ -3,7 +3,7 @@ import './Button.scss'
 import { Button as ButtonUI } from '@mui/material'
 import PropTypes from 'prop-types'
 
-const Button = ({ type, onClick = () => {}, children, className, disabled = false }) => {
+const Button = ({ type, onClick = () => {}, children, className, disabled = false, loading = false }) => {
   return (
     <ButtonUI
       type={type}
@@ -11,6 +11,7 @@ const Button = ({ type, onClick = () => {}, children, className, disabled = fals
       className={`button button-default ${className}`}
       onClick={onClick}
       disabled={disabled}
+      loading={loading}
     >
       {children}
     </ButtonUI>
@@ -22,7 +23,8 @@ Button.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.any,
   className: PropTypes.string,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool
 }
 
 export default Button
