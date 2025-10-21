@@ -4,26 +4,34 @@ import path from 'path'
 import { pathToFileURL } from 'url'
 
 const files = await glob('src/**/**.messages.js')
-
-const allMessages = {}
+const enMessages = (await import('../locales/en.json', { with: { type: "json" } })).default || {}
+const ruMessages = {}
 
 for (const file of files) {
   const moduleUrl = pathToFileURL(path.resolve(file)).href
   const messages = (await import(moduleUrl)).default
 
   for (const [key, value] of Object.entries(messages)) {
-    allMessages[key] = value.defaultMessage
+    ruMessages[key] = value.defaultMessage
+
+    if (!enMessages[key]) {
+      enMessages[key] = value.defaultMessage
+    }
   }
 }
 
-const sortedAllMessages = Object.keys(allMessages)
-  .sort()
-  .reduce((acc, key) => {
-    acc[key] = allMessages[key]
-    return acc
-  }, {})
+function sortMessages (messages) {
+  return Object.keys(messages)
+    .sort()
+    .reduce((acc, key) => {
+      acc[key] = messages[key]
+      return acc
+    }, {})
+}
 
-const outputPath = 'src/locales/ru.json'
-await fs.outputJson(outputPath, sortedAllMessages, { spaces: 2 })
+const outputPathRu = 'src/locales/ru.json'
+const outputPathEN = 'src/locales/en.json'
+await fs.outputJson(outputPathRu, sortMessages(ruMessages), { spaces: 2 })
+await fs.outputJson(outputPathEN, sortMessages(enMessages), { spaces: 2 })
 
-console.log(`✅ Готово! Файл сохранён: ${outputPath}`)
+console.log(`✅ Готово! Файл сохранён: ${outputPathRu}`)
