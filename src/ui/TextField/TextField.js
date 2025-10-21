@@ -1,9 +1,24 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { forwardRef, useEffect, useRef, useState} from 'react'
 import './TextField.scss'
 import { TextField as TextFieldUI } from '@mui/material'
 import ErrorMessage from '../../components/ErrorMessage'
 import PropTypes from 'prop-types'
 import validate from '../../helpers/validate'
+import { IMaskInput } from 'react-imask'
+
+const PhoneMask = forwardRef(function PhoneMask (props, ref) {
+  return (
+    <IMaskInput
+      {...props}
+      mask={'+{7} (000) 000-00-00'}
+      definitions={{
+        '#': /[0-9]/
+      }}
+      inputRef={ref}
+      overwrite
+    />
+  )
+})
 
 const TextField = ({
   label,
@@ -58,6 +73,9 @@ const TextField = ({
       error={!!error.errorCode}
       helperText={error.errorCode ? <ErrorMessage code={error.errorCode} replacements={error.replacements} /> : ''}
       rows={rows}
+      InputProps={{
+        inputComponent: name === 'phone' ? PhoneMask : null
+      }}
     >
       {children}
     </TextFieldUI>

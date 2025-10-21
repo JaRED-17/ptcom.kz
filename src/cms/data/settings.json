@@ -21,7 +21,7 @@
       },
       {
         "name": "phone",
-        "type": "text",
+        "type": "tel",
         "mandatory": true,
         "minWidth": 5,
         "maxWidth": 11

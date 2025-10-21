@@ -86,7 +86,7 @@ export default {
     return this.baseFieldValidation('name', value)
   },
   phone: function (value) {
-    const phoneRegex = /^\+?\d{10,15}$/
+    const phoneRegex = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/
 
     return this.validatePhoneOrEmail(phoneRegex, 'phone', value, 'wrongPhone')
   },

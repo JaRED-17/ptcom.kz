@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React, { useRef, useState } from 'react'
 import './Calculation.scss'
 import setMessages from '../../helpers/setMessages'
 import messages from './Calculation.messages'
