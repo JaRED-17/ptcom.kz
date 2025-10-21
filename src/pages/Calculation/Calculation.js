@@ -15,7 +15,7 @@ import CustomHelmet from '../../components/CustomHelmet'
 import validate from '../../helpers/validate'
 import PropTypes from 'prop-types'
 
-const CustomForm = ({ name, header, message, addRef }) => {
+const CustomForm = ({ name, header, message, addRef, disabled }) => {
   return (
     <>
       <p className={'text-color-orange text-bolt'}>{message(`form.${header}`)}</p>
@@ -28,6 +28,7 @@ const CustomForm = ({ name, header, message, addRef }) => {
             type={field.type}
             multiline={field.multiline || false}
             rows={field.rows || 1}
+            disabled={disabled}
             addRef={(name, ref) => addRef(name, ref)}
           />
         )
@@ -40,6 +41,7 @@ CustomForm.propTypes = {
   name: PropTypes.string,
   header: PropTypes.string,
   message: PropTypes.func,
+  disabled: PropTypes.bool,
   addRef: PropTypes.func
 }
 
@@ -51,6 +53,7 @@ const Calculation = () => {
   const [errorNotification, setErrorNotification] = useState(false)
   const [formErrorNotification, setFormErrorNotification] = useState(false)
   const [warningNotification, setWarningNotification] = useState(false)
+  const [sending, setSending] = useState(false)
   const recaptchaRef = React.useRef()
   const onSubmit = async (e) => {
     e.preventDefault()
@@ -89,8 +92,9 @@ const Calculation = () => {
           dateTime: new Date().toLocaleString('ru-RU')
         })
       }
-
+      setSending(true)
       const res = await sendEmail(data)
+      setSending(false)
       if (res.status === 'success') {
         setSuccessNotification(true)
       } else {
@@ -122,6 +126,7 @@ const Calculation = () => {
           name={'form1'}
           header={'header1'}
           message={message}
+          disabled={sending}
           addRef={(name, ref) => {
             inputsRef[name] = ref
           }}
@@ -131,6 +136,7 @@ const Calculation = () => {
           name={'form2'}
           header={'header2'}
           message={message}
+          disabled={sending}
           addRef={(name, ref) => {
             inputsRef[name] = ref
           }}
@@ -140,6 +146,7 @@ const Calculation = () => {
           name={'form3'}
           header={'header3'}
           message={message}
+          disabled={sending}
           addRef={(name, ref) => {
             inputsRef[name] = ref
           }}
@@ -155,6 +162,7 @@ const Calculation = () => {
           <Button
             type={'submit'}
             className={'button-secondary'}
+            loading={sending}
           >
             {message('form.button')}
           </Button>
