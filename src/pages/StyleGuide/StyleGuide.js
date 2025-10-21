@@ -134,6 +134,14 @@ const StyleGuide = () => {
         </Button>
         <br/>
         <Button
+          className={'button-primary'}
+          onClick={() => {}}
+          loading={true}
+        >
+          {'Button primary loading'}
+        </Button>
+        <br/>
+        <Button
           className={'button-secondary'}
           onClick={() => {}}
         >
@@ -146,6 +154,14 @@ const StyleGuide = () => {
           disabled={true}
         >
           {'Button secondary disabled'}
+        </Button>
+        <br/>
+        <Button
+          className={'button-secondary'}
+          onClick={() => {}}
+          loading={true}
+        >
+          {'Button secondary loading'}
         </Button>
       </StyleGuideBlock>
       <StyleGuideBlock title={'Inputs block'}>
@@ -165,6 +181,26 @@ const StyleGuide = () => {
           multiline={false}
           required={false}
           disabled={true}
+        />
+        <br/>
+        <TextField
+          label={'Multiline input example'}
+          name={'text'}
+          type={'text'}
+          multiline={true}
+          required={false}
+          rows={4}
+        />
+        <br/>
+        <TextField
+          label={'Multiline input example'}
+          name={'text'}
+          type={'text'}
+          value={'Disabled Multiline input text'}
+          multiline={true}
+          required={false}
+          disabled={true}
+          rows={4}
         />
         <LanguageSelector />
       </StyleGuideBlock>
