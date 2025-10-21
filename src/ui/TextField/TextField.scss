@@ -4,6 +4,18 @@
     padding: 10px 15px;
     color: var(--input-text-color);
     background-color: var(--input-background-color);
+
+    &.Mui-disabled {
+      color: var(--input-disabled-text-color);
+      -webkit-text-fill-color: var(--input-disabled-text-color);
+    }
+  }
+
+  .MuiOutlinedInput-input {
+    &.Mui-disabled {
+      color: var(--input-disabled-text-color);
+      -webkit-text-fill-color: var(--input-disabled-text-color);
+    }
   }
 
   .MuiInputLabel-root {
