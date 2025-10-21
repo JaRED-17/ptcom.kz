@@ -26,7 +26,11 @@ const LanguageSelector = () => {
     }
   }
 
-  return (
+  const showLanguageSelector = () => {
+    return settings?.languages?.length > 1
+  }
+
+  return showLanguageSelector() ? (
     <div className={classNamePrefix}>
       <FormControl size={'small'} variant={'outlined'}>
         <Select
@@ -58,7 +62,7 @@ const LanguageSelector = () => {
         </Select>
       </FormControl>
     </div>
-  )
+  ) : null
 }
 
 export default LanguageSelector
