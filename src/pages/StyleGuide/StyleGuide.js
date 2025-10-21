@@ -124,6 +124,7 @@ const StyleGuide = () => {
         >
           {'Button primary'}
         </Button>
+        <br/>
         <Button
           className={'button-primary'}
           onClick={() => {}}
@@ -131,12 +132,14 @@ const StyleGuide = () => {
         >
           {'Button primary disabled'}
         </Button>
+        <br/>
         <Button
           className={'button-secondary'}
           onClick={() => {}}
         >
           {'Button secondary'}
         </Button>
+        <br/>
         <Button
           className={'button-secondary'}
           onClick={() => {}}
@@ -152,6 +155,16 @@ const StyleGuide = () => {
           type={'text'}
           multiline={false}
           required={false}
+        />
+        <br/>
+        <TextField
+          label={'Disabled input example'}
+          name={'text'}
+          type={'text'}
+          value={'Disabled input text'}
+          multiline={false}
+          required={false}
+          disabled={true}
         />
         <LanguageSelector />
       </StyleGuideBlock>
