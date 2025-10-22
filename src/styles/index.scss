@@ -98,3 +98,8 @@ table {
   }
 }
 
+#notistack-snackbar {
+  @include vars.media-xs {
+    max-width: calc(100% - 45px);
+  }
+}
