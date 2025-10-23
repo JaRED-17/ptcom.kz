@@ -4,10 +4,9 @@
 
 #menu {
   .MuiPaper-root {
-    background: var(--body-background);
-    color: var(--text-color-white);
     width: 80%;
     max-width: vars.$size-xs;
+    border: 1px solid transparent;
 
     @include vars.media-xs {
       left: 0 !important;

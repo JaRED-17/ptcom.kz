@@ -5,6 +5,8 @@ import ErrorMessage from '../../components/ErrorMessage'
 import PropTypes from 'prop-types'
 import validate from '../../helpers/validate'
 import { IMaskInput } from 'react-imask'
+import Autocomplete from '@mui/material/Autocomplete'
+import UTSNG from '../../cms/data/UTSNG.json'
 
 const PhoneMask = forwardRef(function PhoneMask (props, ref) {
   return (
@@ -60,31 +62,38 @@ const TextField = ({
     }
   }
 
-  return (
-    <TextFieldUI
-      inputRef={inputRef}
-      className={'input input-default'}
-      label={mandatory ? `${label}*` : label}
-      name={name}
-      type={type}
-      value={value}
-      onChange={onChange}
-      onBlur={onBlur}
-      disabled={disabled}
-      fullWidth={fullWidth}
-      multiline={multiline}
-      error={!!error.errorCode}
-      helperText={error.errorCode ? <ErrorMessage code={error.errorCode} replacements={error.replacements} /> : ''}
-      rows={rows}
-      InputProps={name === 'phone'
-        ? {
-          inputComponent: PhoneMask
-        }
-        : null}
-    >
-      {children}
-    </TextFieldUI>
-  )
+  const textField = (params) => {
+    return (
+      <TextFieldUI
+        {...params}
+        inputRef={inputRef}
+        className={'input input-default'}
+        label={mandatory ? `${label}*` : label}
+        name={name}
+        type={type}
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
+        disabled={disabled}
+        fullWidth={fullWidth}
+        multiline={multiline}
+        error={!!error.errorCode}
+        helperText={error.errorCode ? <ErrorMessage code={error.errorCode} replacements={error.replacements} /> : ''}
+        rows={rows}
+      />
+    )
+  }
+
+  return name === 'cargoCodes'
+    ? (
+      <Autocomplete
+        options={UTSNG}
+        getOptionLabel={(option) => `${option.code} ${option.name}`}
+        value={value}
+        renderInput={(params) => textField(params)}
+      />
+    )
+    : textField({ InputProps: name === 'phone' ? { inputComponent: PhoneMask } : null })
 }
 
 TextField.propTypes = {

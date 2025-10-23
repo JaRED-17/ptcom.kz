@@ -24,8 +24,7 @@
 
 #menu- {
   .MuiPaper-root {
-    background: var(--body-background);
-    color: var(--text-color-white);
+    border: 1px solid transparent;
 
     .MuiMenuItem-root img {
       margin-right: 0.5rem;

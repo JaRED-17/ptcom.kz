@@ -1,9 +1,11 @@
 .input.input-default {
+  .MuiInputBase-root {
+    background-color: var(--input-background-color);
+  }
   input.MuiInputBase-input,
   .MuiInputBase-multiline {
     padding: 10px 15px;
     color: var(--input-text-color);
-    background-color: var(--input-background-color);
 
     &.Mui-disabled {
       color: var(--input-disabled-text-color);
@@ -49,5 +51,13 @@
       -webkit-box-shadow: 0 0 0 1000px var(--input-background-color) inset !important;
       transition: background-color 5000s ease-in-out 0s !important;
     }
+  }
+
+  .MuiAutocomplete-inputRoot {
+    padding: 0;
+  }
+
+  .MuiSvgIcon-root {
+    fill: var(--input-border-color);
   }
 }

@@ -103,3 +103,11 @@ table {
     max-width: calc(100% - 45px);
   }
 }
+
+div[role='presentation'] {
+  .MuiPaper-root {
+    background: var(--body-background);
+    color: var(--text-color-white);
+    border: 1px solid var(--input-border-color);
+  }
+}
