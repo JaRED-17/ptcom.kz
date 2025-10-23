@@ -60,6 +60,8 @@ const TextField = ({
         replacements: {}
       })
     }
+
+    return result
   }
 
   const textField = (params) => {

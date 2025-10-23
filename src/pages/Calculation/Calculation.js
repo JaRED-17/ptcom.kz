@@ -63,8 +63,7 @@ const Calculation = () => {
 
     for (const form in settings.calculationFields) {
       settings.calculationFields[form].forEach(field => {
-        if (validate[field.name](e.target[field.name].value).error) {
-          inputsRef[field.name].current.validateField()
+        if (inputsRef[field.name].current.validateField()?.error) {
           formHasError = true
         }
       })
