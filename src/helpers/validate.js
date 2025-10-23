@@ -17,7 +17,7 @@ export default {
 
     return !!(fieldSettings.mandatory && value.length === 0)
   },
-  baseFieldValidation: function (field, value) {
+  basicFieldValidation: function (field, value) {
     const fieldSettings = this.getFieldSettingsByName(field)
     const minWidth = fieldSettings.minWidth
     const maxWidth = fieldSettings.maxWidth
@@ -91,10 +91,10 @@ export default {
     } : null
   },
   company: function (value) {
-    return this.baseFieldValidation('company', value)
+    return this.basicFieldValidation('company', value)
   },
   name: function (value) {
-    return this.baseFieldValidation('name', value)
+    return this.basicFieldValidation('name', value)
   },
   phone: function (value) {
     const phoneRegex = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/
@@ -109,29 +109,29 @@ export default {
   weightName: function (value) {
     this.weightNameValue = value
 
-    return this.validateWeightNameOrCargoCodes() || this.baseFieldValidation('weightName', value)
+    return this.validateWeightNameOrCargoCodes() || this.basicFieldValidation('weightName', value)
   },
   cargoCodes: function (value) {
     this.cargoCodesValue = value.replace(/[0-9]+ /g, '')
 
-    return this.validateWeightNameOrCargoCodes() || this.baseFieldValidation('cargoCodes', value)
+    return this.validateWeightNameOrCargoCodes() || this.basicFieldValidation('cargoCodes', value)
   },
   packing: function (value) {
-    return this.baseFieldValidation('packing', value)
+    return this.basicFieldValidation('packing', value)
   },
   weight: function (value) {
-    return this.baseFieldValidation('weight', value)
+    return this.basicFieldValidation('weight', value)
   },
   from: function (value) {
-    return this.baseFieldValidation('from', value)
+    return this.basicFieldValidation('from', value)
   },
   to: function (value) {
-    return this.baseFieldValidation('to', value)
+    return this.basicFieldValidation('to', value)
   },
   typeWagons: function (value) {
-    return this.baseFieldValidation('typeWagons', value)
+    return this.basicFieldValidation('typeWagons', value)
   },
   message: function (value) {
-    return this.baseFieldValidation('message', value)
+    return this.basicFieldValidation('message', value)
   }
 }
