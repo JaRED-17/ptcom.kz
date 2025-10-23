@@ -20,5 +20,9 @@ export default defineMessages({
   'app.error.code.wrongPhone': {
     id: 'app.error.code.wrongPhone',
     defaultMessage: 'Введите корректный номер телефонв'
+  },
+  'app.error.code.notTheSame': {
+    id: 'app.error.code.notTheSame',
+    defaultMessage: 'Код груза и наименование груза должны совпадать'
   }
 })

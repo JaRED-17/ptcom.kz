@@ -7,6 +7,8 @@ const allFieldSettings = [
 ]
 
 export default {
+  weightNameValue: '',
+  cargoCodesValue: '',
   getFieldSettingsByName: (name) => {
     return allFieldSettings.filter(field => field.name === name)[0]
   },
@@ -79,6 +81,15 @@ export default {
         }
       }
   },
+  validateWeightNameOrCargoCodes: function () {
+    return this.weightNameValue && this.cargoCodesValue && this.weightNameValue !== this.cargoCodesValue ? {
+      error: true,
+      errorDetails: {
+        errorCode: 'notTheSame',
+        replacements: {}
+      }
+    } : null
+  },
   company: function (value) {
     return this.baseFieldValidation('company', value)
   },
@@ -96,10 +107,14 @@ export default {
     return this.validatePhoneOrEmail(emailRegex, 'email', value, 'wrongEmail')
   },
   weightName: function (value) {
-    return this.baseFieldValidation('weightName', value)
+    this.weightNameValue = value
+
+    return this.validateWeightNameOrCargoCodes() || this.baseFieldValidation('weightName', value)
   },
   cargoCodes: function (value) {
-    return this.baseFieldValidation('cargoCodes', value)
+    this.cargoCodesValue = value.replace(/[0-9]+ /g, '')
+
+    return this.validateWeightNameOrCargoCodes() || this.baseFieldValidation('cargoCodes', value)
   },
   packing: function (value) {
     return this.baseFieldValidation('packing', value)
