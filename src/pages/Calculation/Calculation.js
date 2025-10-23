@@ -12,7 +12,6 @@ import Notification from '../../ui/Notification'
 import ReCAPTCHA from 'react-google-recaptcha'
 import settings from '../../cms/data/settings.json'
 import CustomHelmet from '../../components/CustomHelmet'
-import validate from '../../helpers/validate'
 import PropTypes from 'prop-types'
 
 const CustomForm = ({ name, header, message, addRef, disabled }) => {
