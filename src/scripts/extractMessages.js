@@ -4,7 +4,7 @@ import path from 'path'
 import { pathToFileURL } from 'url'
 
 const files = await glob('src/**/**.messages.js')
-const enMessages = (await import('../locales/en.json', { with: { type: "json" } })).default || {}
+const enMessages = (await import('../locales/en.json', { with: { type: 'json' } })).default || {}
 const ruMessages = {}
 
 for (const file of files) {
