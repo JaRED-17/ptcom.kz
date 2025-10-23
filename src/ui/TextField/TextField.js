@@ -6,7 +6,8 @@ import PropTypes from 'prop-types'
 import validate from '../../helpers/validate'
 import { IMaskInput } from 'react-imask'
 import Autocomplete from '@mui/material/Autocomplete'
-import UTSNG from '../../cms/data/UTSNG.json'
+import UTSNG from '../../cms/data/catalogs/UTSNG.json'
+import typeWagons from '../../cms/data/catalogs/typeWagons.json'
 
 const PhoneMask = forwardRef(function PhoneMask (props, ref) {
   return (
@@ -84,8 +85,8 @@ const TextField = ({
     )
   }
 
-  return name === 'cargoCodes'
-    ? (
+  if (name === 'cargoCodes') {
+    return (
       <Autocomplete
         options={UTSNG}
         getOptionLabel={(option) => `${option.code} ${option.name}`}
@@ -93,7 +94,20 @@ const TextField = ({
         renderInput={(params) => textField(params)}
       />
     )
-    : textField({ InputProps: name === 'phone' ? { inputComponent: PhoneMask } : null })
+  }
+
+  if (name === 'typeWagons') {
+    return (
+      <Autocomplete
+        options={typeWagons}
+        getOptionLabel={option => option.type}
+        value={value}
+        renderInput={(params) => textField(params)}
+      />
+    )
+  }
+
+  return textField({ InputProps: name === 'phone' ? { inputComponent: PhoneMask } : null })
 }
 
 TextField.propTypes = {
