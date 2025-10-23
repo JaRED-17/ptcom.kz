@@ -45,11 +45,11 @@ const TextField = ({
   })
 
   useEffect(() => {
-    inputRef.current.onBlur = onBlur
+    inputRef.current.validateField = validateField
     addRef(name, inputRef)
   }, [])
 
-  const onBlur = () => {
+  const validateField = () => {
     const result = validate[name](inputRef.current.value)
 
     if (result.error) {
@@ -73,7 +73,7 @@ const TextField = ({
         type={type}
         value={value}
         onChange={onChange}
-        onBlur={onBlur}
+        onBlur={validateField}
         disabled={disabled}
         fullWidth={fullWidth}
         multiline={multiline}
