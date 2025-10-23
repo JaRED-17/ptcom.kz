@@ -34,7 +34,6 @@ const TextField = ({
   fullWidth = true,
   multiline = false,
   rows,
-  children,
   disabled = false,
   mandatory = false,
   addRef = () => {}
@@ -96,6 +95,25 @@ const TextField = ({
     )
   }
 
+  if (name === 'weightName') {
+    const result = []
+
+    UTSNG.forEach((item) => {
+      if (!result.includes(item.name)) {
+        result.push(item.name)
+      }
+    })
+
+    return (
+      <Autocomplete
+        options={result.sort((a, b) => a - b)}
+        getOptionLabel={(option) => option}
+        value={value}
+        renderInput={(params) => textField(params)}
+      />
+    )
+  }
+
   if (name === 'typeWagons') {
     return (
       <Autocomplete
@@ -119,7 +137,6 @@ TextField.propTypes = {
   fullWidth: PropTypes.bool,
   multiline: PropTypes.bool,
   rows: PropTypes.number,
-  children: PropTypes.any,
   disabled: PropTypes.bool,
   mandatory: PropTypes.bool,
   addRef: PropTypes.func
