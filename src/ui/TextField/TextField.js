@@ -122,7 +122,13 @@ const TextField = ({
         options={typeWagons}
         getOptionLabel={option => option.type}
         value={value}
-        renderInput={(params) => textField(params)}
+        renderInput={(params) => textField({
+          ...params,
+          inputProps: {
+            ...params.inputProps,
+            readOnly: true
+          }
+        })}
       />
     )
   }
