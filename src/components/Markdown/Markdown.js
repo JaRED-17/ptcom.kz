@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-const Markdown = ({ text, inline, childrenClassName }) => {
+const Markdown = ({ text, inline, childrenClassName, params = {} }) => {
   const getComponents = (inline, childrenClassName) => {
     if (inline) {
       return {
@@ -21,7 +21,7 @@ const Markdown = ({ text, inline, childrenClassName }) => {
       if (childrenClassName.target === 'link') {
         return {
           p: ({ children }) => <>{children}</>,
-          a: ({ children, href }) => <Link to={href} className={childrenClassName.className}>{children}</Link>
+          a: ({ children, href }) => <Link {...params} to={href} className={childrenClassName.className}>{children}</Link>
         }
       }
       if (childrenClassName.target === 'list') {
@@ -49,7 +49,8 @@ const Markdown = ({ text, inline, childrenClassName }) => {
 Markdown.propTypes = {
   text: PropTypes.string.isRequired,
   inline: PropTypes.bool,
-  childrenClassName: PropTypes.object
+  childrenClassName: PropTypes.object,
+  params: PropTypes.object
 }
 
 export default Markdown

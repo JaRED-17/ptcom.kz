@@ -123,5 +123,10 @@
   {
     "name": "contacts",
     "url": "/contacts"
+  },
+  {
+    "name": "policy",
+    "url": "/policy",
+    "static": true
   }
 ]

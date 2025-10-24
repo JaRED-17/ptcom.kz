@@ -124,5 +124,9 @@ export default defineMessages({
   'app.page.seo.keywords.contacts': {
     id: 'app.page.seo.keywords.contacts',
     defaultMessage: 'контакты'
+  },
+  'app.page.seo.keywords.policy': {
+    id: 'app.page.seo.keywords.policy',
+    defaultMessage: 'согласие, персональные данные, политика обработки данных'
   }
 })

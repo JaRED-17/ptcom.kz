@@ -94,6 +94,11 @@
         "maxWidth": 100,
         "rows": 4,
         "mandatory": false
+      },
+      {
+        "name": "policy",
+        "type": "checkbox",
+        "mandatory": true
       }
     ]
   }

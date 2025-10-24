@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect, useRef, useState } from 'react'
 import './TextField.scss'
-import { TextField as TextFieldUI } from '@mui/material'
+import { Checkbox, FormControlLabel, FormGroup, FormHelperText, TextField as TextFieldUI } from '@mui/material'
 import ErrorMessage from '../../components/ErrorMessage'
 import PropTypes from 'prop-types'
 import validate from '../../helpers/validate'
@@ -8,6 +8,7 @@ import { IMaskInput } from 'react-imask'
 import Autocomplete from '@mui/material/Autocomplete'
 import UTSNG from '../../cms/data/catalogs/UTSNG.json'
 import typeWagons from '../../cms/data/catalogs/typeWagons.json'
+import Markdown from '../../components/Markdown'
 
 const PhoneMask = forwardRef(function PhoneMask (props, ref) {
   return (
@@ -50,7 +51,7 @@ const TextField = ({
   }, [])
 
   const validateField = () => {
-    const result = validate[name](inputRef.current.value)
+    const result = name === 'policy' ? validate[name](inputRef.current.checked) : validate[name](inputRef.current.value)
 
     if (result.error) {
       setError({ ...result.errorDetails })
@@ -113,6 +114,22 @@ const TextField = ({
         value={value}
         renderInput={(params) => textField(params)}
       />
+    )
+  }
+
+  if (type === 'checkbox') {
+    return (
+      <FormGroup className={'input input-default'}>
+        <FormControlLabel
+          control={<Checkbox inputRef={inputRef} checked={value} onChange={validateField} />}
+          label={<Markdown childrenClassName={{ target: 'link', className: 'orange-link' }} text={mandatory ? `${label}*` : label} params={{ target: '_blank' }} />}
+        />
+        {error.errorCode ? (
+          <FormHelperText error>
+            <ErrorMessage code={error.errorCode} replacements={error.replacements} />
+          </FormHelperText>
+        ) : null}
+      </FormGroup>
     )
   }
 

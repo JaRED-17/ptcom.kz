@@ -61,6 +61,10 @@ export default defineMessages({
     id: 'app.page.calculation.form.message',
     defaultMessage: 'Дополнительно'
   },
+  'app.page.calculation.form.policy': {
+    id: 'app.page.calculation.form.policy',
+    defaultMessage: 'Согласие на обработку [персональных данных](/policy)'
+  },
   'app.page.calculation.form.button': {
     id: 'app.page.calculation.form.button',
     defaultMessage: 'Отправить'

@@ -133,5 +133,19 @@ export default {
   },
   message: function (value) {
     return this.basicFieldValidation('message', value)
+  },
+  policy: function (value) {
+    const fieldSettings = this.getFieldSettingsByName('policy')
+
+    return fieldSettings.mandatory && !value ? {
+      error: true,
+      errorDetails: {
+        errorCode: 'mandatory',
+        replacements: {}
+      }
+    } : {
+      error: false,
+      errorDetails: {}
+    }
   }
 }
