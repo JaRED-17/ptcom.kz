@@ -111,9 +111,9 @@ const Calculation = () => {
         }}
       >
         {[
-          {name: 'form1', header: 'header1' },
-          {name: 'form2', header: 'header2' },
-          {name: 'form3', header: 'header3' }
+          { name: 'form1', header: 'header1' },
+          { name: 'form2', header: 'header2' },
+          { name: 'form3', header: 'header3' }
         ].map((form, index) => (
           <CalculationForm
             key={index}
