@@ -33,7 +33,6 @@ const CustomForm = ({ name, header, message, addRef, disabled }) => {
               name={field.name}
               type={field.type}
               disabled={disabled}
-              fullWidth={true}
               mandatory={field.mandatory}
               addRef={(name, ref) => addRef(name, ref)}
             />
