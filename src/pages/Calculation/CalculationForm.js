@@ -8,7 +8,7 @@ import settings from '../../cms/data/settings.json'
 import UTSNG from '../../cms/data/catalogs/UTSNG.json'
 import typeWagons from '../../cms/data/catalogs/typeWagons.json'
 
-const CustomForm = ({ name, header, message, addRef, disabled }) => {
+const CalculationForm = ({ name, header, message, addRef, disabled }) => {
   return (
     <>
       <p className={'text-color-orange text-bolt'}>{message(`form.${header}`)}</p>
@@ -119,7 +119,7 @@ const CustomForm = ({ name, header, message, addRef, disabled }) => {
   )
 }
 
-CustomForm.propTypes = {
+CalculationForm.propTypes = {
   name: PropTypes.string,
   header: PropTypes.string,
   message: PropTypes.func,
@@ -127,4 +127,4 @@ CustomForm.propTypes = {
   addRef: PropTypes.func
 }
 
-export default CustomForm
+export default CalculationForm

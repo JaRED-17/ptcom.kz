@@ -11,7 +11,7 @@ import Notification from '../../ui/Notification'
 import ReCAPTCHA from 'react-google-recaptcha'
 import settings from '../../cms/data/settings.json'
 import CustomHelmet from '../../components/CustomHelmet'
-import CustomForm from './CustomForm'
+import CalculationForm from './CalculationForm'
 
 const Calculation = () => {
   const classNamePrefix = 'calculation'
@@ -115,7 +115,7 @@ const Calculation = () => {
           {name: 'form2', header: 'header2' },
           {name: 'form3', header: 'header3' }
         ].map((form, index) => (
-          <CustomForm
+          <CalculationForm
             key={index}
             name={form.name}
             header={form.header}
