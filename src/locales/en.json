@@ -34,6 +34,7 @@
   "app.page.aboutUs.title": "About the Company",
   "app.page.calculation.email": "Company name: {company}\n\nPhone: {phone}\n\nContact person: {name}\n\nE-mail: {email}\n\nCargo name: {weightName}\n\nCargo codes ETSNG, GNG: {cargoCodes}\n\nPackaging: {packing}\n\nWagon load: {weight}\n\nDeparture station: {from}\n\nDestination station: {to}\n\nType of wagons: {typeWagons}\n\nAdditional information: {message}\n\nDate and time of request creation: {dateTime}",
   "app.page.calculation.form.button": "Send",
+  "app.page.calculation.form.button.clear": "Clear",
   "app.page.calculation.form.cargoCodes": "Cargo codes ETSNG, GNG",
   "app.page.calculation.form.company": "Company name",
   "app.page.calculation.form.email": "E-mail",

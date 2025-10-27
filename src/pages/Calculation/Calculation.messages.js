@@ -69,6 +69,10 @@ export default defineMessages({
     id: 'app.page.calculation.form.button',
     defaultMessage: 'Отправить'
   },
+  'app.page.calculation.form.button.clear': {
+    id: 'app.page.calculation.form.button.clear',
+    defaultMessage: 'Очистить'
+  },
   'app.page.calculation.notification.success': {
     id: 'app.page.calculation.notification.success',
     defaultMessage: 'Письмо успешно отправлено'

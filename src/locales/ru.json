@@ -34,6 +34,7 @@
   "app.page.aboutUs.title": "О компании",
   "app.page.calculation.email": "Наименование компании: {company}\n\nТелефон: {phone}\n\nКонтактное лицо: {name}\n\nE-mail: {email}\n\nНаименование груза: {weightName}\n\nКоды груза ЕТСНГ, ГНГ: {cargoCodes}\n\nУпаковка: {packing}\n\nЗагрузка вагона: {weight}\n\nСтанция отправления: {from}\n\nСтанция назначения: {to}\n\nТип вагонов: {typeWagons}\n\nДополнительно: {message}\n\nДата и время создания запроса: {dateTime}",
   "app.page.calculation.form.button": "Отправить",
+  "app.page.calculation.form.button.clear": "Очистить",
   "app.page.calculation.form.cargoCodes": "Коды груза ЕТСНГ, ГНГ",
   "app.page.calculation.form.company": "Наименование компании",
   "app.page.calculation.form.email": "E-mail",

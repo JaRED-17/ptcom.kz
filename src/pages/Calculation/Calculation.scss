@@ -12,8 +12,9 @@
 
       .submit-container {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
 
@@ -21,11 +22,26 @@
           justify-content: center;
         }
 
-        .button-default {
-          min-width: 40%;
+        &__buttons {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
 
           @include vars.media-sm {
-            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          button {
+            width: 40%;
+
+            @include vars.media-sm {
+              width: 100%;
+
+              &:first-child {
+                margin-bottom: 1rem;
+              }
+            }
           }
         }
       }
