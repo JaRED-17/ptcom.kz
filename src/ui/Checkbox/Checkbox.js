@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Checkbox, FormControlLabel, FormGroup, FormHelperText } from '@mui/material'
+import { Checkbox as MUICheckbox, FormControlLabel, FormGroup, FormHelperText } from '@mui/material'
 import ErrorMessage from '../../components/ErrorMessage'
 import validate from '../../helpers/validate'
 import PropTypes from 'prop-types'
 import Markdown from '../../components/Markdown'
 
-const CustomCheckbox = ({
+const Checkbox = ({
   label,
   name,
   disabled = false,
@@ -49,7 +49,7 @@ const CustomCheckbox = ({
   return (
     <FormGroup className={'input input-default'}>
       <FormControlLabel
-        control={<Checkbox inputRef={inputRef} disabled={disabled} checked={value} onChange={(e) => {
+        control={<MUICheckbox inputRef={inputRef} disabled={disabled} checked={value} onChange={(e) => {
           setValue(e.target.checked)
           validateField(e.target.checked)
         }} />}
@@ -64,7 +64,7 @@ const CustomCheckbox = ({
   )
 }
 
-CustomCheckbox.propTypes = {
+Checkbox.propTypes = {
   label: PropTypes.string,
   name: PropTypes.string,
   disabled: PropTypes.bool,
@@ -72,4 +72,4 @@ CustomCheckbox.propTypes = {
   addRef: PropTypes.func
 }
 
-export default CustomCheckbox
+export default Checkbox

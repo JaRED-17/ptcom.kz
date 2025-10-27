@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './TextField.scss'
-import { TextField as TextFieldUI } from '@mui/material'
+import { TextField as MUITextField } from '@mui/material'
 import ErrorMessage from '../../components/ErrorMessage'
 import validate from '../../helpers/validate'
 import PropTypes from 'prop-types'
@@ -52,7 +52,7 @@ const TextField = ({
   }
 
   return (
-    <TextFieldUI
+    <MUITextField
       {...params}
       inputRef={inputRef}
       className={'input input-default'}

@@ -2,7 +2,7 @@ import React from 'react'
 import TextField from '../../ui/TextField'
 import PhoneNumber from '../../ui/PhoneNumber'
 import AutocompleteField from '../../ui/AutocompleteField'
-import CustomCheckbox from '../../ui/CustomCheckbox'
+import Checkbox from '../../ui/Checkbox'
 import PropTypes from 'prop-types'
 import settings from '../../cms/data/settings.json'
 import UTSNG from '../../cms/data/catalogs/UTSNG.json'
@@ -99,7 +99,7 @@ const CalculationForm = ({
 
         if (field.name === 'policy') {
           return (
-            <CustomCheckbox
+            <Checkbox
               key={index}
               label={message(`form.${field.name}`)}
               name={field.name}
