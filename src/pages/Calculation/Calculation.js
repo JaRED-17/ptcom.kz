@@ -66,6 +66,7 @@ const Calculation = () => {
       const res = await sendEmail(data)
       setSending(false)
       if (res.status === 'success') {
+        clearData()
         setNotification({
           type: 'success',
           text: message('notification.success')
