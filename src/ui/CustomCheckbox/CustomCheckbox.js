@@ -21,13 +21,11 @@ const CustomCheckbox = ({
 
   useEffect(() => {
     inputRef.current.validateField = validateField
-    inputRef.current.clearError = () => {
+    inputRef.current.clear = () => {
       setError({
         errorCode: '',
         replacements: {}
       })
-    }
-    inputRef.current.clear = () => {
       setValue(false)
     }
     addRef(name, inputRef)
@@ -51,7 +49,7 @@ const CustomCheckbox = ({
   return (
     <FormGroup className={'input input-default'}>
       <FormControlLabel
-        control={<Checkbox inputRef={inputRef} checked={value} onChange={(e) => {
+        control={<Checkbox inputRef={inputRef} disabled={disabled} checked={value} onChange={(e) => {
           setValue(e.target.checked)
           validateField(e.target.checked)
         }} />}

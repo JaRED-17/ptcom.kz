@@ -52,13 +52,11 @@ const PhoneNumber = ({
 
   useEffect(() => {
     inputRef.current.validateField = validateField
-    inputRef.current.clearError = () => {
+    inputRef.current.clear = () => {
       setError({
         errorCode: '',
         replacements: {}
       })
-    }
-    inputRef.current.clear = () => {
       setValue('')
     }
     addRef(name, inputRef)

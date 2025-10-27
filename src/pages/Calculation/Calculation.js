@@ -214,7 +214,6 @@ const Calculation = () => {
     for (const form in settings.calculationFields) {
       settings.calculationFields[form].forEach(field => {
         inputsRef[field.name].current.clear()
-        inputsRef[field.name].current.clearError()
       })
     }
   }

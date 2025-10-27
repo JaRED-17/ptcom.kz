@@ -28,13 +28,11 @@ const AutocompleteField = ({
 
   useEffect(() => {
     inputRef.current.validateField = validateField
-    inputRef.current.clearError = () => {
+    inputRef.current.clear = () => {
       setError({
         errorCode: '',
         replacements: {}
       })
-    }
-    inputRef.current.clear = () => {
       setValue('')
       setInputValue('')
     }
@@ -68,6 +66,7 @@ const AutocompleteField = ({
       onInputChange={(event, newValue) => {
         setInputValue(newValue)
       }}
+      disabled={disabled}
       renderInput={(params) => (
         <TextField
           {...params}
@@ -77,7 +76,6 @@ const AutocompleteField = ({
           name={name}
           type={type}
           onBlur={validateField}
-          disabled={disabled}
           fullWidth={fullWidth}
           multiline={multiline}
           error={!!error.errorCode}
