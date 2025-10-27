@@ -124,6 +124,16 @@ const Calculation = () => {
             addRef={(name, ref) => {
               inputsRef[name] = ref
             }}
+            onValidate={(name) => {
+              if (inputsRef.cargoCodes.current.value && inputsRef.weightName.current.value) {
+                const Map = {
+                  weightName: 'cargoCodes',
+                  cargoCodes: 'weightName'
+                }
+
+                inputsRef[Map[name]].current.validateField()
+              }
+            }}
           />
         ))}
 

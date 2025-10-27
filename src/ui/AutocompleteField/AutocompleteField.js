@@ -16,7 +16,8 @@ const AutocompleteField = ({
   disabled = false,
   mandatory = false,
   readOnly = false,
-  addRef = () => {}
+  addRef = () => {},
+  onValidate = () => {}
 }) => {
   const inputRef = useRef(null)
   const [error, setError] = useState({
@@ -75,7 +76,10 @@ const AutocompleteField = ({
           label={mandatory ? `${label}*` : label}
           name={name}
           type={type}
-          onBlur={validateField}
+          onBlur={() => {
+            validateField()
+            onValidate(name)
+          }}
           fullWidth={fullWidth}
           multiline={multiline}
           error={!!error.errorCode}
@@ -102,7 +106,8 @@ AutocompleteField.propTypes = {
   disabled: PropTypes.bool,
   mandatory: PropTypes.bool,
   readOnly: PropTypes.bool,
-  addRef: PropTypes.func
+  addRef: PropTypes.func,
+  onValidate: PropTypes.func
 }
 
 export default AutocompleteField

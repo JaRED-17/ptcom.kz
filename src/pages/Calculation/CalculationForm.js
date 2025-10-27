@@ -8,7 +8,14 @@ import settings from '../../cms/data/settings.json'
 import UTSNG from '../../cms/data/catalogs/UTSNG.json'
 import typeWagons from '../../cms/data/catalogs/typeWagons.json'
 
-const CalculationForm = ({ name, header, message, addRef, disabled }) => {
+const CalculationForm = ({
+  name,
+  header,
+  message,
+  disabled = false,
+  addRef = () => {},
+  onValidate = () => {}
+}) => {
   return (
     <>
       <p className={'text-color-orange text-bolt'}>{message(`form.${header}`)}</p>
@@ -41,6 +48,7 @@ const CalculationForm = ({ name, header, message, addRef, disabled }) => {
               disabled={disabled}
               mandatory={field.mandatory}
               addRef={(name, ref) => addRef(name, ref)}
+              onValidate={onValidate}
             />
           )
         }
@@ -66,6 +74,7 @@ const CalculationForm = ({ name, header, message, addRef, disabled }) => {
               disabled={disabled}
               mandatory={field.mandatory}
               addRef={(name, ref) => addRef(name, ref)}
+              onValidate={onValidate}
             />
           )
         }
@@ -124,7 +133,8 @@ CalculationForm.propTypes = {
   header: PropTypes.string,
   message: PropTypes.func,
   disabled: PropTypes.bool,
-  addRef: PropTypes.func
+  addRef: PropTypes.func,
+  onValidate: PropTypes.func
 }
 
 export default CalculationForm
