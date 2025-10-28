@@ -1,4 +1,5 @@
 {
+  "app.consultationsWidget.title": "Consultations",
   "app.error.code.mandatory": "This field is mandatory",
   "app.error.code.maxWidth": "The content of this field must be a maximum of {amount} characters",
   "app.error.code.minWidth": "The content of this field must be at least {amount} character(s)",

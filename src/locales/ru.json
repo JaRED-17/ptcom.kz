@@ -1,4 +1,5 @@
 {
+  "app.consultationsWidget.title": "Консультации",
   "app.error.code.mandatory": "Это поле является обязательным",
   "app.error.code.maxWidth": "Содержимое этого поля должно быть максимум {amount} символов",
   "app.error.code.minWidth": "Содержимое этого поля должно быть минимум {amount} символ(а)",
