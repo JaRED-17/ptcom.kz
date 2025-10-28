@@ -15,11 +15,11 @@ const Home = ({ navigate }) => {
   return (
     <Page classNamePrefix={classNamePrefix}>
       <CustomHelmet page={'home'} />
-      <div className={'home__content--text'}>
+      <div className={`${classNamePrefix}__content--text`}>
         <h1>{message('title')}</h1>
         <p>{message('text')}</p>
       </div>
-      <div className={'home__content--buttons'}>
+      <div className={`${classNamePrefix}__content--buttons`}>
         <Button
           className={'button-secondary button-services'}
           onClick={() => {
