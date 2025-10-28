@@ -15,7 +15,7 @@ const Services = () => {
     <Page classNamePrefix={classNamePrefix}>
       <CustomHelmet page={'services'} />
       <PageTitle name={'services'} />
-      <div className={'services__content--block__buttons'}>
+      <div className={`${classNamePrefix}__content--block__buttons`}>
         <ServicesCustomButton
           icon={'wagons'}
           text={message('provideWagons')}
