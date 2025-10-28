@@ -1,0 +1,5 @@
+.news-widget {
+  &__link:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+}
