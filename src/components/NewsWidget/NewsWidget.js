@@ -14,12 +14,12 @@ const NewsWidget = () => {
   return (
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__header`}>
-        <h1>{message('title')}</h1>
+        <p className={'text-color-orange text-bolt text-header'}>{message('title')}</p>
       </div>
       <div className={`${classNamePrefix}__links`}>
         {pages[0].entries[1].entries.map((entry, index) => (
           <div className={`${classNamePrefix}__link`} key={index}>
-            <Link className={'white-link'} to={entry.url}>{PageTitle(entry.name + '.title')}</Link>
+            <Link className={'grey-link'} to={entry.url}>{PageTitle(entry.name + '.title')}</Link>
           </div>
         ))}
       </div>

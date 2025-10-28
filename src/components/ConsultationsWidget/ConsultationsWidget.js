@@ -14,7 +14,7 @@ const ConsultationsWidget = () => {
   return (
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__header`}>
-        <h1>{message('title')}</h1>
+        <p className={'text-color-orange text-bolt text-header'}>{message('title')}</p>
       </div>
       <div className={`${classNamePrefix}__links`}>
         {pages[2].entries.map((entry, index) => (
