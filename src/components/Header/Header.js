@@ -10,20 +10,21 @@ import PropTypes from 'prop-types'
 import SiteMenu from '../SiteMenu'
 
 const Header = ({ navigate }) => {
+  const classNamePrefix = 'header'
   const message = setMessages(messages, 'app.header.')
 
   return (
-    <header className={'header'}>
-      <div className={'header__content'}>
-        <div className={'header__logo'}>
+    <header className={classNamePrefix}>
+      <div className={`${classNamePrefix}__content`}>
+        <div className={`${classNamePrefix}__logo`}>
           <Link to={'/'}>
-            <img className={'header__logo-img'} src={logo} alt={message('logo')} />
+            <img className={`${classNamePrefix}__logo-img`} src={logo} alt={message('logo')} />
           </Link>
         </div>
-        <div className={'header__navigation'}>
+        <div className={`${classNamePrefix}__navigation`}>
           <SiteMenu />
         </div>
-        <div className={'header__button'}>
+        <div className={`${classNamePrefix}__button`}>
           <Button
             className={'button-primary'}
             onClick={() => {
