@@ -1,6 +1,8 @@
 import React from 'react'
 import './Licenses.scss'
-import OurAdvantages from '../../components/OurAdvantages'
+import NewsWidget from '../../components/NewsWidget'
+import ConsultationsWidget from '../../components/ConsultationsWidget'
+import TwoColumnsContent from '../../components/TwoColumnsContent'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 import CustomHelmet from '../../components/CustomHelmet'
@@ -22,7 +24,10 @@ const Licenses = () => {
         <img src={'/cms/images/licenses/200x200-sert-eaa-2.41f.jpg'} alt={''} />
         <img src={'/cms/images/licenses/200x200-sert-mnn-1.41f.jpg'} alt={''} />
       </div>
-      <OurAdvantages />
+      <TwoColumnsContent
+        column1={<NewsWidget />}
+        column2={<ConsultationsWidget />}
+      />
     </PageWithAsideMenu>
   )
 }
