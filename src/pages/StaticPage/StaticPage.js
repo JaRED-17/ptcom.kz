@@ -1,5 +1,5 @@
 import React from 'react'
-import OurAdvantages from '../../components/OurAdvantages'
+import ConsultationsWidget from '../../components/ConsultationsWidget'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 import StaticContent from '../../components/StaticContent'
@@ -24,7 +24,7 @@ const StaticPage = ({ name }) => {
   ) : (
     <PageWithAsideMenu classNamePrefix={classNamePrefix} index={0} entries={name === 'news' ? null : 1}>
       {content}
-      <OurAdvantages />
+      <ConsultationsWidget />
     </PageWithAsideMenu>
   )
 }
