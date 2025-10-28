@@ -9,7 +9,7 @@ const handlePages = (pages, languages, addHomeUrl = false) => {
   const generateUrlsByLanguages = (language, url) => {
     return {
       url: `/${language}${url}`,
-      lastmod: new Date().toLocaleDateString(),
+      lastmod: new Date().toISOString().split('T')[0],
       changefreq: 'daily',
       priority: 1.0
     }
