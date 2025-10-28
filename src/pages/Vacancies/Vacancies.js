@@ -1,7 +1,9 @@
 import React from 'react'
 import setMessages from '../../helpers/setMessages'
 import messages from './Vacancies.messages'
-import OurAdvantages from '../../components/OurAdvantages'
+import NewsWidget from '../../components/NewsWidget'
+import ConsultationsWidget from '../../components/ConsultationsWidget'
+import TwoColumnsContent from '../../components/TwoColumnsContent'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 import Markdown from '../../components/Markdown'
@@ -19,7 +21,10 @@ const Vacancies = () => {
       <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph2')} />
       <Markdown childrenClassName={{ target: ['paragraph', 'link'], className: ['text-color-gray', 'white-link'] }} text={message('paragraph3')} />
       <p className={'text-color-gray'}>{message('paragraph4')}</p>
-      <OurAdvantages />
+      <TwoColumnsContent
+        column1={<NewsWidget />}
+        column2={<ConsultationsWidget />}
+      />
     </PageWithAsideMenu>
   )
 }
