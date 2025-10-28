@@ -1,5 +1,7 @@
 import React from 'react'
-import OurAdvantages from '../../components/OurAdvantages'
+import NewsWidget from '../../components/NewsWidget'
+import ConsultationsWidget from '../../components/ConsultationsWidget'
+import TwoColumnsContent from '../../components/TwoColumnsContent'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 import StaffList from '../../components/StaffList'
@@ -13,7 +15,10 @@ const Staffs = () => {
       <CustomHelmet page={'staffs'} />
       <PageTitle name={'staffs'} />
       <StaffList />
-      <OurAdvantages />
+      <TwoColumnsContent
+        column1={<NewsWidget />}
+        column2={<ConsultationsWidget />}
+      />
     </PageWithAsideMenu>
   )
 }
