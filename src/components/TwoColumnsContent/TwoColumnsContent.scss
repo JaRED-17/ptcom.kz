@@ -1,0 +1,20 @@
+@use '../../styles/vars';
+
+.two-columns-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  @include vars.media-sm {
+    flex-direction: column;
+  }
+
+  &__first-column-content,
+  &__second-column-content {
+    flex-basis: 50%;
+
+    @include vars.media-sm {
+      flex-basis: 100%;
+    }
+  }
+}
