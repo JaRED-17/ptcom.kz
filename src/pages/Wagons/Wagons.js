@@ -1,7 +1,7 @@
 import React from 'react'
 import setMessages from '../../helpers/setMessages'
 import messages from './Wagons.messages'
-import OurAdvantages from '../../components/OurAdvantages'
+import NewsWidget from '../../components/NewsWidget'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 import Markdown from '../../components/Markdown'
@@ -24,7 +24,7 @@ const Wagons = () => {
       <p className={'text-color-gray'}>{message('paragraph7')}</p>
       <p className={'text-color-gray'}>{message('paragraph8')}</p>
       <p className={'text-color-gray'}>{message('paragraph9')}</p>
-      <OurAdvantages />
+      <NewsWidget />
     </PageWithAsideMenu>
   )
 }

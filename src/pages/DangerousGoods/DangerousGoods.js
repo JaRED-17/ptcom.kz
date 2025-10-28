@@ -1,7 +1,7 @@
 import React from 'react'
 import setMessages from '../../helpers/setMessages'
 import messages from './DangerousGoods.messages'
-import OurAdvantages from '../../components/OurAdvantages'
+import NewsWidget from '../../components/NewsWidget'
 import PageTitle from '../../components/PageTitle'
 import PageWithAsideMenu from '../../components/PageWithAsideMenu'
 import Markdown from '../../components/Markdown'
@@ -30,7 +30,7 @@ const DangerousGoods = () => {
       <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph10')} />
       <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph11')} />
       <Markdown childrenClassName={{ target: 'paragraph', className: 'text-color-gray' }} text={message('paragraph12')} />
-      <OurAdvantages />
+      <NewsWidget />
     </PageWithAsideMenu>
   )
 }
