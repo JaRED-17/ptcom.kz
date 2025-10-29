@@ -125,12 +125,17 @@ const Calculation = () => {
               inputsRef[name] = ref
             }}
             onValidate={(name) => {
-              if (inputsRef.cargoCodes.current.value && inputsRef.weightName.current.value) {
-                const Map = {
-                  weightName: 'cargoCodes',
-                  cargoCodes: 'weightName'
-                }
+              const Map = {
+                weightName: 'cargoCodes',
+                cargoCodes: 'weightName',
+                from: 'to',
+                to: 'from'
+              }
 
+              if (
+                (inputsRef.cargoCodes.current.value && inputsRef.weightName.current.value) ||
+                (inputsRef.from.current.value && inputsRef.to.current.value)
+              ) {
                 inputsRef[Map[name]].current.validateField()
               }
             }}

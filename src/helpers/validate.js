@@ -9,6 +9,8 @@ const allFieldSettings = [
 export default {
   weightNameValue: '',
   cargoCodesValue: '',
+  fromValue: '',
+  toValue: '',
   getFieldSettingsByName: (name) => {
     return allFieldSettings.filter(field => field.name === name)[0]
   },
@@ -90,6 +92,15 @@ export default {
       }
     } : null
   },
+  validateFromOrTo: function () {
+    return this.fromValue && this.toValue && this.fromValue === this.toValue ? {
+      error: true,
+      errorDetails: {
+        errorCode: 'same',
+        replacements: {}
+      }
+    } : null
+  },
   company: function (value) {
     return this.basicFieldValidation('company', value)
   },
@@ -123,10 +134,14 @@ export default {
     return this.basicFieldValidation('weight', value)
   },
   from: function (value) {
-    return this.basicFieldValidation('from', value)
+    this.fromValue = value
+
+    return this.validateFromOrTo() || this.basicFieldValidation('from', value)
   },
   to: function (value) {
-    return this.basicFieldValidation('to', value)
+    this.toValue = value
+
+    return this.validateFromOrTo() || this.basicFieldValidation('to', value)
   },
   typeWagons: function (value) {
     return this.basicFieldValidation('typeWagons', value)
