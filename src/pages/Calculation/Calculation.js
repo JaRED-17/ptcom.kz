@@ -132,10 +132,7 @@ const Calculation = () => {
                 to: 'from'
               }
 
-              if (
-                (inputsRef.cargoCodes.current.value && inputsRef.weightName.current.value) ||
-                (inputsRef.from.current.value && inputsRef.to.current.value)
-              ) {
+              if (inputsRef[name].current.value && inputsRef[Map[name]].current.value) {
                 inputsRef[Map[name]].current.validateField()
               }
             }}
