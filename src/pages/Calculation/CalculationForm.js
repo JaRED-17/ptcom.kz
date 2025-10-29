@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 import settings from '../../cms/data/settings.json'
 import UTSNG from '../../cms/data/catalogs/UTSNG.json'
 import typeWagons from '../../cms/data/catalogs/typeWagons.json'
+import railwayStations from '../../cms/data/catalogs/railwayStations.json'
 
 const CalculationForm = ({
   name,
@@ -40,6 +41,24 @@ const CalculationForm = ({
             <AutocompleteField
               key={index}
               options={UTSNG.map((option) => `${option.code} ${option.name}`)}
+              label={message(`form.${field.name}`)}
+              name={field.name}
+              type={field.type}
+              multiline={field.multiline || false}
+              rows={field.rows || 1}
+              disabled={disabled}
+              mandatory={field.mandatory}
+              addRef={(name, ref) => addRef(name, ref)}
+              onValidate={onValidate}
+            />
+          )
+        }
+
+        if (field.name === 'from' || field.name === 'to') {
+          return (
+            <AutocompleteField
+              key={index}
+              options={railwayStations.map((option) => `${option.code} ${option.name}`)}
               label={message(`form.${field.name}`)}
               name={field.name}
               type={field.type}
