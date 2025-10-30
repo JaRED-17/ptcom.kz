@@ -18,10 +18,10 @@ const Calculation = () => {
   const message = setMessages(messages, 'app.page.calculation.')
   const inputsRef = useRef({})
   const recaptchaRef = useRef(null)
-  const [notification, setNotification] = useState({
-    type: '',
-    text: ''
-  })
+  const [successNotification, setSuccessNotification] = useState(false)
+  const [errorNotification, setErrorNotification] = useState(false)
+  const [formErrorNotification, setFormErrorNotification] = useState(false)
+  const [warningNotification, setWarningNotification] = useState(false)
   const [sending, setSending] = useState(false)
   const onSubmit = async (e) => {
     e.preventDefault()
@@ -37,10 +37,7 @@ const Calculation = () => {
     }
 
     if (formHasError) {
-      setNotification({
-        type: 'error',
-        text: message('notification.form.error')
-      })
+      setFormErrorNotification(true)
     } else if (recaptchaValue || settings.skipCaptchaCheck) {
       const data = {
         name: e.target.name.value,
@@ -67,21 +64,12 @@ const Calculation = () => {
       setSending(false)
       if (res.status === 'success') {
         clearData()
-        setNotification({
-          type: 'success',
-          text: message('notification.success')
-        })
+        setSuccessNotification(true)
       } else {
-        setNotification({
-          type: 'error',
-          text: message('notification.error')
-        })
+        setErrorNotification(true)
       }
     } else {
-      setNotification({
-        type: 'warning',
-        text: message('notification.warning')
-      })
+      setWarningNotification(true)
     }
   }
 
@@ -165,17 +153,44 @@ const Calculation = () => {
         </div>
       </Box>
       <Notification
-        open={Boolean(notification.text)}
-        variant={notification.type}
+        open={successNotification}
+        variant={'success'}
         autoHideDuration={5000}
         onClose={() => {
-          setNotification({
-            type: '',
-            text: ''
-          })
+          setSuccessNotification(false)
         }}
       >
-        {notification.text}
+        {message('notification.success')}
+      </Notification>
+      <Notification
+        open={errorNotification}
+        variant={'error'}
+        autoHideDuration={5000}
+        onClose={() => {
+          setErrorNotification(false)
+        }}
+      >
+        {message('notification.error')}
+      </Notification>
+      <Notification
+        open={formErrorNotification}
+        variant={'error'}
+        autoHideDuration={5000}
+        onClose={() => {
+          setFormErrorNotification(false)
+        }}
+      >
+        {message('notification.form.error')}
+      </Notification>
+      <Notification
+        open={warningNotification}
+        variant={'warning'}
+        autoHideDuration={5000}
+        onClose={() => {
+          setWarningNotification(false)
+        }}
+      >
+        {message('notification.warning')}
       </Notification>
     </Page>
   )
