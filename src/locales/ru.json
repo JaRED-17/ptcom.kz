@@ -56,7 +56,7 @@
   "app.page.calculation.form.weightName": "Наименование груза",
   "app.page.calculation.mandatory": "* - обязательные поля",
   "app.page.calculation.notification.error": "Произошла ошибка во время отправки письма",
-  "app.page.calculation.notification.form.error": "Пожалуйста, проверьте подствеченные поля",
+  "app.page.calculation.notification.form.error": "Пожалуйста, проверьте подсвеченные поля",
   "app.page.calculation.notification.success": "Письмо успешно отправлено",
   "app.page.calculation.notification.warning": "Пожалуста, проверьте Captcha",
   "app.page.calculation.subject": "Новый запрос на расчет тарифов",
