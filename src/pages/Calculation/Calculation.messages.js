@@ -83,7 +83,7 @@ export default defineMessages({
   },
   'app.page.calculation.notification.form.error': {
     id: 'app.page.calculation.notification.form.error',
-    defaultMessage: 'Пожалуйста, проверьте подствеченные поля'
+    defaultMessage: 'Пожалуйста, проверьте подсвеченные поля'
   },
   'app.page.calculation.notification.warning': {
     id: 'app.page.calculation.notification.warning',
