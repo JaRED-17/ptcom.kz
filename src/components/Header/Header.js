@@ -8,6 +8,7 @@ import Button from '../../ui/Button'
 import withRoute from '../../helpers/withRoute'
 import PropTypes from 'prop-types'
 import SiteMenu from '../SiteMenu'
+import LanguageSelector from '../../ui/LanguageSelector'
 
 const Header = ({ navigate }) => {
   const classNamePrefix = 'header'
@@ -33,6 +34,7 @@ const Header = ({ navigate }) => {
           >
             {message('button')}
           </Button>
+          <LanguageSelector />
         </div>
       </div>
     </header>

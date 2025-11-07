@@ -1,6 +1,4 @@
 .language-selector {
-  margin-top: 1rem;
-
   .MuiFormControl-root {
     .MuiInputBase-root {
       & fieldset,
@@ -19,15 +17,22 @@
         display: none;
       }
     }
+    .MuiSelect-root {
+      min-width: auto;
+    }
   }
 }
 
 #menu- {
   .MuiPaper-root {
     border: 1px solid transparent;
+  }
 
-    .MuiMenuItem-root img {
-      margin-right: 0.5rem;
+  .MuiList-root {
+    padding: 0;
+
+    .MuiButtonBase-root {
+      padding: 0.5rem;
     }
   }
 }

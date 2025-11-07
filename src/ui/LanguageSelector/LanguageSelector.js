@@ -56,7 +56,6 @@ const LanguageSelector = () => {
                   border: '1px solid #ccc'
                 }}
               />
-              {message('language.' + language)}
             </MenuItem>
           ))}
         </Select>

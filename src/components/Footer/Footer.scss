@@ -50,4 +50,13 @@
     display: flex;
     flex-direction: column;
   }
+
+  .language-selector {
+    margin-top: 1rem;
+    display: none;
+
+    @include vars.media-xs {
+      display: block;
+    }
+  }
 }
